@@ -1,0 +1,94 @@
+{
+  "terms": [
+    {
+      "term": "General Fund",
+      "definition": "The city's main bank account that pays for everyday services like police, fire, and parks. It's funded mostly by taxes and is the biggest pot of money the city manages.",
+      "example": "Cerritos uses its General Fund (about $95 million) to pay for sheriff patrols, park maintenance, and street repairs.",
+      "relatedTerms": ["Revenue", "Expenditure", "Fund Balance"]
+    },
+    {
+      "term": "Capital Budget",
+      "definition": "Money set aside for big, one-time projects like building a new park, repaving a road, or upgrading a water treatment plant. These are things that last many years.",
+      "example": "The city's capital budget might include $2 million to renovate a playground that will serve kids for the next 20 years.",
+      "relatedTerms": ["Operating Budget", "Bond", "Appropriation"]
+    },
+    {
+      "term": "Operating Budget",
+      "definition": "The plan for day-to-day spending that keeps the city running -- salaries, supplies, utilities, and regular maintenance. Think of it like a household's monthly bills.",
+      "example": "The operating budget covers things like paying firefighters every month and keeping the lights on at City Hall.",
+      "relatedTerms": ["Capital Budget", "General Fund", "Line Item"]
+    },
+    {
+      "term": "Revenue",
+      "definition": "All the money coming into the city's budget. This includes taxes, fees, grants, and other income. It's like the city's paycheck.",
+      "example": "Cerritos collects about $95 million in revenue each year, with property tax and sales tax being the two biggest sources.",
+      "relatedTerms": ["Expenditure", "Tax Base", "Surplus/Deficit"]
+    },
+    {
+      "term": "Expenditure",
+      "definition": "Money the city spends on services, projects, and operations. Every dollar going out of the budget is an expenditure.",
+      "example": "The city's largest expenditure is the sheriff contract at about $30 million per year -- that's roughly one-third of the whole budget.",
+      "relatedTerms": ["Revenue", "Appropriation", "Line Item"]
+    },
+    {
+      "term": "Per Capita",
+      "definition": "A Latin phrase meaning 'per person.' It's a way to figure out how much something costs for each resident, which makes it easier to compare cities of different sizes.",
+      "example": "If Cerritos spends $95 million for 51,460 people, that's about $1,846 per capita -- meaning each resident's share is roughly $1,846.",
+      "relatedTerms": ["General Fund", "Revenue", "Expenditure"]
+    },
+    {
+      "term": "Fiscal Year",
+      "definition": "The 12-month period the city uses for its budget. In California, the fiscal year runs from July 1 to June 30 -- so 'FY 2024-25' means July 2024 through June 2025.",
+      "example": "Schools start in September, but the city's fiscal year starts in July, so the 2024-25 budget kicks in two months before school starts.",
+      "relatedTerms": ["Operating Budget", "Capital Budget"]
+    },
+    {
+      "term": "Bond",
+      "definition": "A way for the city to borrow money for big projects by promising to pay it back over time with interest -- kind of like a loan. Voters often have to approve bonds.",
+      "example": "The city might issue a $10 million bond to build a new community center and pay it back over 20 years using tax revenue.",
+      "relatedTerms": ["Capital Budget", "Tax Base"]
+    },
+    {
+      "term": "Enterprise Fund",
+      "definition": "A separate budget for a city service that charges fees to cover its own costs, like water or sewer. It's meant to be self-supporting, like a mini business within the city.",
+      "example": "Cerritos runs its water utility as an enterprise fund -- the fees on your water bill pay for water treatment, not tax dollars.",
+      "relatedTerms": ["General Fund", "Restricted Fund"]
+    },
+    {
+      "term": "Restricted Fund",
+      "definition": "Money that can only be spent on a specific purpose, usually because of a law or grant requirement. The city can't use it for anything else.",
+      "example": "Gas tax money from the state is restricted -- Cerritos must use it for road repairs and can't spend it on parks or police.",
+      "relatedTerms": ["General Fund", "Enterprise Fund", "Appropriation"]
+    },
+    {
+      "term": "Surplus/Deficit",
+      "definition": "A surplus means the city collected more money than it spent (good news!). A deficit means it spent more than it earned (a warning sign that cuts or new revenue may be needed).",
+      "example": "If the city collects $96 million in revenue but only spends $95 million, it has a $1 million surplus that can go into savings.",
+      "relatedTerms": ["Revenue", "Expenditure", "Fund Balance"]
+    },
+    {
+      "term": "Appropriation",
+      "definition": "Official permission from the City Council to spend a specific amount of money on something. No city department can spend money without an appropriation.",
+      "example": "The City Council appropriated $500,000 for new playground equipment -- that's the green light for the Parks Department to make the purchase.",
+      "relatedTerms": ["Expenditure", "Line Item", "Operating Budget"]
+    },
+    {
+      "term": "Line Item",
+      "definition": "A single, specific entry in the budget that shows exactly what money is being spent on. It's the most detailed level of the budget.",
+      "example": "Under Parks & Recreation, you might see a line item for 'Tree Planting & Care: $2,050,000' -- that tells you exactly how much goes to trees.",
+      "relatedTerms": ["Appropriation", "Expenditure", "Operating Budget"]
+    },
+    {
+      "term": "Fund Balance",
+      "definition": "The city's savings account -- money left over from previous years that hasn't been spent. A healthy fund balance helps the city handle emergencies or unexpected costs.",
+      "example": "Cerritos keeps a fund balance as a rainy-day reserve so it can still pay for services if tax revenue drops unexpectedly.",
+      "relatedTerms": ["General Fund", "Surplus/Deficit", "Revenue"]
+    },
+    {
+      "term": "Tax Base",
+      "definition": "The total value of all the property, businesses, and economic activity that the city can collect taxes on. A bigger tax base means more potential revenue.",
+      "example": "The Cerritos Auto Square and Cerritos Towne Center are huge parts of the city's tax base because they generate millions in sales tax.",
+      "relatedTerms": ["Revenue", "Per Capita", "Bond"]
+    }
+  ]
+}

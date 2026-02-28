@@ -1,0 +1,365 @@
+{
+  "city": "Cerritos",
+  "state": "CA",
+  "populationEstimate": 51460,
+  "lastUpdated": "2024-11-15",
+  "source": {
+    "documentName": "City of Cerritos Adopted Budget",
+    "documentUrl": "https://www.cerritos.us/BUSINESSES/adopted_budget.php",
+    "accessDate": "2024-11-15",
+    "freshnessLabel": "current"
+  },
+  "fiscalYears": ["2022-23", "2023-24", "2024-25"],
+  "categories": [
+    {
+      "id": "public-safety",
+      "name": "Public Safety",
+      "icon": "Shield",
+      "color": "#EF4444",
+      "tldr": "Keeps our neighborhoods safe -- police patrols, fire trucks, and making sure buildings follow safety rules.",
+      "amounts": [
+        { "fiscalYear": "2022-23", "amount": 43250000 },
+        { "fiscalYear": "2023-24", "amount": 44550000 },
+        { "fiscalYear": "2024-25", "amount": 45870000 }
+      ],
+      "sustainabilityTags": ["general"],
+      "lineItems": [
+        {
+          "id": "ps-sheriff",
+          "name": "Sheriff Contract",
+          "department": "Public Safety",
+          "description": "Contract with the Los Angeles County Sheriff's Department for law enforcement services including patrol, traffic enforcement, and investigations.",
+          "tldr": "Pays for sheriff deputies who patrol Cerritos streets and respond to 911 calls.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 29100000 },
+            { "fiscalYear": "2023-24", "amount": 29970000 },
+            { "fiscalYear": "2024-25", "amount": 30870000 }
+          ],
+          "sustainabilityTags": ["general"]
+        },
+        {
+          "id": "ps-fire",
+          "name": "Fire Services",
+          "department": "Public Safety",
+          "description": "Contract with the Los Angeles County Fire Department for fire suppression, emergency medical services, and hazardous materials response.",
+          "tldr": "Funds firefighters and paramedics who respond to fires and medical emergencies.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 11400000 },
+            { "fiscalYear": "2023-24", "amount": 11740000 },
+            { "fiscalYear": "2024-25", "amount": 12090000 }
+          ],
+          "sustainabilityTags": ["general"]
+        },
+        {
+          "id": "ps-code",
+          "name": "Code Enforcement",
+          "department": "Public Safety",
+          "description": "Ensures compliance with municipal codes including property maintenance, zoning, and nuisance abatement.",
+          "tldr": "Makes sure properties are maintained and neighborhoods stay clean and orderly.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 2750000 },
+            { "fiscalYear": "2023-24", "amount": 2840000 },
+            { "fiscalYear": "2024-25", "amount": 2910000 }
+          ],
+          "sustainabilityTags": ["general"]
+        }
+      ]
+    },
+    {
+      "id": "parks-recreation",
+      "name": "Parks & Recreation",
+      "icon": "TreePine",
+      "color": "#22C55E",
+      "tldr": "Keeps our parks green, runs youth sports and after-school programs, and plants trees throughout the city.",
+      "amounts": [
+        { "fiscalYear": "2022-23", "amount": 13200000 },
+        { "fiscalYear": "2023-24", "amount": 13660000 },
+        { "fiscalYear": "2024-25", "amount": 14120000 }
+      ],
+      "sustainabilityTags": ["parks"],
+      "lineItems": [
+        {
+          "id": "pr-maintenance",
+          "name": "Park Maintenance",
+          "department": "Parks & Recreation",
+          "description": "Maintenance of 23 city parks including landscaping, irrigation, playground equipment, and athletic fields.",
+          "tldr": "Takes care of all 23 city parks so they stay safe and beautiful for everyone.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 5600000 },
+            { "fiscalYear": "2023-24", "amount": 5820000 },
+            { "fiscalYear": "2024-25", "amount": 6040000 }
+          ],
+          "sustainabilityTags": ["parks"]
+        },
+        {
+          "id": "pr-programs",
+          "name": "Recreation Programs",
+          "department": "Parks & Recreation",
+          "description": "Youth and adult recreation programs including sports leagues, classes, camps, and senior activities at the Cerritos Senior Center.",
+          "tldr": "Runs sports leagues, art classes, summer camps, and programs for all ages.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 3700000 },
+            { "fiscalYear": "2023-24", "amount": 3850000 },
+            { "fiscalYear": "2024-25", "amount": 3990000 }
+          ],
+          "sustainabilityTags": ["parks"]
+        },
+        {
+          "id": "pr-trees",
+          "name": "Tree Planting & Care",
+          "department": "Parks & Recreation",
+          "description": "Urban forestry program including new tree plantings, pruning, removal of hazardous trees, and maintenance of the city's 25,000+ public trees.",
+          "tldr": "Plants new trees and cares for the 25,000+ trees lining our streets and parks.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 1900000 },
+            { "fiscalYear": "2023-24", "amount": 1970000 },
+            { "fiscalYear": "2024-25", "amount": 2050000 }
+          ],
+          "sustainabilityTags": ["parks"]
+        },
+        {
+          "id": "pr-heritage",
+          "name": "Heritage Park Maintenance",
+          "department": "Parks & Recreation",
+          "description": "Specialized maintenance for Heritage Park, including the sculpture garden, amphitheater, and community center facilities.",
+          "tldr": "Keeps Heritage Park's sculpture garden, stage, and community center in top shape.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 2000000 },
+            { "fiscalYear": "2023-24", "amount": 2020000 },
+            { "fiscalYear": "2024-25", "amount": 2040000 }
+          ],
+          "sustainabilityTags": ["parks"]
+        }
+      ]
+    },
+    {
+      "id": "public-works",
+      "name": "Public Works",
+      "icon": "Wrench",
+      "color": "#F59E0B",
+      "tldr": "Fixes roads, picks up trash and recycling, runs the water system, and maintains city buildings.",
+      "amounts": [
+        { "fiscalYear": "2022-23", "amount": 11400000 },
+        { "fiscalYear": "2023-24", "amount": 11750000 },
+        { "fiscalYear": "2024-25", "amount": 12130000 }
+      ],
+      "sustainabilityTags": ["waste", "streets"],
+      "lineItems": [
+        {
+          "id": "pw-streets",
+          "name": "Street Maintenance",
+          "department": "Public Works",
+          "description": "Resurfacing, pothole repair, sidewalk maintenance, street lighting, and traffic signal operations across 115 miles of city streets.",
+          "tldr": "Repairs potholes, repaves roads, and keeps streetlights and traffic signals working.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 3800000 },
+            { "fiscalYear": "2023-24", "amount": 3920000 },
+            { "fiscalYear": "2024-25", "amount": 4050000 }
+          ],
+          "sustainabilityTags": ["streets"]
+        },
+        {
+          "id": "pw-waste",
+          "name": "Waste Services",
+          "department": "Public Works",
+          "description": "Residential and commercial waste collection, recycling programs, organic waste diversion, and compliance with SB 1383 requirements.",
+          "tldr": "Handles trash pickup, recycling bins, and composting to keep waste out of landfills.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 3700000 },
+            { "fiscalYear": "2023-24", "amount": 3850000 },
+            { "fiscalYear": "2024-25", "amount": 3980000 }
+          ],
+          "sustainabilityTags": ["waste"]
+        },
+        {
+          "id": "pw-water-ops",
+          "name": "Water System Operations",
+          "department": "Public Works",
+          "description": "Operation and maintenance of the city's water distribution infrastructure including pump stations, reservoirs, and 130 miles of water mains.",
+          "tldr": "Keeps clean water flowing through 130 miles of pipes to every home and business.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 2400000 },
+            { "fiscalYear": "2023-24", "amount": 2470000 },
+            { "fiscalYear": "2024-25", "amount": 2550000 }
+          ],
+          "sustainabilityTags": ["water"]
+        },
+        {
+          "id": "pw-facilities",
+          "name": "Facilities Maintenance",
+          "department": "Public Works",
+          "description": "Maintenance and repair of city-owned buildings including City Hall, libraries, community centers, and the Cerritos Center for the Performing Arts.",
+          "tldr": "Keeps City Hall, libraries, and community centers running smoothly.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 1500000 },
+            { "fiscalYear": "2023-24", "amount": 1510000 },
+            { "fiscalYear": "2024-25", "amount": 1550000 }
+          ],
+          "sustainabilityTags": ["energy"]
+        }
+      ]
+    },
+    {
+      "id": "community-development",
+      "name": "Community Development",
+      "icon": "Building2",
+      "color": "#8B5CF6",
+      "tldr": "Plans how the city grows, checks that buildings are safe, and attracts new businesses and jobs.",
+      "amounts": [
+        { "fiscalYear": "2022-23", "amount": 7600000 },
+        { "fiscalYear": "2023-24", "amount": 7830000 },
+        { "fiscalYear": "2024-25", "amount": 8070000 }
+      ],
+      "sustainabilityTags": ["general"],
+      "lineItems": [
+        {
+          "id": "cd-planning",
+          "name": "Planning & Zoning",
+          "department": "Community Development",
+          "description": "Long-range planning, zoning administration, environmental review, and processing of development applications.",
+          "tldr": "Decides where homes, stores, and parks can be built and makes sure new projects fit the neighborhood.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 2850000 },
+            { "fiscalYear": "2023-24", "amount": 2940000 },
+            { "fiscalYear": "2024-25", "amount": 3030000 }
+          ],
+          "sustainabilityTags": ["general"]
+        },
+        {
+          "id": "cd-building",
+          "name": "Building Inspection",
+          "department": "Community Development",
+          "description": "Plan review, building permit issuance, and field inspection services to ensure structures meet California Building Code standards.",
+          "tldr": "Checks that new buildings and renovations are safe and follow the rules.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 2400000 },
+            { "fiscalYear": "2023-24", "amount": 2470000 },
+            { "fiscalYear": "2024-25", "amount": 2540000 }
+          ],
+          "sustainabilityTags": ["general"]
+        },
+        {
+          "id": "cd-econ",
+          "name": "Economic Development",
+          "department": "Community Development",
+          "description": "Business attraction and retention, commercial corridor revitalization, and support for the Cerritos Auto Square and Cerritos Towne Center.",
+          "tldr": "Works to bring new shops and jobs to Cerritos and support local businesses.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 2350000 },
+            { "fiscalYear": "2023-24", "amount": 2420000 },
+            { "fiscalYear": "2024-25", "amount": 2500000 }
+          ],
+          "sustainabilityTags": ["general"]
+        }
+      ]
+    },
+    {
+      "id": "admin-finance",
+      "name": "Administration & Finance",
+      "icon": "Landmark",
+      "color": "#6B7280",
+      "tldr": "Runs the behind-the-scenes stuff -- managing the city, tracking every dollar, and keeping tech running.",
+      "amounts": [
+        { "fiscalYear": "2022-23", "amount": 6650000 },
+        { "fiscalYear": "2023-24", "amount": 6850000 },
+        { "fiscalYear": "2024-25", "amount": 7060000 }
+      ],
+      "sustainabilityTags": ["general"],
+      "lineItems": [
+        {
+          "id": "af-admin",
+          "name": "City Administration",
+          "department": "Administration & Finance",
+          "description": "City Manager's office, City Clerk, City Attorney, and Human Resources providing executive leadership and administrative support.",
+          "tldr": "The City Manager's team that oversees everything and keeps the city government organized.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 2850000 },
+            { "fiscalYear": "2023-24", "amount": 2940000 },
+            { "fiscalYear": "2024-25", "amount": 3030000 }
+          ],
+          "sustainabilityTags": ["general"]
+        },
+        {
+          "id": "af-finance",
+          "name": "Finance",
+          "department": "Administration & Finance",
+          "description": "Financial management, accounting, payroll, purchasing, and annual budget preparation and monitoring.",
+          "tldr": "Tracks every dollar the city earns and spends to make sure money is used wisely.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 1900000 },
+            { "fiscalYear": "2023-24", "amount": 1960000 },
+            { "fiscalYear": "2024-25", "amount": 2020000 }
+          ],
+          "sustainabilityTags": ["general"]
+        },
+        {
+          "id": "af-it",
+          "name": "IT Services",
+          "department": "Administration & Finance",
+          "description": "Information technology infrastructure, cybersecurity, application support, and digital government services.",
+          "tldr": "Keeps the city's computers, networks, and online services running for staff and residents.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 1900000 },
+            { "fiscalYear": "2023-24", "amount": 1950000 },
+            { "fiscalYear": "2024-25", "amount": 2010000 }
+          ],
+          "sustainabilityTags": ["general"]
+        }
+      ]
+    },
+    {
+      "id": "water-utility",
+      "name": "Water Utility",
+      "icon": "Droplets",
+      "color": "#3B82F6",
+      "tldr": "Cleans and delivers safe drinking water, maintains pipes and wells, and runs programs to help everyone save water.",
+      "amounts": [
+        { "fiscalYear": "2022-23", "amount": 8500000 },
+        { "fiscalYear": "2023-24", "amount": 8760000 },
+        { "fiscalYear": "2024-25", "amount": 9100000 }
+      ],
+      "sustainabilityTags": ["water"],
+      "lineItems": [
+        {
+          "id": "wu-treatment",
+          "name": "Water Treatment",
+          "department": "Water Utility",
+          "description": "Operation of water treatment facilities, water quality testing, regulatory compliance, and source water protection.",
+          "tldr": "Treats and tests water to make sure every drop from your tap is safe to drink.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 3800000 },
+            { "fiscalYear": "2023-24", "amount": 3920000 },
+            { "fiscalYear": "2024-25", "amount": 4080000 }
+          ],
+          "sustainabilityTags": ["water"]
+        },
+        {
+          "id": "wu-distribution",
+          "name": "Distribution System",
+          "department": "Water Utility",
+          "description": "Maintenance and replacement of water mains, service lines, valves, hydrants, and metering equipment.",
+          "tldr": "Maintains the underground network of pipes and fire hydrants that deliver water everywhere.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 2800000 },
+            { "fiscalYear": "2023-24", "amount": 2890000 },
+            { "fiscalYear": "2024-25", "amount": 3000000 }
+          ],
+          "sustainabilityTags": ["water"]
+        },
+        {
+          "id": "wu-conservation",
+          "name": "Conservation Programs",
+          "department": "Water Utility",
+          "description": "Water conservation outreach, rebate programs for water-efficient fixtures, turf replacement incentives, and drought response planning.",
+          "tldr": "Helps residents save water with rebates for efficient fixtures and replacing thirsty lawns.",
+          "amounts": [
+            { "fiscalYear": "2022-23", "amount": 1900000 },
+            { "fiscalYear": "2023-24", "amount": 1950000 },
+            { "fiscalYear": "2024-25", "amount": 2020000 }
+          ],
+          "sustainabilityTags": ["water"]
+        }
+      ]
+    }
+  ]
+}

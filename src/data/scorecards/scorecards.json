@@ -1,0 +1,94 @@
+{
+  "scorecards": [
+    {
+      "id": "tree-planting",
+      "title": "Tree Planting & Urban Canopy",
+      "type": "program",
+      "sustainabilityTag": "parks",
+      "description": "Tracking Cerritos's urban forestry program including new tree plantings, canopy coverage, and tree health maintenance across the city's parks and streets.",
+      "tldr": "Cerritos is planting more trees each year and slowly growing its urban canopy to cool streets and clean air.",
+      "icon": "TreePine",
+      "metrics": [
+        { "label": "Trees planted this year", "value": 450, "unit": "trees", "target": 500, "trend": "up", "yearOverYearChange": 12 },
+        { "label": "Urban canopy coverage", "value": 18, "unit": "%", "target": 25, "trend": "up", "yearOverYearChange": 1.5 },
+        { "label": "Tree maintenance budget used", "value": 92, "unit": "%", "trend": "flat" },
+        { "label": "Trees removed (disease/safety)", "value": 35, "unit": "trees", "trend": "down", "yearOverYearChange": -8 }
+      ],
+      "highlights": [
+        "450 new trees planted — up 12% from last year",
+        "$2.5M invested in tree care, highest budget in 5 years",
+        "Shade coverage along South Street improved by 15%"
+      ],
+      "challenges": [
+        "Still 7 percentage points below the 25% canopy target",
+        "Drought-stress causing more tree removals than planned",
+        "Need more drought-tolerant species in new plantings"
+      ],
+      "source": {
+        "documentName": "City of Cerritos FY 2024-25 Adopted Budget",
+        "accessDate": "2024-11-15",
+        "freshnessLabel": "current"
+      }
+    },
+    {
+      "id": "recycling-program",
+      "title": "Recycling & Waste Diversion",
+      "type": "program",
+      "sustainabilityTag": "waste",
+      "description": "Evaluating Cerritos's recycling effectiveness, contamination rates, and progress toward state-mandated waste diversion goals.",
+      "tldr": "Recycling rates are improving but contamination is still an expensive problem costing the city extra money.",
+      "icon": "Recycle",
+      "metrics": [
+        { "label": "Waste diversion rate", "value": 62, "unit": "%", "target": 75, "trend": "up", "yearOverYearChange": 3 },
+        { "label": "Recycling contamination rate", "value": 22, "unit": "%", "target": 10, "trend": "down", "yearOverYearChange": -2 },
+        { "label": "Composting participation", "value": 45, "unit": "%", "target": 70, "trend": "up", "yearOverYearChange": 8 },
+        { "label": "Cost per ton of recycling", "value": 85, "unit": "$/ton", "trend": "down", "yearOverYearChange": -5 }
+      ],
+      "highlights": [
+        "Waste diversion up to 62% — best year yet for Cerritos",
+        "Composting participation jumped 8% after new green bin program",
+        "Processing costs dropping as contamination decreases"
+      ],
+      "challenges": [
+        "22% contamination rate is still double the target",
+        "13 percentage points below the 75% diversion goal",
+        "Need better outreach to apartment complexes"
+      ],
+      "source": {
+        "documentName": "City of Cerritos FY 2024-25 Adopted Budget",
+        "accessDate": "2024-11-15",
+        "freshnessLabel": "current"
+      }
+    },
+    {
+      "id": "water-conservation",
+      "title": "Water Conservation & Efficiency",
+      "type": "program",
+      "sustainabilityTag": "water",
+      "description": "Monitoring Cerritos's water usage trends, conservation program participation, and progress toward state water reduction mandates.",
+      "tldr": "Water use is dropping thanks to rebate programs and drought landscaping, but there's still a long way to go.",
+      "icon": "Droplets",
+      "metrics": [
+        { "label": "Gallons per capita per day", "value": 125, "unit": "gpcd", "target": 100, "trend": "down", "yearOverYearChange": -4 },
+        { "label": "Rebates issued this year", "value": 320, "unit": "rebates", "target": 400, "trend": "up", "yearOverYearChange": 15 },
+        { "label": "Drought-tolerant conversions", "value": 85, "unit": "yards", "trend": "up", "yearOverYearChange": 22 },
+        { "label": "Water system leak repairs", "value": 48, "unit": "repairs", "trend": "flat" }
+      ],
+      "highlights": [
+        "Per-capita water use down 4% year-over-year",
+        "320 water-saving rebates issued — toilets, washers, and irrigation",
+        "85 front-yard drought conversions completed"
+      ],
+      "challenges": [
+        "Still 25 gallons above the 100 gpcd state target",
+        "Rebate program not reaching 100% of budget allocation",
+        "Aging pipes causing more system leaks"
+      ],
+      "source": {
+        "documentName": "Cerritos Annual Water Quality Report 2024",
+        "accessDate": "2024-11-15",
+        "freshnessLabel": "current"
+      }
+    }
+  ]
+}

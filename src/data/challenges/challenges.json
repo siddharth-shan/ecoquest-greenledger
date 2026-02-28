@@ -1,0 +1,145 @@
+{
+  "challenges": [
+    {
+      "id": "water-audit-home",
+      "title": "Home Water Audit",
+      "description": "Check every faucet, toilet, and showerhead at home for leaks. A single dripping faucet can waste 3,000 gallons a year! Document what you find and estimate the water savings if fixed.",
+      "shortDescription": "Find and report water leaks at home",
+      "icon": "Droplets",
+      "sustainabilityTag": "water",
+      "difficulty": "easy",
+      "pointsReward": 50,
+      "estimatedMinutes": 20,
+      "proofType": "both",
+      "impactMetric": { "label": "Gallons of water saved annually", "unitValue": 1000 },
+      "relatedBudgetItemId": "water-system-ops",
+      "steps": [
+        "Walk through your home and check each faucet for drips",
+        "Listen for running water in each toilet (put food coloring in the tank — if color appears in the bowl within 15 minutes, you have a leak)",
+        "Check under sinks for any moisture or slow drips",
+        "Take a photo of any leaks you find",
+        "Write a short reflection on what you discovered and how much water could be saved"
+      ],
+      "tips": [
+        "A dripping faucet can waste up to 3,000 gallons per year!",
+        "Put food coloring in toilet tanks — if color appears in the bowl, you have a leak",
+        "Check your water meter before and after a 2-hour no-use period to spot hidden leaks"
+      ],
+      "cityGoalConnection": "Cerritos aims to reduce water consumption by 20% by 2030 through its conservation programs.",
+      "financialSnippet": "Cerritos spends $7.2M/year on water system operations. Every leak found saves the city money on water treatment and infrastructure."
+    },
+    {
+      "id": "water-saving-pledge",
+      "title": "5-Day Water Saving Pledge",
+      "description": "Commit to 5 days of conscious water saving: shorter showers, turning off taps while brushing, and only running full loads of laundry. Track your daily efforts and reflect on what changed.",
+      "shortDescription": "Commit to 5 days of saving water at home",
+      "icon": "Timer",
+      "sustainabilityTag": "water",
+      "difficulty": "easy",
+      "pointsReward": 30,
+      "estimatedMinutes": 15,
+      "proofType": "reflection",
+      "impactMetric": { "label": "Gallons of water saved", "unitValue": 500 },
+      "relatedBudgetItemId": "conservation-programs",
+      "steps": [
+        "Take the pledge: commit to 5 days of active water saving",
+        "Day 1-5: Time your showers (aim for under 5 minutes), turn off taps while brushing, run only full loads",
+        "Keep a simple daily log of what you did differently",
+        "After 5 days, write a reflection on which habits were easiest and hardest to change",
+        "Calculate roughly how many gallons you saved (avg shower saves ~2 gallons/minute)"
+      ],
+      "tips": [
+        "A 5-minute shower uses about 10 gallons vs. 20+ for a 10-minute one",
+        "Turning off the tap while brushing saves about 4 gallons each time",
+        "Challenge a family member to join you!"
+      ],
+      "cityGoalConnection": "The city's conservation programs spend $3.9M/year on water efficiency — your personal habits multiply that investment.",
+      "financialSnippet": "Cerritos invests $3.9M in conservation rebates and education. When residents save water, these programs get a better return on investment."
+    },
+    {
+      "id": "park-cleanup-champion",
+      "title": "Park Cleanup Champion",
+      "description": "Visit one of Cerritos's 23 parks and spend 30 minutes picking up litter. Bring a bag and gloves, document what you collect, and reflect on the park's condition.",
+      "shortDescription": "Clean up litter at a Cerritos park",
+      "icon": "TreePine",
+      "sustainabilityTag": "parks",
+      "difficulty": "medium",
+      "pointsReward": 75,
+      "estimatedMinutes": 45,
+      "proofType": "both",
+      "impactMetric": { "label": "Lbs of litter collected", "unitValue": 3 },
+      "relatedBudgetItemId": "park-maintenance",
+      "steps": [
+        "Choose one of Cerritos's 23 parks to visit",
+        "Bring a trash bag and gloves (or use a repurposed bag)",
+        "Spend at least 30 minutes picking up litter — focus on areas around benches, playgrounds, and walkways",
+        "Take a before-and-after photo of the area you cleaned",
+        "Write a short reflection: What types of litter did you find? What could prevent it?"
+      ],
+      "tips": [
+        "Heritage Park, Liberty Park, and Frontier Park are great starting points",
+        "Avoid picking up anything sharp or hazardous — leave that for professionals",
+        "Bring a friend to make it more fun and cover more ground"
+      ],
+      "cityGoalConnection": "The city spends $5.4M/year maintaining parks. Community cleanups extend these resources and keep parks beautiful for everyone.",
+      "financialSnippet": "Park maintenance costs $5.4M/year for 23 parks. That's about $235K per park. Every volunteer hour saves taxpayer money for other improvements."
+    },
+    {
+      "id": "tree-care-ambassador",
+      "title": "Tree Care Ambassador",
+      "description": "Adopt a street tree or neighborhood tree for a month. Water it weekly, check for damage or disease, and document its health. Trees clean our air, cool our streets, and boost property values.",
+      "shortDescription": "Adopt and care for a neighborhood tree",
+      "icon": "Sprout",
+      "sustainabilityTag": "parks",
+      "difficulty": "medium",
+      "pointsReward": 100,
+      "estimatedMinutes": 60,
+      "proofType": "both",
+      "impactMetric": { "label": "Trees cared for", "unitValue": 1 },
+      "relatedBudgetItemId": "tree-care",
+      "steps": [
+        "Identify a street tree or young tree in your neighborhood that needs attention",
+        "Take a 'before' photo showing its current condition",
+        "Water it deeply once a week for 4 weeks (young trees need 15-20 gallons per watering)",
+        "Check for signs of damage, pests, or disease each time you visit",
+        "After 4 weeks, take an 'after' photo and write about what you learned about urban trees"
+      ],
+      "tips": [
+        "Water slowly at the base — a slow trickle from a hose for 15-20 minutes works great",
+        "Young trees (planted in the last 3 years) need the most help during hot months",
+        "If you notice serious damage, report it to the city's Public Works department"
+      ],
+      "cityGoalConnection": "Cerritos's tree care program ($2.5M/year) maintains thousands of urban trees. Community tree stewards multiply the city's capacity.",
+      "financialSnippet": "The Tree Care & Planting budget is $2.5M for 2024-25. Each healthy tree adds about $20 in annual benefits through air cleaning and cooling."
+    },
+    {
+      "id": "recycling-audit",
+      "title": "Recycling Contamination Audit",
+      "description": "Inspect your household's recycling bin before pickup day. Identify items that DON'T belong (contamination) and create a family guide for what's actually recyclable in Cerritos.",
+      "shortDescription": "Audit your recycling bin for contamination",
+      "icon": "SearchCheck",
+      "sustainabilityTag": "waste",
+      "difficulty": "hard",
+      "pointsReward": 100,
+      "estimatedMinutes": 40,
+      "proofType": "both",
+      "impactMetric": { "label": "Gallons of water saved annually", "unitValue": 200 },
+      "relatedBudgetItemId": "recycling-programs",
+      "steps": [
+        "On the day before recycling pickup, carefully inspect your blue bin's contents",
+        "Sort items into 'correctly recycled' and 'contamination' piles",
+        "Take a photo showing the contamination items you found",
+        "Research Cerritos's recycling guidelines to understand what's accepted",
+        "Create a simple one-page recycling guide for your family (can be handwritten or digital)",
+        "Write a reflection: What was the most surprising contaminant?"
+      ],
+      "tips": [
+        "Common contaminants: plastic bags, food-soiled containers, styrofoam, and 'wishful recycling'",
+        "Greasy pizza boxes go in the green waste, not recycling!",
+        "When in doubt, throw it out — contamination can ruin an entire truckload of recycling"
+      ],
+      "cityGoalConnection": "Contamination costs Cerritos's recycling program extra money every year. Clean recycling = more efficient use of the $2.4M recycling budget.",
+      "financialSnippet": "Recycling programs cost $2.4M/year. Contamination increases processing costs by 25-40%. Cleaner bins directly save taxpayer money."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "sources": [
+    {
+      "id": "adopted-budget-2024",
+      "documentName": "City of Cerritos FY 2024-25 Adopted Budget",
+      "documentUrl": "https://www.cerritos.us/GOVERNMENT/finance/budget.php",
+      "description": "The officially adopted annual budget for the City of Cerritos, detailing all revenue sources and departmental expenditures.",
+      "accessDate": "2024-11-15",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Budget Explorer", "Scorecards", "Challenges"]
+    },
+    {
+      "id": "cafr-2023",
+      "documentName": "City of Cerritos Comprehensive Annual Financial Report (CAFR) 2023",
+      "documentUrl": "https://www.cerritos.us/GOVERNMENT/finance/cafr.php",
+      "description": "Comprehensive financial statements and statistical data audited by independent accountants.",
+      "accessDate": "2024-11-15",
+      "freshnessLabel": "recent",
+      "dataUsedFor": ["Budget Explorer", "Trend Data"]
+    },
+    {
+      "id": "census-2020",
+      "documentName": "U.S. Census Bureau - Cerritos City, California",
+      "documentUrl": "https://data.census.gov/profile/Cerritos_city,_California",
+      "description": "Population estimates and demographic data for per-capita calculations.",
+      "accessDate": "2024-11-15",
+      "freshnessLabel": "recent",
+      "dataUsedFor": ["Per-Capita Calculations", "Demographics"]
+    },
+    {
+      "id": "sustainability-plan",
+      "documentName": "City of Cerritos Sustainability Action Plan",
+      "documentUrl": "https://www.cerritos.us",
+      "description": "The city's strategic plan for environmental sustainability goals and targets.",
+      "accessDate": "2024-11-15",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Scorecards", "Challenges", "City Goal Connections"]
+    },
+    {
+      "id": "water-quality-2024",
+      "documentName": "Cerritos Annual Water Quality Report 2024",
+      "documentUrl": "https://www.cerritos.us",
+      "description": "Annual water quality testing results and compliance data for the Cerritos water system.",
+      "accessDate": "2024-11-15",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Water Conservation Scorecard"]
+    }
+  ]
+}

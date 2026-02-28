@@ -3,24 +3,127 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* EcoQuest Brand Colors */
+  --eco-green: #34a853;
+  --eco-green-dark: #137333;
+  --eco-green-light: #e8f5e9;
+  --eco-blue: #00a8e1;
+  --eco-blue-dark: #0077a8;
+  --eco-blue-light: #e0f4fd;
+  --eco-yellow: #fbbc04;
+  --eco-orange: #f57c00;
+
+  /* Sustainability Tag Colors */
+  --tag-parks: #22c55e;
+  --tag-parks-bg: #dcfce7;
+  --tag-waste: #f59e0b;
+  --tag-waste-bg: #fef3c7;
+  --tag-water: #3b82f6;
+  --tag-water-bg: #dbeafe;
+  --tag-energy: #a855f7;
+  --tag-energy-bg: #f3e8ff;
+  --tag-streets: #6b7280;
+  --tag-streets-bg: #f3f4f6;
+  --tag-general: #64748b;
+  --tag-general-bg: #f1f5f9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-eco-green: var(--eco-green);
+  --color-eco-green-dark: var(--eco-green-dark);
+  --color-eco-green-light: var(--eco-green-light);
+  --color-eco-blue: var(--eco-blue);
+  --color-eco-blue-dark: var(--eco-blue-dark);
+  --color-eco-blue-light: var(--eco-blue-light);
+  --color-eco-yellow: var(--eco-yellow);
+  --color-eco-orange: var(--eco-orange);
+
+  --color-tag-parks: var(--tag-parks);
+  --color-tag-parks-bg: var(--tag-parks-bg);
+  --color-tag-waste: var(--tag-waste);
+  --color-tag-waste-bg: var(--tag-waste-bg);
+  --color-tag-water: var(--tag-water);
+  --color-tag-water-bg: var(--tag-water-bg);
+  --color-tag-energy: var(--tag-energy);
+  --color-tag-energy-bg: var(--tag-energy-bg);
+  --color-tag-streets: var(--tag-streets);
+  --color-tag-streets-bg: var(--tag-streets-bg);
+  --color-tag-general: var(--tag-general);
+  --color-tag-general-bg: var(--tag-general-bg);
+
+  --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-heading: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Component Styles */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-2.5 font-semibold rounded-full transition-all duration-300 text-center cursor-pointer text-sm;
+  }
+
+  .btn-primary {
+    @apply bg-eco-green text-white hover:bg-eco-green-dark hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-eco-blue text-white hover:bg-eco-blue-dark hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-eco-green border-2 border-eco-green hover:bg-eco-green hover:text-white;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-900;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4 font-heading;
+  }
+
+  .section-underline {
+    @apply w-16 h-1 bg-gradient-to-r from-eco-green to-eco-blue rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-eco-green to-eco-blue bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-eco {
+    @apply bg-gradient-to-br from-eco-green to-eco-blue;
+  }
+
+  .bg-gradient-eco-light {
+    @apply bg-gradient-to-br from-eco-green-light to-eco-blue-light;
+  }
 }
