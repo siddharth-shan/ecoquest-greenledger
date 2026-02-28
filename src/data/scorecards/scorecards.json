@@ -1,92 +1,162 @@
 {
   "scorecards": [
     {
-      "id": "tree-planting",
-      "title": "Tree Planting & Urban Canopy",
-      "type": "program",
-      "sustainabilityTag": "parks",
-      "description": "Tracking Cerritos's urban forestry program including new tree plantings, canopy coverage, and tree health maintenance across the city's parks and streets.",
-      "tldr": "Cerritos is planting more trees each year and slowly growing its urban canopy to cool streets and clean air.",
-      "icon": "TreePine",
-      "metrics": [
-        { "label": "Trees planted this year", "value": 450, "unit": "trees", "target": 500, "trend": "up", "yearOverYearChange": 12 },
-        { "label": "Urban canopy coverage", "value": 18, "unit": "%", "target": 25, "trend": "up", "yearOverYearChange": 1.5 },
-        { "label": "Tree maintenance budget used", "value": 92, "unit": "%", "trend": "flat" },
-        { "label": "Trees removed (disease/safety)", "value": 35, "unit": "trees", "trend": "down", "yearOverYearChange": -8 }
-      ],
-      "highlights": [
-        "450 new trees planted — up 12% from last year",
-        "$2.5M invested in tree care, highest budget in 5 years",
-        "Shade coverage along South Street improved by 15%"
-      ],
-      "challenges": [
-        "Still 7 percentage points below the 25% canopy target",
-        "Drought-stress causing more tree removals than planned",
-        "Need more drought-tolerant species in new plantings"
-      ],
-      "source": {
-        "documentName": "City of Cerritos FY 2024-25 Adopted Budget",
-        "accessDate": "2024-11-15",
-        "freshnessLabel": "current"
-      }
-    },
-    {
-      "id": "recycling-program",
-      "title": "Recycling & Waste Diversion",
-      "type": "program",
-      "sustainabilityTag": "waste",
-      "description": "Evaluating Cerritos's recycling effectiveness, contamination rates, and progress toward state-mandated waste diversion goals.",
-      "tldr": "Recycling rates are improving but contamination is still an expensive problem costing the city extra money.",
-      "icon": "Recycle",
-      "metrics": [
-        { "label": "Waste diversion rate", "value": 62, "unit": "%", "target": 75, "trend": "up", "yearOverYearChange": 3 },
-        { "label": "Recycling contamination rate", "value": 22, "unit": "%", "target": 10, "trend": "down", "yearOverYearChange": -2 },
-        { "label": "Composting participation", "value": 45, "unit": "%", "target": 70, "trend": "up", "yearOverYearChange": 8 },
-        { "label": "Cost per ton of recycling", "value": 85, "unit": "$/ton", "trend": "down", "yearOverYearChange": -5 }
-      ],
-      "highlights": [
-        "Waste diversion up to 62% — best year yet for Cerritos",
-        "Composting participation jumped 8% after new green bin program",
-        "Processing costs dropping as contamination decreases"
-      ],
-      "challenges": [
-        "22% contamination rate is still double the target",
-        "13 percentage points below the 75% diversion goal",
-        "Need better outreach to apartment complexes"
-      ],
-      "source": {
-        "documentName": "City of Cerritos FY 2024-25 Adopted Budget",
-        "accessDate": "2024-11-15",
-        "freshnessLabel": "current"
-      }
-    },
-    {
-      "id": "water-conservation",
-      "title": "Water Conservation & Efficiency",
+      "id": "recycled-water",
+      "title": "Recycled Water & Conservation",
       "type": "program",
       "sustainabilityTag": "water",
-      "description": "Monitoring Cerritos's water usage trends, conservation program participation, and progress toward state water reduction mandates.",
-      "tldr": "Water use is dropping thanks to rebate programs and drought landscaping, but there's still a long way to go.",
+      "description": "Since 1988, Cerritos has operated one of the region's most successful recycled water programs, replacing potable water with treated recycled water for irrigation across parks, medians, and school grounds.",
+      "tldr": "Cerritos saves 722 million gallons of drinking water every year by using recycled water to irrigate parks and public spaces.",
       "icon": "Droplets",
       "metrics": [
-        { "label": "Gallons per capita per day", "value": 125, "unit": "gpcd", "target": 100, "trend": "down", "yearOverYearChange": -4 },
-        { "label": "Rebates issued this year", "value": 320, "unit": "rebates", "target": 400, "trend": "up", "yearOverYearChange": 15 },
-        { "label": "Drought-tolerant conversions", "value": 85, "unit": "yards", "trend": "up", "yearOverYearChange": 22 },
-        { "label": "Water system leak repairs", "value": 48, "unit": "repairs", "trend": "flat" }
+        { "label": "Potable water saved annually", "value": 722, "unit": "million gal", "trend": "flat", "yearOverYearChange": 0 },
+        { "label": "Recycled water distribution lines", "value": 25, "unit": "miles", "trend": "flat" },
+        { "label": "Acres irrigated with recycled water", "value": 200, "unit": "acres", "trend": "flat" },
+        { "label": "Program operating since", "value": 1988, "unit": "year", "trend": "flat" }
       ],
       "highlights": [
-        "Per-capita water use down 4% year-over-year",
-        "320 water-saving rebates issued — toilets, washers, and irrigation",
-        "85 front-yard drought conversions completed"
+        "722 million gallons of potable water conserved every year",
+        "25 miles of recycled water distribution lines serve 200+ acres",
+        "Parks, medians, school grounds, and golf courses all use recycled water",
+        "Program has operated continuously since 1988 — nearly 4 decades"
       ],
       "challenges": [
-        "Still 25 gallons above the 100 gpcd state target",
-        "Rebate program not reaching 100% of budget allocation",
-        "Aging pipes causing more system leaks"
+        "Expanding recycled water to additional commercial and residential uses",
+        "Aging infrastructure requires ongoing maintenance investment",
+        "Climate change increasing demand for drought-resistant irrigation"
       ],
       "source": {
-        "documentName": "Cerritos Annual Water Quality Report 2024",
-        "accessDate": "2024-11-15",
+        "documentName": "City of Cerritos — Recycled Water Program",
+        "documentUrl": "https://www.cerritos.gov/city-government/sustainability/recycled-water/",
+        "accessDate": "2025-06-27",
+        "freshnessLabel": "current"
+      }
+    },
+    {
+      "id": "urban-forestry",
+      "title": "Urban Forestry & Tree City USA",
+      "type": "program",
+      "sustainabilityTag": "parks",
+      "description": "Cerritos maintains over 28,000 public trees across streets, parks, and medians. The city has been recognized as a Tree City USA by the National Arbor Day Foundation for 25+ consecutive years, planting approximately 250 new trees annually.",
+      "tldr": "With 28,000+ trees and 25+ years as Tree City USA, Cerritos is serious about its urban canopy for cleaner air and cooler streets.",
+      "icon": "TreePine",
+      "metrics": [
+        { "label": "Public trees maintained", "value": 28000, "unit": "trees", "trend": "up", "yearOverYearChange": 250 },
+        { "label": "New trees planted annually", "value": 250, "unit": "trees/yr", "trend": "flat" },
+        { "label": "Tree City USA consecutive years", "value": 25, "unit": "years", "trend": "up", "yearOverYearChange": 1 },
+        { "label": "Parks & Trees Management budget", "value": 4.5, "unit": "$M", "trend": "up", "yearOverYearChange": 3.4 }
+      ],
+      "highlights": [
+        "28,000+ public trees — one of the greenest cities in the LA metro",
+        "Tree City USA for 25+ consecutive years from the Arbor Day Foundation",
+        "~250 new trees planted each year to replace damaged or aging trees",
+        "$4.5M invested in parks and trees management (FY 2025-26)"
+      ],
+      "challenges": [
+        "Drought stress and climate impacts increasing tree mortality rates",
+        "Need more drought-tolerant species in future plantings",
+        "Balancing tree canopy growth with urban development pressures"
+      ],
+      "source": {
+        "documentName": "City of Cerritos — Current Green Efforts",
+        "documentUrl": "https://www.cerritos.gov/city-government/sustainability/current-green-efforts/",
+        "accessDate": "2025-06-27",
+        "freshnessLabel": "current"
+      }
+    },
+    {
+      "id": "solar-energy",
+      "title": "Solar Energy & Clean Power",
+      "type": "program",
+      "sustainabilityTag": "energy",
+      "description": "Cerritos was a solar energy pioneer — City Hall featured one of the nation's first solar heating systems when it opened in 1978. Today, the Corporate Yard solar array generates 350,000 kWh/year, LED traffic signals save 60% energy, and the city participates in the Magnolia Power Plant clean energy partnership.",
+      "tldr": "From the nation's first solar City Hall in 1978 to today's 350,000 kWh solar farm, Cerritos has been a clean energy leader for decades.",
+      "icon": "Zap",
+      "metrics": [
+        { "label": "Solar generation (Corporate Yard)", "value": 350000, "unit": "kWh/yr", "trend": "flat" },
+        { "label": "City Hall solar panels", "value": 1408, "unit": "sq ft", "trend": "flat" },
+        { "label": "LED signal energy savings", "value": 60, "unit": "%", "trend": "flat" },
+        { "label": "Solar pioneer since", "value": 1978, "unit": "year", "trend": "flat" }
+      ],
+      "highlights": [
+        "City Hall solar heating system installed 1978 — one of the nation's first",
+        "Corporate Yard solar array generates 350,000 kWh per year",
+        "LED traffic signals across the city save 60% energy vs. incandescent",
+        "Magnolia Power Plant partnership provides clean energy for city facilities"
+      ],
+      "challenges": [
+        "Expanding solar to additional city facilities and parking structures",
+        "Battery storage needed to maximize solar generation value",
+        "Aging City Hall system needs modernization for current technology"
+      ],
+      "source": {
+        "documentName": "City of Cerritos — Current Green Efforts",
+        "documentUrl": "https://www.cerritos.gov/city-government/sustainability/current-green-efforts/",
+        "accessDate": "2025-06-27",
+        "freshnessLabel": "current"
+      }
+    },
+    {
+      "id": "clean-fleet",
+      "title": "Clean Vehicle Fleet & CNG",
+      "type": "program",
+      "sustainabilityTag": "energy",
+      "description": "Cerritos operates a Compressed Natural Gas (CNG) fueling station built in 2007. All Athens Services waste collection vehicles are CNG-powered. The Cerritos on Wheels (COW) transit buses run on propane, reducing emissions from city transportation.",
+      "tldr": "Every trash truck and city bus in Cerritos runs on cleaner fuel — CNG for waste vehicles and propane for transit buses.",
+      "icon": "Truck",
+      "metrics": [
+        { "label": "Waste vehicles on CNG", "value": 100, "unit": "%", "trend": "flat" },
+        { "label": "CNG station operating since", "value": 2007, "unit": "year", "trend": "flat" },
+        { "label": "Transit buses on propane", "value": 100, "unit": "%", "trend": "flat" },
+        { "label": "Vehicle maintenance budget", "value": 3.0, "unit": "$M", "trend": "flat" }
+      ],
+      "highlights": [
+        "100% of Athens Services waste hauling vehicles are CNG-operated",
+        "City-owned CNG fueling station operational since 2007",
+        "Cerritos on Wheels (COW) transit fleet runs on propane",
+        "Reducing diesel emissions across all city fleet operations"
+      ],
+      "challenges": [
+        "Transitioning to electric vehicles as EV technology matures",
+        "CNG infrastructure maintenance and upgrade costs",
+        "Evaluating electric bus options for the COW transit service"
+      ],
+      "source": {
+        "documentName": "City of Cerritos — Current Green Efforts",
+        "documentUrl": "https://www.cerritos.gov/city-government/sustainability/current-green-efforts/",
+        "accessDate": "2025-06-27",
+        "freshnessLabel": "current"
+      }
+    },
+    {
+      "id": "fiscal-health",
+      "title": "Fiscal Health & Transparency",
+      "type": "governance",
+      "sustainabilityTag": "general",
+      "description": "Cerritos maintains strong fiscal health with a General Fund reserve policy, GFOA Distinguished Budget Presentation Award, and public financial transparency through the OpenGov portal. FY 2025-26 includes a strategic $2M CalPERS Additional Discretionary Payment (ADP) to reduce long-term pension liability.",
+      "tldr": "Cerritos is financially healthy with award-winning budget transparency and smart moves to pay down pension debt early.",
+      "icon": "ShieldCheck",
+      "metrics": [
+        { "label": "General Fund revenue", "value": 101.5, "unit": "$M", "trend": "up", "yearOverYearChange": 2.1 },
+        { "label": "All-Funds operating expenses", "value": 131.4, "unit": "$M", "trend": "up", "yearOverYearChange": 1.8 },
+        { "label": "Capital improvements (CIP)", "value": 23.0, "unit": "$M", "trend": "up" },
+        { "label": "CalPERS early paydown", "value": 2.0, "unit": "$M", "trend": "up" }
+      ],
+      "highlights": [
+        "GFOA Distinguished Budget Presentation Award recipient",
+        "$101.5M General Fund revenue with diversified income sources",
+        "$2M CalPERS ADP payment to reduce long-term pension liability",
+        "OpenGov transparency portal provides public access to 10 years of data"
+      ],
+      "challenges": [
+        "Sales tax headwinds from auto sales slowdown ($46M forecast adjusted to $42.8M)",
+        "Rising public safety contract costs (Sheriff + Fire)",
+        "CalPERS unfunded liability remains a statewide challenge"
+      ],
+      "source": {
+        "documentName": "City of Cerritos Combined Financial Program FY 2025-2026",
+        "documentUrl": "https://www.cerritos.gov/media/purhqkrc/fy-2025-2026_adopted-budget.pdf",
+        "accessDate": "2025-06-27",
         "freshnessLabel": "current"
       }
     }

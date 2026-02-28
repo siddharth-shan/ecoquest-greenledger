@@ -2,93 +2,111 @@
   "terms": [
     {
       "term": "General Fund",
-      "definition": "The city's main bank account that pays for everyday services like police, fire, and parks. It's funded mostly by taxes and is the biggest pot of money the city manages.",
-      "example": "Cerritos uses its General Fund (about $95 million) to pay for sheriff patrols, park maintenance, and street repairs.",
-      "relatedTerms": ["Revenue", "Expenditure", "Fund Balance"]
+      "definition": "The city's main bank account that pays for everyday services like sheriff patrols, fire response, parks, and the library. It's funded mostly by sales tax and is the biggest pot of money the city manages.",
+      "example": "Cerritos's General Fund revenue is $101.5 million for FY 2025-26 — sales tax alone brings in $43.8M (43% of the total).",
+      "relatedTerms": ["Revenue", "Expenditure", "Fund Balance", "Enterprise Fund"]
     },
     {
-      "term": "Capital Budget",
-      "definition": "Money set aside for big, one-time projects like building a new park, repaving a road, or upgrading a water treatment plant. These are things that last many years.",
-      "example": "The city's capital budget might include $2 million to renovate a playground that will serve kids for the next 20 years.",
-      "relatedTerms": ["Operating Budget", "Bond", "Appropriation"]
+      "term": "Contract City",
+      "definition": "A city that contracts with a county or other agency for major services instead of running them in-house. Cerritos is a contract city — it pays LA County for sheriff and fire services rather than having its own police and fire departments.",
+      "example": "Cerritos pays the LA County Sheriff's Department ~$16.2M/year for dedicated deputies. This means the city doesn't have its own police force — it's a 'contract city.'",
+      "relatedTerms": ["Community Safety", "General Fund", "Expenditure"]
+    },
+    {
+      "term": "Sales Tax",
+      "definition": "A percentage of each purchase in the city that goes to fund city services. In California, a portion of the state sales tax (currently 1%) is returned to the city where the sale happened. This is Cerritos's #1 revenue source.",
+      "example": "When you buy a $40,000 car at the Cerritos Auto Square, about $400 in sales tax comes to the city. The Auto Square alone generates ~$14.6M/year — about one-third of all city sales tax!",
+      "relatedTerms": ["Revenue", "Tax Base", "Auto Square"]
+    },
+    {
+      "term": "Capital Improvement Program (CIP)",
+      "definition": "Money set aside for big, one-time infrastructure projects like repaving roads, upgrading water systems, or renovating buildings. These projects last many years and are separate from day-to-day operating costs.",
+      "example": "The FY 2025-26 CIP totals $23.0 million for projects like street rehabilitation, park upgrades, and water system improvements.",
+      "relatedTerms": ["Operating Budget", "Bond", "Public Works"]
     },
     {
       "term": "Operating Budget",
-      "definition": "The plan for day-to-day spending that keeps the city running -- salaries, supplies, utilities, and regular maintenance. Think of it like a household's monthly bills.",
-      "example": "The operating budget covers things like paying firefighters every month and keeping the lights on at City Hall.",
-      "relatedTerms": ["Capital Budget", "General Fund", "Line Item"]
+      "definition": "The plan for day-to-day spending that keeps the city running — salaries, supplies, utilities, and regular maintenance. Think of it like a household's monthly bills. Cerritos's all-funds operating budget is $131.4M.",
+      "example": "The operating budget covers things like paying sheriff deputies every month, keeping the lights on at the library, and maintaining 28,000+ city trees.",
+      "relatedTerms": ["Capital Improvement Program", "General Fund", "Line Item"]
     },
     {
       "term": "Revenue",
-      "definition": "All the money coming into the city's budget. This includes taxes, fees, grants, and other income. It's like the city's paycheck.",
-      "example": "Cerritos collects about $95 million in revenue each year, with property tax and sales tax being the two biggest sources.",
+      "definition": "All the money coming into the city's budget. This includes taxes, fees, property income, and grants. It's like the city's paycheck.",
+      "example": "Cerritos collects $101.5M in General Fund revenue — with sales tax ($43.8M), property income ($21.8M), and other taxes ($12.7M) as the top three sources.",
       "relatedTerms": ["Expenditure", "Tax Base", "Surplus/Deficit"]
     },
     {
       "term": "Expenditure",
       "definition": "Money the city spends on services, projects, and operations. Every dollar going out of the budget is an expenditure.",
-      "example": "The city's largest expenditure is the sheriff contract at about $30 million per year -- that's roughly one-third of the whole budget.",
+      "example": "The city's largest single expenditure is the Sheriff contract at about $16.2M/year — nearly 18% of the General Fund operating budget.",
       "relatedTerms": ["Revenue", "Appropriation", "Line Item"]
     },
     {
       "term": "Per Capita",
-      "definition": "A Latin phrase meaning 'per person.' It's a way to figure out how much something costs for each resident, which makes it easier to compare cities of different sizes.",
-      "example": "If Cerritos spends $95 million for 51,460 people, that's about $1,846 per capita -- meaning each resident's share is roughly $1,846.",
+      "definition": "A Latin phrase meaning 'per person.' Dividing the budget by population shows how much is spent per resident, making it easier to compare cities of different sizes.",
+      "example": "Cerritos's General Fund spends $91.5M for 51,460 people — that's about $1,778 per capita. The all-funds figure is $131.4M ÷ 51,460 = $2,553 per person.",
       "relatedTerms": ["General Fund", "Revenue", "Expenditure"]
     },
     {
-      "term": "Fiscal Year",
-      "definition": "The 12-month period the city uses for its budget. In California, the fiscal year runs from July 1 to June 30 -- so 'FY 2024-25' means July 2024 through June 2025.",
-      "example": "Schools start in September, but the city's fiscal year starts in July, so the 2024-25 budget kicks in two months before school starts.",
-      "relatedTerms": ["Operating Budget", "Capital Budget"]
-    },
-    {
-      "term": "Bond",
-      "definition": "A way for the city to borrow money for big projects by promising to pay it back over time with interest -- kind of like a loan. Voters often have to approve bonds.",
-      "example": "The city might issue a $10 million bond to build a new community center and pay it back over 20 years using tax revenue.",
-      "relatedTerms": ["Capital Budget", "Tax Base"]
+      "term": "Fiscal Year (FY)",
+      "definition": "The 12-month period the city uses for its budget. In California, the fiscal year runs from July 1 to June 30 — so 'FY 2025-26' means July 2025 through June 2026.",
+      "example": "Schools start in September, but the city's fiscal year starts in July. The FY 2025-26 budget was adopted in June 2025 and takes effect on July 1st.",
+      "relatedTerms": ["Operating Budget", "Capital Improvement Program"]
     },
     {
       "term": "Enterprise Fund",
-      "definition": "A separate budget for a city service that charges fees to cover its own costs, like water or sewer. It's meant to be self-supporting, like a mini business within the city.",
-      "example": "Cerritos runs its water utility as an enterprise fund -- the fees on your water bill pay for water treatment, not tax dollars.",
+      "definition": "A separate budget for a city service that charges fees to cover its own costs, like water or sewer. It's meant to be self-supporting, like a mini business within the city. Cerritos has Water, Sewer, and Electric enterprise funds.",
+      "example": "The water system runs as an enterprise fund — the fees on your water bill pay for water treatment and pipe maintenance, not tax dollars from the General Fund.",
       "relatedTerms": ["General Fund", "Restricted Fund"]
     },
     {
-      "term": "Restricted Fund",
-      "definition": "Money that can only be spent on a specific purpose, usually because of a law or grant requirement. The city can't use it for anything else.",
-      "example": "Gas tax money from the state is restricted -- Cerritos must use it for road repairs and can't spend it on parks or police.",
-      "relatedTerms": ["General Fund", "Enterprise Fund", "Appropriation"]
+      "term": "CalPERS",
+      "definition": "California Public Employees' Retirement System — the state agency that manages pension benefits for city employees. Cities must make annual contributions, and many face 'unfunded liabilities' (promised benefits that haven't been fully funded yet).",
+      "example": "Cerritos is paying an extra $2.0M 'Additional Discretionary Payment' (ADP) to CalPERS in FY 2025-26 to reduce its long-term pension debt faster.",
+      "relatedTerms": ["General Fund", "Expenditure", "Operating Budget"]
     },
     {
-      "term": "Surplus/Deficit",
-      "definition": "A surplus means the city collected more money than it spent (good news!). A deficit means it spent more than it earned (a warning sign that cuts or new revenue may be needed).",
-      "example": "If the city collects $96 million in revenue but only spends $95 million, it has a $1 million surplus that can go into savings.",
-      "relatedTerms": ["Revenue", "Expenditure", "Fund Balance"]
+      "term": "CCPA (Cerritos Center for the Performing Arts)",
+      "definition": "A world-class performing arts venue operated by the city that hosts Broadway shows, concerts, comedy, and cultural events. It's one of Cerritos's signature community assets with a $12.3M annual budget.",
+      "example": "The CCPA brings in big-name entertainment to Cerritos and also runs arts education programs — but it requires significant city funding at $12.3M/year because ticket revenue doesn't cover all costs.",
+      "relatedTerms": ["General Fund", "Community & Cultural Services"]
     },
     {
-      "term": "Appropriation",
-      "definition": "Official permission from the City Council to spend a specific amount of money on something. No city department can spend money without an appropriation.",
-      "example": "The City Council appropriated $500,000 for new playground equipment -- that's the green light for the Parks Department to make the purchase.",
-      "relatedTerms": ["Expenditure", "Line Item", "Operating Budget"]
+      "term": "Ground Lease",
+      "definition": "When the city owns land and leases it to a private company to develop and operate. The company pays rent to the city, creating a reliable long-term income stream. Cerritos has a large ground lease portfolio.",
+      "example": "Cerritos earns ~$14.6M/year from ground leases on city-owned land — including the Cerritos Towne Center, auto dealership parcels, and the Lincoln Station development.",
+      "relatedTerms": ["Revenue", "Use of Money & Property", "Tax Base"]
     },
     {
-      "term": "Line Item",
-      "definition": "A single, specific entry in the budget that shows exactly what money is being spent on. It's the most detailed level of the budget.",
-      "example": "Under Parks & Recreation, you might see a line item for 'Tree Planting & Care: $2,050,000' -- that tells you exactly how much goes to trees.",
-      "relatedTerms": ["Appropriation", "Expenditure", "Operating Budget"]
+      "term": "GFOA Award",
+      "definition": "The Government Finance Officers Association (GFOA) Distinguished Budget Presentation Award recognizes governments that produce high-quality budget documents with transparency and clarity. It's like a gold star for financial reporting.",
+      "example": "Cerritos has received the GFOA Distinguished Budget Presentation Award, meaning its 370-page budget document meets the highest national standards for transparency.",
+      "relatedTerms": ["Operating Budget", "General Fund"]
     },
     {
       "term": "Fund Balance",
-      "definition": "The city's savings account -- money left over from previous years that hasn't been spent. A healthy fund balance helps the city handle emergencies or unexpected costs.",
-      "example": "Cerritos keeps a fund balance as a rainy-day reserve so it can still pay for services if tax revenue drops unexpectedly.",
+      "definition": "The city's savings account — money left over from previous years. A healthy fund balance helps the city handle emergencies, economic downturns, or unexpected costs without cutting services.",
+      "example": "When sales tax revenue dropped during the auto sales slowdown, Cerritos's fund balance helped maintain services without layoffs or cuts.",
       "relatedTerms": ["General Fund", "Surplus/Deficit", "Revenue"]
     },
     {
       "term": "Tax Base",
-      "definition": "The total value of all the property, businesses, and economic activity that the city can collect taxes on. A bigger tax base means more potential revenue.",
-      "example": "The Cerritos Auto Square and Cerritos Towne Center are huge parts of the city's tax base because they generate millions in sales tax.",
-      "relatedTerms": ["Revenue", "Per Capita", "Bond"]
+      "definition": "The total value of all property, businesses, and economic activity that generates tax revenue for the city. A bigger, more diverse tax base means more revenue stability.",
+      "example": "The Cerritos Auto Square (one of the world's largest auto malls) and Cerritos Towne Center are the backbone of the city's tax base, generating tens of millions in sales tax annually.",
+      "relatedTerms": ["Revenue", "Sales Tax", "Per Capita"]
+    },
+    {
+      "term": "Surplus/Deficit",
+      "definition": "A surplus means the city collected more money than it spent (good news!). A deficit means it spent more than it earned — a warning sign that reserves may be needed.",
+      "example": "With $101.5M in General Fund revenue and $91.5M in operating expenditures, Cerritos runs a surplus that funds capital projects and builds reserves.",
+      "relatedTerms": ["Revenue", "Expenditure", "Fund Balance"]
+    },
+    {
+      "term": "Bond",
+      "definition": "A way for the city to borrow money for big projects by promising to pay it back over time with interest — like a loan. Voters often have to approve bonds.",
+      "example": "A city might issue bonds to fund a major road reconstruction project, then repay the bonds over 20-30 years using dedicated revenue.",
+      "relatedTerms": ["Capital Improvement Program", "Tax Base"]
     }
   ]
 }

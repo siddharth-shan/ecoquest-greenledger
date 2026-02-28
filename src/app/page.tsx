@@ -88,7 +88,7 @@ export default function HomePage() {
       <section className="py-10 bg-white border-b border-gray-100">
         <div className="container-custom">
           <h2 className="font-heading font-bold text-sm text-gray-400 uppercase tracking-wider mb-4">
-            Cerritos Budget at a Glance
+            Cerritos FY 2025-26 Budget at a Glance
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex items-center gap-3">
@@ -96,8 +96,8 @@ export default function HomePage() {
                 <DollarSign className="w-5 h-5 text-eco-green" />
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">$136.6M</p>
-                <p className="text-xs text-gray-500">Total Budget</p>
+                <p className="text-xl font-bold text-gray-900">$131.4M</p>
+                <p className="text-xs text-gray-500">All-Funds Budget</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -105,7 +105,7 @@ export default function HomePage() {
                 <Users className="w-5 h-5 text-eco-blue" />
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">$2,655</p>
+                <p className="text-xl font-bold text-gray-900">$2,553</p>
                 <p className="text-xs text-gray-500">Per Resident</p>
               </div>
             </div>
@@ -114,8 +114,8 @@ export default function HomePage() {
                 <TreePine className="w-5 h-5 text-tag-parks" />
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">46%</p>
-                <p className="text-xs text-gray-500">Sustainability Spend</p>
+                <p className="text-xl font-bold text-gray-900">7</p>
+                <p className="text-xs text-gray-500">City Departments</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -123,8 +123,8 @@ export default function HomePage() {
                 <TrendingUp className="w-5 h-5 text-eco-yellow" />
               </div>
               <div>
-                <p className="text-xl font-bold text-gray-900">+3.4%</p>
-                <p className="text-xs text-gray-500">YoY Budget Growth</p>
+                <p className="text-xl font-bold text-gray-900">722M gal</p>
+                <p className="text-xs text-gray-500">Water Saved/Year</p>
               </div>
             </div>
           </div>

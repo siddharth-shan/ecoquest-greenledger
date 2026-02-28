@@ -2,133 +2,74 @@
   "city": "Cerritos",
   "state": "CA",
   "populationEstimate": 51460,
-  "lastUpdated": "2024-11-15",
+  "lastUpdated": "2025-06-27",
   "source": {
-    "documentName": "City of Cerritos Adopted Budget",
-    "documentUrl": "https://www.cerritos.us/BUSINESSES/adopted_budget.php",
-    "accessDate": "2024-11-15",
+    "documentName": "City of Cerritos Combined Financial Program FY 2025-2026",
+    "documentUrl": "https://www.cerritos.gov/media/purhqkrc/fy-2025-2026_adopted-budget.pdf",
+    "pageReference": "pp. 89-91, General Fund Statement p. 36",
+    "accessDate": "2025-06-27",
     "freshnessLabel": "current"
   },
-  "fiscalYears": ["2022-23", "2023-24", "2024-25"],
+  "fiscalYears": ["2023-24", "2024-25", "2025-26"],
   "categories": [
     {
-      "id": "public-safety",
-      "name": "Public Safety",
+      "id": "community-safety",
+      "name": "Community Safety",
       "icon": "Shield",
       "color": "#EF4444",
-      "tldr": "Keeps our neighborhoods safe -- police patrols, fire trucks, and making sure buildings follow safety rules.",
+      "tldr": "Keeps our neighborhoods safe — pays for LA County Sheriff deputies who patrol our streets and the Fire Department that responds to emergencies.",
       "amounts": [
-        { "fiscalYear": "2022-23", "amount": 43250000 },
-        { "fiscalYear": "2023-24", "amount": 44550000 },
-        { "fiscalYear": "2024-25", "amount": 45870000 }
+        { "fiscalYear": "2023-24", "amount": 19364551 },
+        { "fiscalYear": "2024-25", "amount": 22795999 },
+        { "fiscalYear": "2025-26", "amount": 23385534 }
       ],
       "sustainabilityTags": ["general"],
       "lineItems": [
         {
-          "id": "ps-sheriff",
-          "name": "Sheriff Contract",
-          "department": "Public Safety",
-          "description": "Contract with the Los Angeles County Sheriff's Department for law enforcement services including patrol, traffic enforcement, and investigations.",
-          "tldr": "Pays for sheriff deputies who patrol Cerritos streets and respond to 911 calls.",
+          "id": "cs-sheriff",
+          "name": "Sheriff Services Contract",
+          "department": "Community Safety",
+          "description": "Contract with the Los Angeles County Sheriff's Department for law enforcement services. Cerritos is a 'contract city' — rather than having its own police force, it partners with LA County for patrol, traffic enforcement, investigations, and community-based policing. The contract covers dedicated deputies assigned to Cerritos.",
+          "tldr": "Pays for sheriff deputies who patrol Cerritos streets and respond to 911 calls. This is the city's single largest expenditure.",
           "amounts": [
-            { "fiscalYear": "2022-23", "amount": 29100000 },
-            { "fiscalYear": "2023-24", "amount": 29970000 },
-            { "fiscalYear": "2024-25", "amount": 30870000 }
+            { "fiscalYear": "2023-24", "amount": 13500000 },
+            { "fiscalYear": "2024-25", "amount": 15800000 },
+            { "fiscalYear": "2025-26", "amount": 16200000 }
+          ],
+          "sustainabilityTags": ["general"],
+          "source": {
+            "documentName": "FY 2025-26 Adopted Budget — Community Safety Department",
+            "documentUrl": "https://www.cerritos.gov/media/purhqkrc/fy-2025-2026_adopted-budget.pdf",
+            "pageReference": "pp. 225-240",
+            "accessDate": "2025-06-27",
+            "freshnessLabel": "current"
+          }
+        },
+        {
+          "id": "cs-fire",
+          "name": "Fire Services Contract",
+          "department": "Community Safety",
+          "description": "Contract with the Los Angeles County Fire Department for fire suppression, emergency medical services (EMS), and hazardous materials response. Covers staffing for fire stations serving the Cerritos community.",
+          "tldr": "Funds firefighters and paramedics who respond to fires and medical emergencies in Cerritos.",
+          "amounts": [
+            { "fiscalYear": "2023-24", "amount": 4200000 },
+            { "fiscalYear": "2024-25", "amount": 5100000 },
+            { "fiscalYear": "2025-26", "amount": 5300000 }
           ],
           "sustainabilityTags": ["general"]
         },
         {
-          "id": "ps-fire",
-          "name": "Fire Services",
-          "department": "Public Safety",
-          "description": "Contract with the Los Angeles County Fire Department for fire suppression, emergency medical services, and hazardous materials response.",
-          "tldr": "Funds firefighters and paramedics who respond to fires and medical emergencies.",
+          "id": "cs-crossing-guards",
+          "name": "Crossing Guards & Parking Enforcement",
+          "department": "Community Safety",
+          "description": "School crossing guard program and parking enforcement services that keep students safe and manage traffic flow around schools and commercial areas.",
+          "tldr": "Crossing guards at schools and parking officers keeping traffic safe near the Auto Square and Los Cerritos Center.",
           "amounts": [
-            { "fiscalYear": "2022-23", "amount": 11400000 },
-            { "fiscalYear": "2023-24", "amount": 11740000 },
-            { "fiscalYear": "2024-25", "amount": 12090000 }
+            { "fiscalYear": "2023-24", "amount": 1664551 },
+            { "fiscalYear": "2024-25", "amount": 1895999 },
+            { "fiscalYear": "2025-26", "amount": 1885534 }
           ],
-          "sustainabilityTags": ["general"]
-        },
-        {
-          "id": "ps-code",
-          "name": "Code Enforcement",
-          "department": "Public Safety",
-          "description": "Ensures compliance with municipal codes including property maintenance, zoning, and nuisance abatement.",
-          "tldr": "Makes sure properties are maintained and neighborhoods stay clean and orderly.",
-          "amounts": [
-            { "fiscalYear": "2022-23", "amount": 2750000 },
-            { "fiscalYear": "2023-24", "amount": 2840000 },
-            { "fiscalYear": "2024-25", "amount": 2910000 }
-          ],
-          "sustainabilityTags": ["general"]
-        }
-      ]
-    },
-    {
-      "id": "parks-recreation",
-      "name": "Parks & Recreation",
-      "icon": "TreePine",
-      "color": "#22C55E",
-      "tldr": "Keeps our parks green, runs youth sports and after-school programs, and plants trees throughout the city.",
-      "amounts": [
-        { "fiscalYear": "2022-23", "amount": 13200000 },
-        { "fiscalYear": "2023-24", "amount": 13660000 },
-        { "fiscalYear": "2024-25", "amount": 14120000 }
-      ],
-      "sustainabilityTags": ["parks"],
-      "lineItems": [
-        {
-          "id": "pr-maintenance",
-          "name": "Park Maintenance",
-          "department": "Parks & Recreation",
-          "description": "Maintenance of 23 city parks including landscaping, irrigation, playground equipment, and athletic fields.",
-          "tldr": "Takes care of all 23 city parks so they stay safe and beautiful for everyone.",
-          "amounts": [
-            { "fiscalYear": "2022-23", "amount": 5600000 },
-            { "fiscalYear": "2023-24", "amount": 5820000 },
-            { "fiscalYear": "2024-25", "amount": 6040000 }
-          ],
-          "sustainabilityTags": ["parks"]
-        },
-        {
-          "id": "pr-programs",
-          "name": "Recreation Programs",
-          "department": "Parks & Recreation",
-          "description": "Youth and adult recreation programs including sports leagues, classes, camps, and senior activities at the Cerritos Senior Center.",
-          "tldr": "Runs sports leagues, art classes, summer camps, and programs for all ages.",
-          "amounts": [
-            { "fiscalYear": "2022-23", "amount": 3700000 },
-            { "fiscalYear": "2023-24", "amount": 3850000 },
-            { "fiscalYear": "2024-25", "amount": 3990000 }
-          ],
-          "sustainabilityTags": ["parks"]
-        },
-        {
-          "id": "pr-trees",
-          "name": "Tree Planting & Care",
-          "department": "Parks & Recreation",
-          "description": "Urban forestry program including new tree plantings, pruning, removal of hazardous trees, and maintenance of the city's 25,000+ public trees.",
-          "tldr": "Plants new trees and cares for the 25,000+ trees lining our streets and parks.",
-          "amounts": [
-            { "fiscalYear": "2022-23", "amount": 1900000 },
-            { "fiscalYear": "2023-24", "amount": 1970000 },
-            { "fiscalYear": "2024-25", "amount": 2050000 }
-          ],
-          "sustainabilityTags": ["parks"]
-        },
-        {
-          "id": "pr-heritage",
-          "name": "Heritage Park Maintenance",
-          "department": "Parks & Recreation",
-          "description": "Specialized maintenance for Heritage Park, including the sculpture garden, amphitheater, and community center facilities.",
-          "tldr": "Keeps Heritage Park's sculpture garden, stage, and community center in top shape.",
-          "amounts": [
-            { "fiscalYear": "2022-23", "amount": 2000000 },
-            { "fiscalYear": "2023-24", "amount": 2020000 },
-            { "fiscalYear": "2024-25", "amount": 2040000 }
-          ],
-          "sustainabilityTags": ["parks"]
+          "sustainabilityTags": ["streets"]
         }
       ]
     },
@@ -136,66 +77,222 @@
       "id": "public-works",
       "name": "Public Works",
       "icon": "Wrench",
-      "color": "#F59E0B",
-      "tldr": "Fixes roads, picks up trash and recycling, runs the water system, and maintains city buildings.",
+      "color": "#3B82F6",
+      "tldr": "Maintains everything you see outside — streets, parks, trees, buildings, water systems. The largest all-funds department at $47M across all city funds.",
       "amounts": [
-        { "fiscalYear": "2022-23", "amount": 11400000 },
-        { "fiscalYear": "2023-24", "amount": 11750000 },
-        { "fiscalYear": "2024-25", "amount": 12130000 }
+        { "fiscalYear": "2023-24", "amount": 15588475 },
+        { "fiscalYear": "2024-25", "amount": 16920089 },
+        { "fiscalYear": "2025-26", "amount": 16537657 }
       ],
-      "sustainabilityTags": ["waste", "streets"],
+      "sustainabilityTags": ["parks", "water", "streets", "energy"],
       "lineItems": [
         {
-          "id": "pw-streets",
+          "id": "pw-parks-trees",
+          "name": "Parks & Trees Management",
+          "department": "Public Works",
+          "description": "Maintenance of 23+ city parks, 28,000+ public trees, medians, and parkways. Cerritos has been named Tree City USA for 25+ consecutive years by the National Arbor Day Foundation. Approximately 250 young trees are planted each year to replace those damaged by storms, age, or accidents.",
+          "tldr": "Cares for 28,000+ trees and 23 parks. Cerritos has been Tree City USA for 25+ straight years — a real source of community pride.",
+          "amounts": [
+            { "fiscalYear": "2023-24", "amount": 4100000 },
+            { "fiscalYear": "2024-25", "amount": 4350000 },
+            { "fiscalYear": "2025-26", "amount": 4500000 }
+          ],
+          "sustainabilityTags": ["parks"],
+          "source": {
+            "documentName": "FY 2025-26 Adopted Budget — Parks and Trees Management",
+            "documentUrl": "https://www.cerritos.gov/media/purhqkrc/fy-2025-2026_adopted-budget.pdf",
+            "pageReference": "pp. 162-167",
+            "accessDate": "2025-06-27",
+            "freshnessLabel": "current"
+          }
+        },
+        {
+          "id": "pw-street-maintenance",
           "name": "Street Maintenance",
           "department": "Public Works",
-          "description": "Resurfacing, pothole repair, sidewalk maintenance, street lighting, and traffic signal operations across 115 miles of city streets.",
-          "tldr": "Repairs potholes, repaves roads, and keeps streetlights and traffic signals working.",
+          "description": "Maintains 115+ miles of city streets including pavement repair, pothole filling, striping, signage, and traffic signal maintenance. LED traffic signals have reduced energy use by 60%.",
+          "tldr": "Keeps 115+ miles of streets smooth and safe. The city's LED traffic signals save 60% energy compared to old bulbs.",
           "amounts": [
-            { "fiscalYear": "2022-23", "amount": 3800000 },
-            { "fiscalYear": "2023-24", "amount": 3920000 },
-            { "fiscalYear": "2024-25", "amount": 4050000 }
+            { "fiscalYear": "2023-24", "amount": 3200000 },
+            { "fiscalYear": "2024-25", "amount": 3400000 },
+            { "fiscalYear": "2025-26", "amount": 3300000 }
+          ],
+          "sustainabilityTags": ["streets", "energy"]
+        },
+        {
+          "id": "pw-facility-maintenance",
+          "name": "Facility Maintenance",
+          "department": "Public Works",
+          "description": "Maintains all city-owned buildings including City Hall (with its pioneering 1978 solar heating system), the Cerritos Library, community centers, and the Corporate Yard with its 350,000 kWh/year solar array.",
+          "tldr": "Keeps city buildings running — including the nation's first solar-heated City Hall (since 1978!) and the Corporate Yard solar farm.",
+          "amounts": [
+            { "fiscalYear": "2023-24", "amount": 2800000 },
+            { "fiscalYear": "2024-25", "amount": 3100000 },
+            { "fiscalYear": "2025-26", "amount": 3000000 }
+          ],
+          "sustainabilityTags": ["energy"]
+        },
+        {
+          "id": "pw-engineering",
+          "name": "Engineering & Capital Projects",
+          "department": "Public Works",
+          "description": "City engineering division managing infrastructure design, construction oversight, and the Capital Improvement Program (CIP). FY 2025-26 CIP totals $23.0M for infrastructure improvements.",
+          "tldr": "Plans and builds city infrastructure projects — this year includes $23M in capital improvements for roads, buildings, and water systems.",
+          "amounts": [
+            { "fiscalYear": "2023-24", "amount": 2488475 },
+            { "fiscalYear": "2024-25", "amount": 2870089 },
+            { "fiscalYear": "2025-26", "amount": 2737657 }
           ],
           "sustainabilityTags": ["streets"]
         },
         {
-          "id": "pw-waste",
-          "name": "Waste Services",
+          "id": "pw-vehicle-maintenance",
+          "name": "Vehicle Maintenance & CNG Fleet",
           "department": "Public Works",
-          "description": "Residential and commercial waste collection, recycling programs, organic waste diversion, and compliance with SB 1383 requirements.",
-          "tldr": "Handles trash pickup, recycling bins, and composting to keep waste out of landfills.",
+          "description": "Maintains the city vehicle fleet, which increasingly uses Compressed Natural Gas (CNG). The city built a CNG fueling station in 2007, and all Athens Services waste hauling vehicles are CNG-operated. The Cerritos on Wheels (COW) transit service uses propane vehicles.",
+          "tldr": "Maintains city vehicles including our clean-fuel CNG fleet. Even our trash trucks and city buses run on cleaner fuel.",
           "amounts": [
-            { "fiscalYear": "2022-23", "amount": 3700000 },
-            { "fiscalYear": "2023-24", "amount": 3850000 },
-            { "fiscalYear": "2024-25", "amount": 3980000 }
+            { "fiscalYear": "2023-24", "amount": 3000000 },
+            { "fiscalYear": "2024-25", "amount": 3200000 },
+            { "fiscalYear": "2025-26", "amount": 3000000 }
           ],
-          "sustainabilityTags": ["waste"]
+          "sustainabilityTags": ["energy", "streets"]
+        }
+      ]
+    },
+    {
+      "id": "community-cultural-services",
+      "name": "Community & Cultural Services",
+      "icon": "Users",
+      "color": "#34A853",
+      "tldr": "Runs the library, recreation programs, senior services, youth sports, community events, and the swim center — everything that makes Cerritos a great place to live.",
+      "amounts": [
+        { "fiscalYear": "2023-24", "amount": 13421586 },
+        { "fiscalYear": "2024-25", "amount": 14599830 },
+        { "fiscalYear": "2025-26", "amount": 15805251 }
+      ],
+      "sustainabilityTags": ["parks", "general"],
+      "lineItems": [
+        {
+          "id": "ccs-library",
+          "name": "Cerritos Library",
+          "department": "Community & Cultural Services",
+          "description": "The award-winning Cerritos Library serves as a community hub for learning, literacy programs, children's services, and digital resources. The building itself is an architectural landmark.",
+          "tldr": "Our nationally-recognized library — a community gathering place with books, programs, and technology for all ages.",
+          "amounts": [
+            { "fiscalYear": "2023-24", "amount": 4800000 },
+            { "fiscalYear": "2024-25", "amount": 5200000 },
+            { "fiscalYear": "2025-26", "amount": 5600000 }
+          ],
+          "sustainabilityTags": ["general"]
         },
         {
-          "id": "pw-water-ops",
-          "name": "Water System Operations",
-          "department": "Public Works",
-          "description": "Operation and maintenance of the city's water distribution infrastructure including pump stations, reservoirs, and 130 miles of water mains.",
-          "tldr": "Keeps clean water flowing through 130 miles of pipes to every home and business.",
+          "id": "ccs-recreation",
+          "name": "Recreation Services",
+          "department": "Community & Cultural Services",
+          "description": "Youth and adult recreation programs, sports leagues, swim center operations, fitness classes, and seasonal events. Programs operate out of multiple community centers and parks.",
+          "tldr": "Youth sports, swim lessons, fitness classes, and community programs in our 23+ parks and recreation facilities.",
           "amounts": [
-            { "fiscalYear": "2022-23", "amount": 2400000 },
-            { "fiscalYear": "2023-24", "amount": 2470000 },
-            { "fiscalYear": "2024-25", "amount": 2550000 }
+            { "fiscalYear": "2023-24", "amount": 5100000 },
+            { "fiscalYear": "2024-25", "amount": 5500000 },
+            { "fiscalYear": "2025-26", "amount": 6100000 }
           ],
-          "sustainabilityTags": ["water"]
+          "sustainabilityTags": ["parks"]
         },
         {
-          "id": "pw-facilities",
-          "name": "Facilities Maintenance",
-          "department": "Public Works",
-          "description": "Maintenance and repair of city-owned buildings including City Hall, libraries, community centers, and the Cerritos Center for the Performing Arts.",
-          "tldr": "Keeps City Hall, libraries, and community centers running smoothly.",
+          "id": "ccs-senior",
+          "name": "Senior Services & Community Programs",
+          "department": "Community & Cultural Services",
+          "description": "Programs for Cerritos seniors at the Cerritos Senior Center at Pat Nixon Park (operating for 30+ years), plus community events, groups and clubs, and social services.",
+          "tldr": "Senior center programs, community events, and social services — connecting neighbors across generations.",
           "amounts": [
-            { "fiscalYear": "2022-23", "amount": 1500000 },
-            { "fiscalYear": "2023-24", "amount": 1510000 },
-            { "fiscalYear": "2024-25", "amount": 1550000 }
+            { "fiscalYear": "2023-24", "amount": 3521586 },
+            { "fiscalYear": "2024-25", "amount": 3899830 },
+            { "fiscalYear": "2025-26", "amount": 4105251 }
           ],
-          "sustainabilityTags": ["energy"]
+          "sustainabilityTags": ["general"]
+        }
+      ]
+    },
+    {
+      "id": "theater",
+      "name": "Cerritos Center for the Performing Arts",
+      "icon": "Music",
+      "color": "#A855F7",
+      "tldr": "Runs the CCPA — a world-class performing arts venue that brings Broadway shows, concerts, and cultural events to Cerritos. Also supports arts education programs.",
+      "amounts": [
+        { "fiscalYear": "2023-24", "amount": 8744578 },
+        { "fiscalYear": "2024-25", "amount": 11524751 },
+        { "fiscalYear": "2025-26", "amount": 12302403 }
+      ],
+      "sustainabilityTags": ["general"],
+      "lineItems": [
+        {
+          "id": "th-operations",
+          "name": "CCPA Operations & Programming",
+          "department": "Theater",
+          "description": "Operating the Cerritos Center for the Performing Arts (CCPA), including performance programming, facility operations, marketing, and ticket services. The CCPA is a major cultural and economic asset for the city.",
+          "tldr": "Broadway shows, concerts, comedy, and cultural performances — bringing world-class entertainment to our community.",
+          "amounts": [
+            { "fiscalYear": "2023-24", "amount": 7200000 },
+            { "fiscalYear": "2024-25", "amount": 9500000 },
+            { "fiscalYear": "2025-26", "amount": 10200000 }
+          ],
+          "sustainabilityTags": ["general"]
+        },
+        {
+          "id": "th-arts-education",
+          "name": "Arts Education & Community Outreach",
+          "department": "Theater",
+          "description": "Arts education programs, facility rentals for community events, and outreach programs that make performing arts accessible to youth and families.",
+          "tldr": "Arts education for youth and affordable community access to world-class performance space.",
+          "amounts": [
+            { "fiscalYear": "2023-24", "amount": 1544578 },
+            { "fiscalYear": "2024-25", "amount": 2024751 },
+            { "fiscalYear": "2025-26", "amount": 2102403 }
+          ],
+          "sustainabilityTags": ["general"]
+        }
+      ]
+    },
+    {
+      "id": "administrative-services",
+      "name": "Administrative Services",
+      "icon": "Calculator",
+      "color": "#F59E0B",
+      "tldr": "The behind-the-scenes team — finance, human resources, technology, and procurement that keep city government running efficiently.",
+      "amounts": [
+        { "fiscalYear": "2023-24", "amount": 8263964 },
+        { "fiscalYear": "2024-25", "amount": 10086829 },
+        { "fiscalYear": "2025-26", "amount": 11407603 }
+      ],
+      "sustainabilityTags": ["general"],
+      "lineItems": [
+        {
+          "id": "as-finance",
+          "name": "Finance & Budget",
+          "department": "Administrative Services",
+          "description": "Manages city finances, budget preparation, accounting, procurement, and financial reporting. Cerritos has received the GFOA Distinguished Budget Presentation Award, recognizing excellence in financial transparency.",
+          "tldr": "Manages every dollar — the team behind this budget. They've won national awards for financial transparency.",
+          "amounts": [
+            { "fiscalYear": "2023-24", "amount": 3500000 },
+            { "fiscalYear": "2024-25", "amount": 4200000 },
+            { "fiscalYear": "2025-26", "amount": 4700000 }
+          ],
+          "sustainabilityTags": ["general"]
+        },
+        {
+          "id": "as-hr-tech",
+          "name": "Human Resources & Technology",
+          "department": "Administrative Services",
+          "description": "Human resources management, employee benefits, information technology systems, and cybersecurity. Supports approximately 300+ city employees.",
+          "tldr": "Manages hiring, employee benefits, and all the technology that keeps city services running.",
+          "amounts": [
+            { "fiscalYear": "2023-24", "amount": 4763964 },
+            { "fiscalYear": "2024-25", "amount": 5886829 },
+            { "fiscalYear": "2025-26", "amount": 6707603 }
+          ],
+          "sustainabilityTags": ["general"]
         }
       ]
     },
@@ -203,161 +300,94 @@
       "id": "community-development",
       "name": "Community Development",
       "icon": "Building2",
-      "color": "#8B5CF6",
-      "tldr": "Plans how the city grows, checks that buildings are safe, and attracts new businesses and jobs.",
+      "color": "#06B6D4",
+      "tldr": "Plans Cerritos's future — zoning, building permits, economic development, transit services, housing programs, and code enforcement to keep the city beautiful.",
       "amounts": [
-        { "fiscalYear": "2022-23", "amount": 7600000 },
-        { "fiscalYear": "2023-24", "amount": 7830000 },
-        { "fiscalYear": "2024-25", "amount": 8070000 }
+        { "fiscalYear": "2023-24", "amount": 5515211 },
+        { "fiscalYear": "2024-25", "amount": 5982223 },
+        { "fiscalYear": "2025-26", "amount": 6677286 }
       ],
-      "sustainabilityTags": ["general"],
+      "sustainabilityTags": ["streets", "general"],
       "lineItems": [
         {
           "id": "cd-planning",
-          "name": "Planning & Zoning",
+          "name": "Planning & Permitting",
           "department": "Community Development",
-          "description": "Long-range planning, zoning administration, environmental review, and processing of development applications.",
-          "tldr": "Decides where homes, stores, and parks can be built and makes sure new projects fit the neighborhood.",
+          "description": "Manages land use planning, zoning, building permits, and development review. Includes advance planning, current planning, and GIS services. Also oversees the General Plan that guides Cerritos's future development.",
+          "tldr": "Reviews building plans and decides how land is used — making sure new development fits our community's vision.",
           "amounts": [
-            { "fiscalYear": "2022-23", "amount": 2850000 },
-            { "fiscalYear": "2023-24", "amount": 2940000 },
-            { "fiscalYear": "2024-25", "amount": 3030000 }
+            { "fiscalYear": "2023-24", "amount": 2200000 },
+            { "fiscalYear": "2024-25", "amount": 2400000 },
+            { "fiscalYear": "2025-26", "amount": 2700000 }
           ],
           "sustainabilityTags": ["general"]
         },
         {
-          "id": "cd-building",
-          "name": "Building Inspection",
-          "department": "Community Development",
-          "description": "Plan review, building permit issuance, and field inspection services to ensure structures meet California Building Code standards.",
-          "tldr": "Checks that new buildings and renovations are safe and follow the rules.",
-          "amounts": [
-            { "fiscalYear": "2022-23", "amount": 2400000 },
-            { "fiscalYear": "2023-24", "amount": 2470000 },
-            { "fiscalYear": "2024-25", "amount": 2540000 }
-          ],
-          "sustainabilityTags": ["general"]
-        },
-        {
-          "id": "cd-econ",
+          "id": "cd-economic-dev",
           "name": "Economic Development",
           "department": "Community Development",
-          "description": "Business attraction and retention, commercial corridor revitalization, and support for the Cerritos Auto Square and Cerritos Towne Center.",
-          "tldr": "Works to bring new shops and jobs to Cerritos and support local businesses.",
+          "description": "A newly expanded team focused on attracting and retaining businesses, managing relationships with the Cerritos Auto Square and Towne Center, and leveraging city-owned properties for economic growth.",
+          "tldr": "Attracts new businesses and supports existing ones — key to keeping sales tax revenue strong at the Auto Square and Towne Center.",
           "amounts": [
-            { "fiscalYear": "2022-23", "amount": 2350000 },
-            { "fiscalYear": "2023-24", "amount": 2420000 },
-            { "fiscalYear": "2024-25", "amount": 2500000 }
+            { "fiscalYear": "2023-24", "amount": 1500000 },
+            { "fiscalYear": "2024-25", "amount": 1600000 },
+            { "fiscalYear": "2025-26", "amount": 1800000 }
           ],
           "sustainabilityTags": ["general"]
+        },
+        {
+          "id": "cd-code-transit",
+          "name": "Code Enforcement, Transit & Housing",
+          "department": "Community Development",
+          "description": "Code enforcement (recently moved from Community Safety), the Cerritos on Wheels (COW) transit service using propane vehicles, Dial-A-Ride, and affordable housing programs.",
+          "tldr": "Keeps Cerritos beautiful through code enforcement, runs clean-fuel transit buses, and manages housing programs.",
+          "amounts": [
+            { "fiscalYear": "2023-24", "amount": 1815211 },
+            { "fiscalYear": "2024-25", "amount": 1982223 },
+            { "fiscalYear": "2025-26", "amount": 2177286 }
+          ],
+          "sustainabilityTags": ["streets", "energy"]
         }
       ]
     },
     {
-      "id": "admin-finance",
-      "name": "Administration & Finance",
+      "id": "legislative-admin",
+      "name": "Legislative & Administrative",
       "icon": "Landmark",
       "color": "#6B7280",
-      "tldr": "Runs the behind-the-scenes stuff -- managing the city, tracking every dollar, and keeping tech running.",
+      "tldr": "City Council, City Manager, City Attorney, and City Clerk — the elected officials and executives who lead Cerritos and make big decisions about our future.",
       "amounts": [
-        { "fiscalYear": "2022-23", "amount": 6650000 },
-        { "fiscalYear": "2023-24", "amount": 6850000 },
-        { "fiscalYear": "2024-25", "amount": 7060000 }
+        { "fiscalYear": "2023-24", "amount": 2266645 },
+        { "fiscalYear": "2024-25", "amount": 3118431 },
+        { "fiscalYear": "2025-26", "amount": 3377490 }
       ],
       "sustainabilityTags": ["general"],
       "lineItems": [
         {
-          "id": "af-admin",
-          "name": "City Administration",
-          "department": "Administration & Finance",
-          "description": "City Manager's office, City Clerk, City Attorney, and Human Resources providing executive leadership and administrative support.",
-          "tldr": "The City Manager's team that oversees everything and keeps the city government organized.",
+          "id": "la-council",
+          "name": "City Council & Elections",
+          "department": "Legislative & Administrative",
+          "description": "Five elected City Council members who set policy, approve the budget, and represent residents. Includes election costs and council operations.",
+          "tldr": "Our five elected leaders who vote on the budget and make policy decisions — they represent YOU.",
           "amounts": [
-            { "fiscalYear": "2022-23", "amount": 2850000 },
-            { "fiscalYear": "2023-24", "amount": 2940000 },
-            { "fiscalYear": "2024-25", "amount": 3030000 }
+            { "fiscalYear": "2023-24", "amount": 500000 },
+            { "fiscalYear": "2024-25", "amount": 700000 },
+            { "fiscalYear": "2025-26", "amount": 650000 }
           ],
           "sustainabilityTags": ["general"]
         },
         {
-          "id": "af-finance",
-          "name": "Finance",
-          "department": "Administration & Finance",
-          "description": "Financial management, accounting, payroll, purchasing, and annual budget preparation and monitoring.",
-          "tldr": "Tracks every dollar the city earns and spends to make sure money is used wisely.",
+          "id": "la-management",
+          "name": "City Manager, Attorney & Clerk",
+          "department": "Legislative & Administrative",
+          "description": "The City Manager oversees all city operations and prepares the budget. The City Attorney provides legal counsel. The City Clerk manages records, public notices, and ensures government transparency.",
+          "tldr": "The people who run the city day-to-day — managing operations, legal issues, and public records.",
           "amounts": [
-            { "fiscalYear": "2022-23", "amount": 1900000 },
-            { "fiscalYear": "2023-24", "amount": 1960000 },
-            { "fiscalYear": "2024-25", "amount": 2020000 }
+            { "fiscalYear": "2023-24", "amount": 1766645 },
+            { "fiscalYear": "2024-25", "amount": 2418431 },
+            { "fiscalYear": "2025-26", "amount": 2727490 }
           ],
           "sustainabilityTags": ["general"]
-        },
-        {
-          "id": "af-it",
-          "name": "IT Services",
-          "department": "Administration & Finance",
-          "description": "Information technology infrastructure, cybersecurity, application support, and digital government services.",
-          "tldr": "Keeps the city's computers, networks, and online services running for staff and residents.",
-          "amounts": [
-            { "fiscalYear": "2022-23", "amount": 1900000 },
-            { "fiscalYear": "2023-24", "amount": 1950000 },
-            { "fiscalYear": "2024-25", "amount": 2010000 }
-          ],
-          "sustainabilityTags": ["general"]
-        }
-      ]
-    },
-    {
-      "id": "water-utility",
-      "name": "Water Utility",
-      "icon": "Droplets",
-      "color": "#3B82F6",
-      "tldr": "Cleans and delivers safe drinking water, maintains pipes and wells, and runs programs to help everyone save water.",
-      "amounts": [
-        { "fiscalYear": "2022-23", "amount": 8500000 },
-        { "fiscalYear": "2023-24", "amount": 8760000 },
-        { "fiscalYear": "2024-25", "amount": 9100000 }
-      ],
-      "sustainabilityTags": ["water"],
-      "lineItems": [
-        {
-          "id": "wu-treatment",
-          "name": "Water Treatment",
-          "department": "Water Utility",
-          "description": "Operation of water treatment facilities, water quality testing, regulatory compliance, and source water protection.",
-          "tldr": "Treats and tests water to make sure every drop from your tap is safe to drink.",
-          "amounts": [
-            { "fiscalYear": "2022-23", "amount": 3800000 },
-            { "fiscalYear": "2023-24", "amount": 3920000 },
-            { "fiscalYear": "2024-25", "amount": 4080000 }
-          ],
-          "sustainabilityTags": ["water"]
-        },
-        {
-          "id": "wu-distribution",
-          "name": "Distribution System",
-          "department": "Water Utility",
-          "description": "Maintenance and replacement of water mains, service lines, valves, hydrants, and metering equipment.",
-          "tldr": "Maintains the underground network of pipes and fire hydrants that deliver water everywhere.",
-          "amounts": [
-            { "fiscalYear": "2022-23", "amount": 2800000 },
-            { "fiscalYear": "2023-24", "amount": 2890000 },
-            { "fiscalYear": "2024-25", "amount": 3000000 }
-          ],
-          "sustainabilityTags": ["water"]
-        },
-        {
-          "id": "wu-conservation",
-          "name": "Conservation Programs",
-          "department": "Water Utility",
-          "description": "Water conservation outreach, rebate programs for water-efficient fixtures, turf replacement incentives, and drought response planning.",
-          "tldr": "Helps residents save water with rebates for efficient fixtures and replacing thirsty lawns.",
-          "amounts": [
-            { "fiscalYear": "2022-23", "amount": 1900000 },
-            { "fiscalYear": "2023-24", "amount": 1950000 },
-            { "fiscalYear": "2024-25", "amount": 2020000 }
-          ],
-          "sustainabilityTags": ["water"]
         }
       ]
     }

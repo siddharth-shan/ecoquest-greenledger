@@ -8,6 +8,8 @@ import {
   ListOrdered,
   Megaphone,
   FileText,
+  Receipt,
+  SlidersHorizontal,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { HUB_NAV_ITEMS } from "@/lib/constants";
@@ -18,6 +20,8 @@ const iconMap: Record<string, React.ElementType> = {
   ListOrdered,
   Megaphone,
   FileText,
+  Receipt,
+  SlidersHorizontal,
 };
 
 export default function HubSubNav() {

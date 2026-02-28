@@ -67,8 +67,19 @@ export const NAV_ITEMS = [
 
 export const HUB_NAV_ITEMS = [
   { label: "Budget Explorer", href: "/hub/budget", icon: "PieChart" },
+  { label: "Tax Dollar", href: "/hub/tax-dollar", icon: "Receipt" },
+  { label: "Simulator", href: "/hub/simulator", icon: "SlidersHorizontal" },
   { label: "Scorecards", href: "/hub/scorecards", icon: "ClipboardCheck" },
-  { label: "Priorities", href: "/hub/priorities", icon: "ListOrdered" },
   { label: "Civic Actions", href: "/hub/civic", icon: "Megaphone" },
   { label: "Sources", href: "/hub/sources", icon: "FileText" },
 ] as const;
+
+export const DEPARTMENT_COLORS: Record<string, string> = {
+  "community-safety": "#EF4444",
+  "public-works": "#3B82F6",
+  "community-cultural-services": "#34A853",
+  "theater": "#A855F7",
+  "administrative-services": "#F59E0B",
+  "community-development": "#06B6D4",
+  "legislative-admin": "#6B7280",
+};

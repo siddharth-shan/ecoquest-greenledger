@@ -15,6 +15,7 @@ export interface SourceCitation {
   documentName: string;
   documentUrl?: string;
   pageNumber?: string;
+  pageReference?: string;
   accessDate: string;
   freshnessLabel: "current" | "recent" | "historical";
 }
@@ -68,4 +69,58 @@ export interface BudgetSummary {
   topExpenditureCategory: string;
   sustainabilitySpendPercent: number;
   fiscalYear: string;
+}
+
+// 10-Year Historical Data Types
+export interface HistoricalDepartment {
+  id: string;
+  name: string;
+  color: string;
+  amounts: number[];
+}
+
+export interface HistoricalKeyEvent {
+  fiscalYear: string;
+  label: string;
+  description: string;
+}
+
+export interface BudgetHistoricalData {
+  city: string;
+  state: string;
+  description: string;
+  source: {
+    documentName: string;
+    documentUrl: string;
+    accessDate: string;
+    freshnessLabel: string;
+    notes: string;
+  };
+  fiscalYears: string[];
+  departments: HistoricalDepartment[];
+  totals: number[];
+  keyEvents: HistoricalKeyEvent[];
+}
+
+// Tax Dollar Calculator Types
+export interface TaxDollarBreakdown {
+  departmentId: string;
+  departmentName: string;
+  color: string;
+  amount: number;
+  percentage: number;
+  perDollar: number;
+  perHundred: number;
+}
+
+// Budget Simulator Types
+export interface SimulatorDepartment {
+  id: string;
+  name: string;
+  color: string;
+  baseAmount: number;
+  currentAmount: number;
+  percentChange: number;
+  isFixed: boolean;
+  fixedReason?: string;
 }

@@ -1,49 +1,67 @@
 {
   "sources": [
     {
-      "id": "adopted-budget-2024",
-      "documentName": "City of Cerritos FY 2024-25 Adopted Budget",
-      "documentUrl": "https://www.cerritos.us/GOVERNMENT/finance/budget.php",
-      "description": "The officially adopted annual budget for the City of Cerritos, detailing all revenue sources and departmental expenditures.",
-      "accessDate": "2024-11-15",
+      "id": "adopted-budget-2025-26",
+      "documentName": "City of Cerritos Combined Financial Program FY 2025-2026 (Adopted Budget)",
+      "documentUrl": "https://www.cerritos.gov/media/purhqkrc/fy-2025-2026_adopted-budget.pdf",
+      "description": "The officially adopted annual budget for the City of Cerritos, a 370+ page document detailing all revenue sources, departmental expenditures, capital improvements, and fund statements for the fiscal year beginning July 1, 2025.",
+      "accessDate": "2025-06-27",
       "freshnessLabel": "current",
-      "dataUsedFor": ["Budget Explorer", "Scorecards", "Challenges"]
+      "dataUsedFor": ["Budget Explorer", "Tax Dollar Calculator", "Budget Simulator", "Scorecards", "Challenges"]
     },
     {
-      "id": "cafr-2023",
-      "documentName": "City of Cerritos Comprehensive Annual Financial Report (CAFR) 2023",
-      "documentUrl": "https://www.cerritos.us/GOVERNMENT/finance/cafr.php",
-      "description": "Comprehensive financial statements and statistical data audited by independent accountants.",
-      "accessDate": "2024-11-15",
+      "id": "budget-at-a-glance-2025-26",
+      "documentName": "City of Cerritos FY 2025-26 Budget at a Glance",
+      "documentUrl": "https://www.cerritos.gov/media/0ppcrf3a/budget-at-a-glance_web.pdf",
+      "description": "One-page infographic summarizing FY 2025-26 citywide operating expenses ($131.4M), General Fund revenue ($101.5M), and capital improvement plan ($23.0M).",
+      "accessDate": "2025-06-27",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Home Page Stats", "Budget Explorer"]
+    },
+    {
+      "id": "opengov-transparency",
+      "documentName": "Cerritos OpenGov Financial Transparency Portal",
+      "documentUrl": "https://cerritosca.opengov.com/transparency#/",
+      "description": "Interactive portal providing 10-year historical expenditure and revenue data by department and fund. Data spans FY 2016-17 through FY 2025-26 (Adopted).",
+      "accessDate": "2025-06-27",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["10-Year Historical Trends", "Budget Explorer"]
+    },
+    {
+      "id": "adopted-budget-2024-25",
+      "documentName": "City of Cerritos Combined Financial Program FY 2024-2025 (Adopted Budget)",
+      "documentUrl": "https://www.cerritos.gov/media/gd0j3all/combined-financial-program-2425-adopted.pdf",
+      "description": "Prior year adopted budget used for year-over-year comparison and trend analysis.",
+      "accessDate": "2025-06-27",
       "freshnessLabel": "recent",
       "dataUsedFor": ["Budget Explorer", "Trend Data"]
     },
     {
+      "id": "sustainability-green-efforts",
+      "documentName": "City of Cerritos — Current Green Efforts",
+      "documentUrl": "https://www.cerritos.gov/city-government/sustainability/current-green-efforts/",
+      "description": "Official city sustainability page listing active environmental programs including recycled water, solar energy, CNG fleet, LED traffic signals, and urban forestry.",
+      "accessDate": "2025-06-27",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Scorecards", "Challenges", "Sustainability Metrics"]
+    },
+    {
+      "id": "recycled-water",
+      "documentName": "City of Cerritos — Recycled Water Program",
+      "documentUrl": "https://www.cerritos.gov/city-government/sustainability/recycled-water/",
+      "description": "Details on Cerritos's recycled water system operating since 1988: 25 miles of distribution lines, 200+ acres irrigated, 722 million gallons of potable water conserved annually.",
+      "accessDate": "2025-06-27",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Water Conservation Scorecard", "Challenges"]
+    },
+    {
       "id": "census-2020",
-      "documentName": "U.S. Census Bureau - Cerritos City, California",
+      "documentName": "U.S. Census Bureau — Cerritos City, California",
       "documentUrl": "https://data.census.gov/profile/Cerritos_city,_California",
-      "description": "Population estimates and demographic data for per-capita calculations.",
+      "description": "Population estimates and demographic data for per-capita calculations. Cerritos population: 51,460 (2020 Census).",
       "accessDate": "2024-11-15",
       "freshnessLabel": "recent",
-      "dataUsedFor": ["Per-Capita Calculations", "Demographics"]
-    },
-    {
-      "id": "sustainability-plan",
-      "documentName": "City of Cerritos Sustainability Action Plan",
-      "documentUrl": "https://www.cerritos.us",
-      "description": "The city's strategic plan for environmental sustainability goals and targets.",
-      "accessDate": "2024-11-15",
-      "freshnessLabel": "current",
-      "dataUsedFor": ["Scorecards", "Challenges", "City Goal Connections"]
-    },
-    {
-      "id": "water-quality-2024",
-      "documentName": "Cerritos Annual Water Quality Report 2024",
-      "documentUrl": "https://www.cerritos.us",
-      "description": "Annual water quality testing results and compliance data for the Cerritos water system.",
-      "accessDate": "2024-11-15",
-      "freshnessLabel": "current",
-      "dataUsedFor": ["Water Conservation Scorecard"]
+      "dataUsedFor": ["Per-Capita Calculations", "Demographics", "Tax Dollar Calculator"]
     }
   ]
 }

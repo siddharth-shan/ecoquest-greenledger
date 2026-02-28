@@ -1,0 +1,83 @@
+{
+  "city": "Cerritos",
+  "state": "CA",
+  "description": "10-year historical expenditure data by department from the Cerritos OpenGov Transparency Portal",
+  "source": {
+    "documentName": "Cerritos OpenGov Financial Transparency Portal",
+    "documentUrl": "https://cerritosca.opengov.com/transparency#/",
+    "accessDate": "2025-06-27",
+    "freshnessLabel": "current",
+    "notes": "Actuals for FY 2016-17 through FY 2024-25; Adopted Budget for FY 2025-26"
+  },
+  "fiscalYears": [
+    "2016-17", "2017-18", "2018-19", "2019-20", "2020-21",
+    "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"
+  ],
+  "departments": [
+    {
+      "id": "legislative-admin",
+      "name": "Legislative & Admin",
+      "color": "#6B7280",
+      "amounts": [2457283, 2323563, 2288564, 2780510, 3049544, 3428026, 3193675, 3239256, 4454763, 4631655]
+    },
+    {
+      "id": "community-development",
+      "name": "Community Development",
+      "color": "#06B6D4",
+      "amounts": [7598135, 6249238, 6440492, 6250638, 7049719, 6663888, 6537168, 8105816, 8032288, 8945723]
+    },
+    {
+      "id": "community-safety",
+      "name": "Community Safety",
+      "color": "#EF4444",
+      "amounts": [15789689, 16455154, 16970132, 17213396, 17155373, 17615348, 18312663, 19364548, 22345976, 23385534]
+    },
+    {
+      "id": "public-works",
+      "name": "Public Works",
+      "color": "#3B82F6",
+      "amounts": [29635046, 32794169, 30451129, 32419164, 31866137, 34345847, 38104732, 39245558, 42269660, 47057441]
+    },
+    {
+      "id": "community-cultural-services",
+      "name": "Community & Cultural Services",
+      "color": "#34A853",
+      "amounts": [12211644, 12677729, 12507583, 12756885, 9606214, 11254649, 12526218, 13725125, 14584318, 15802251]
+    },
+    {
+      "id": "administrative-services",
+      "name": "Administrative Services",
+      "color": "#F59E0B",
+      "amounts": [9506007, 10175921, 9824117, 10215538, 9922980, 10394894, 11361777, 12505949, 15401558, 17249513]
+    },
+    {
+      "id": "theater",
+      "name": "Theater (CCPA)",
+      "color": "#A855F7",
+      "amounts": [6026270, 7437142, 7309321, 6932307, 2120633, 4288373, 6368221, 8809527, 11753886, 12302403]
+    }
+  ],
+  "totals": [89983370, 93587911, 89472276, 94182694, 91085325, 102001643, 110809603, 152339661, 137082233, 129374520],
+  "keyEvents": [
+    {
+      "fiscalYear": "2020-21",
+      "label": "COVID-19 Impact",
+      "description": "Theater dropped 69% ($6.9M → $2.1M) as CCPA closed. Community & Cultural Services fell 25%. Overall budget dropped to $91M."
+    },
+    {
+      "fiscalYear": "2023-24",
+      "label": "Interfund Loan Forgiveness",
+      "description": "One-time spike to $152.3M due to forgiveness of $24.3M in interfund loans to Water and Sewer funds, plus $47.3M in Non-Departmental activity."
+    },
+    {
+      "fiscalYear": "2024-25",
+      "label": "Sales Tax Headwinds",
+      "description": "Sales tax forecast adjusted down from $46.0M to $42.8M due to auto sales slowdown. City budget returned to normalized levels at $137M."
+    },
+    {
+      "fiscalYear": "2025-26",
+      "label": "Strategic Investment",
+      "description": "Budget includes $23M CIP, $2M CalPERS ADP payment, and organizational restructuring with new Economic Development team."
+    }
+  ]
+}
