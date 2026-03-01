@@ -14,6 +14,11 @@
   --civic-highlight: #d69e2e;
   --civic-warm: #c05621;
 
+  /* Eco Green — the "Green" in GreenLedger */
+  --eco-green: #34d399;
+  --eco-green-dark: #059669;
+  --eco-green-light: #d1fae5;
+
   /* Sustainability Tag Colors (functional — keep as-is) */
   --tag-parks: #22c55e;
   --tag-parks-bg: #dcfce7;
@@ -41,6 +46,9 @@
   --color-civic-accent-light: var(--civic-accent-light);
   --color-civic-highlight: var(--civic-highlight);
   --color-civic-warm: var(--civic-warm);
+  --color-eco-green: var(--eco-green);
+  --color-eco-green-dark: var(--eco-green-dark);
+  --color-eco-green-light: var(--eco-green-light);
 
   --color-tag-parks: var(--tag-parks);
   --color-tag-parks-bg: var(--tag-parks-bg);
@@ -110,7 +118,7 @@ body {
   }
 
   .section-underline {
-    @apply w-16 h-1 bg-gradient-to-r from-civic-primary to-civic-accent rounded-full;
+    @apply w-16 h-1 bg-gradient-to-r from-eco-green to-civic-accent rounded-full;
   }
 }
 

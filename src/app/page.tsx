@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
-  Building2,
   ArrowRight,
   DollarSign,
   Users,
@@ -11,7 +10,6 @@ import {
   Trophy,
   Droplets,
   Recycle,
-  TrendingUp,
   BarChart3,
   Leaf,
   MessageCircle,
@@ -73,10 +71,10 @@ const topBenefits = [
     stat: "722M gal saved",
     icon: Leaf,
     href: "/hub/scorecards",
-    borderColor: "border-civic-accent",
-    iconBg: "bg-civic-accent-light",
-    iconColor: "text-civic-accent",
-    linkColor: "text-civic-accent hover:text-civic-accent-dark",
+    borderColor: "border-eco-green-dark",
+    iconBg: "bg-eco-green-light",
+    iconColor: "text-eco-green-dark",
+    linkColor: "text-eco-green-dark hover:text-emerald-700",
   },
   {
     title: "Make Your Voice Count",
@@ -110,30 +108,30 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-civic-primary via-civic-primary-dark to-civic-accent text-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-civic-primary via-civic-primary-dark to-emerald-900 text-white py-10 md:py-14">
         <div className="container-custom">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                <Building2 className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-9 h-9 rounded-xl bg-eco-green/20 flex items-center justify-center">
+                <Leaf className="w-5 h-5 text-eco-green" />
               </div>
               <span className="font-heading font-bold text-lg">
-                GreenLedger
+                <span className="text-eco-green">Green</span>Ledger
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-heading font-extrabold leading-tight mb-4">
+            <h1 className="text-3xl md:text-5xl font-heading font-extrabold leading-tight mb-3">
               Follow the Money.
               <br />
-              <span className="text-civic-highlight">Improve Your City.</span>
+              <span className="text-eco-green">Improve Your City.</span>
             </h1>
-            <p className="text-lg text-white/80 mb-4 max-w-lg">
+            <p className="text-base text-white/80 mb-3 max-w-lg">
               See how Cerritos spends your tax dollars on sustainability — then
               take action with real-world challenges that make a difference.
             </p>
 
             {/* Strategic Plan Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-8">
-              <ClipboardCheck className="w-4 h-4 text-civic-highlight" />
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-3 py-1.5 mb-5">
+              <ClipboardCheck className="w-4 h-4 text-eco-green" />
               <span className="text-sm text-white/90">
                 Aligned with Cerritos Strategic Plan 2025-2027
               </span>
@@ -142,7 +140,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/hub/budget"
-                className="inline-flex items-center justify-center gap-2 bg-white text-civic-primary-dark font-semibold px-6 py-3 rounded-lg hover:bg-civic-highlight hover:text-gray-900 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-white text-civic-primary-dark font-semibold px-6 py-3 rounded-lg hover:bg-eco-green hover:text-gray-900 transition-all duration-300"
               >
                 <BarChart3 className="w-5 h-5" />
                 Explore the Budget
@@ -156,50 +154,35 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Quick Stats */}
-      <section className="py-10 bg-white border-b border-gray-100">
-        <div className="container-custom">
-          <h2 className="font-heading font-bold text-sm text-gray-400 uppercase tracking-wider mb-4">
-            Cerritos FY 2025-26 Budget at a Glance
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {/* Quick Stats — inline in hero */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-white/15">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-civic-primary-light flex items-center justify-center shrink-0">
-                <DollarSign className="w-5 h-5 text-civic-primary" />
-              </div>
+              <DollarSign className="w-5 h-5 text-eco-green shrink-0" />
               <div>
-                <p className="text-xl font-bold text-gray-900">$131.4M</p>
-                <p className="text-xs text-gray-500">All-Funds Budget</p>
+                <p className="text-lg font-bold text-white">$131.4M</p>
+                <p className="text-xs text-white/60">All-Funds Budget</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-civic-accent-light flex items-center justify-center shrink-0">
-                <Users className="w-5 h-5 text-civic-accent" />
-              </div>
+              <Users className="w-5 h-5 text-eco-green shrink-0" />
               <div>
-                <p className="text-xl font-bold text-gray-900">$2,553</p>
-                <p className="text-xs text-gray-500">Per Resident</p>
+                <p className="text-lg font-bold text-white">$2,553</p>
+                <p className="text-xs text-white/60">Per Resident</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-tag-parks-bg flex items-center justify-center shrink-0">
-                <TreePine className="w-5 h-5 text-tag-parks" />
-              </div>
+              <TreePine className="w-5 h-5 text-eco-green shrink-0" />
               <div>
-                <p className="text-xl font-bold text-gray-900">7</p>
-                <p className="text-xs text-gray-500">City Departments</p>
+                <p className="text-lg font-bold text-white">7</p>
+                <p className="text-xs text-white/60">City Departments</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-civic-highlight/10 flex items-center justify-center shrink-0">
-                <TrendingUp className="w-5 h-5 text-civic-highlight" />
-              </div>
+              <Droplets className="w-5 h-5 text-eco-green shrink-0" />
               <div>
-                <p className="text-xl font-bold text-gray-900">722M gal</p>
-                <p className="text-xs text-gray-500">Water Saved/Year</p>
+                <p className="text-lg font-bold text-white">722M gal</p>
+                <p className="text-xs text-white/60">Water Saved/Year</p>
               </div>
             </div>
           </div>
