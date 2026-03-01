@@ -1,0 +1,117 @@
+{
+  "cerritosEnergy": {
+    "solarGenerationKwh": 350000,
+    "solarSource": "Corporate Yard rooftop installation",
+    "cityHallSolarSqFt": 1408,
+    "cityHallSolarYear": 1978,
+    "cityHallSolarNote": "Nation's first city hall solar installation (1978)",
+    "ledSavingsPercent": 60,
+    "ledNote": "All traffic signals converted to LED, reducing energy use by 60%",
+    "facilities": [
+      "City Hall (1978 solar panels)",
+      "Corporate Yard (350,000 kWh/yr solar)",
+      "Cerritos Center for the Performing Arts",
+      "Cerritos Library",
+      "Heritage Park Community Center",
+      "Iron-Wood Nine Golf Course",
+      "Cerritos Olympic Swim Center"
+    ]
+  },
+  "emissionsFactors": {
+    "ceuGrid": {
+      "lbsCO2ePerMwh": 622,
+      "source": "CEU 2024 Power Content Label",
+      "year": 2024,
+      "note": "Cerritos Electric Utility serves businesses; higher intensity due to natural gas share"
+    },
+    "californiaGrid": {
+      "lbsCO2ePerMwh": 359,
+      "source": "California Air Resources Board (CARB) — CA utility average shown on CEU PCL",
+      "year": 2024
+    },
+    "nationalGrid": {
+      "lbsCO2ePerMwh": 852,
+      "source": "EPA eGRID national average",
+      "year": 2022
+    }
+  },
+  "ceuUtility": {
+    "name": "Cerritos Electric Utility (CEU)",
+    "serves": "Businesses in Cerritos",
+    "discount": "5% discount vs SCE rates",
+    "switchCost": "No charge to switch",
+    "transmission": "SCE continues to transmit electricity",
+    "powerSources": [
+      { "name": "Magnolia Power Plant (natural gas)", "percent": 52, "type": "fossil" },
+      { "name": "Boulder Canyon Hydro", "percent": 15, "type": "renewable" },
+      { "name": "Daggett Solar Project (with battery)", "percent": 18, "type": "renewable" },
+      { "name": "Market Purchases", "percent": 15, "type": "mixed" }
+    ],
+    "daggettProduction": 16000,
+    "daggettNote": "Daggett Solar share produces ~16,000 MWh annually and supports RPS alignment"
+  },
+  "californiaPowerMix": {
+    "year": 2022,
+    "source": "California Energy Commission",
+    "components": [
+      { "name": "Natural Gas", "percent": 37.5, "color": "#6b7280" },
+      { "name": "Solar", "percent": 17.8, "color": "#f59e0b" },
+      { "name": "Wind", "percent": 12.2, "color": "#06b6d4" },
+      { "name": "Large Hydro", "percent": 11.5, "color": "#3b82f6" },
+      { "name": "Nuclear", "percent": 8.6, "color": "#8b5cf6" },
+      { "name": "Geothermal", "percent": 4.9, "color": "#ef4444" },
+      { "name": "Biomass", "percent": 2.4, "color": "#22c55e" },
+      { "name": "Small Hydro", "percent": 2.1, "color": "#0ea5e9" },
+      { "name": "Other/Imports", "percent": 3.0, "color": "#9ca3af" }
+    ]
+  },
+  "sb100Targets": {
+    "description": "California SB 100 (2018) mandates 100% clean electricity by 2045",
+    "milestones": [
+      { "year": 2030, "cleanPercent": 60, "label": "60% Renewable by 2030" },
+      { "year": 2045, "cleanPercent": 100, "label": "100% Clean by 2045" }
+    ],
+    "currentCleanPercent": 59.5,
+    "currentCleanNote": "Solar + Wind + Hydro + Nuclear + Geothermal + Biomass + Small Hydro"
+  },
+  "timeline": [
+    { "year": 1978, "event": "City Hall solar panels installed — nation's first municipal solar installation", "icon": "Sun" },
+    { "year": 1988, "event": "Recycled water program begins, reducing energy-intensive potable water treatment", "icon": "Droplets" },
+    { "year": 2005, "event": "LED traffic signal conversion begins — 60% energy reduction achieved", "icon": "Lightbulb" },
+    { "year": 2015, "event": "Corporate Yard solar installation: 350,000 kWh/year generation", "icon": "Zap" },
+    { "year": 2020, "event": "All waste collection vehicles converted to CNG (Athens Services)", "icon": "Truck" },
+    { "year": 2025, "event": "Tree City USA 25+ consecutive years — urban canopy reduces cooling energy", "icon": "TreePine" }
+  ],
+  "sources": [
+    {
+      "name": "City of Cerritos — Current Green Efforts",
+      "url": "https://www.cerritos.gov/city-government/sustainability/current-green-efforts/",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "California Air Resources Board — GHG Inventory",
+      "url": "https://ww2.arb.ca.gov/ghg-inventory-data",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "EPA eGRID",
+      "url": "https://www.epa.gov/egrid",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "California Energy Commission — Power Mix",
+      "url": "https://www.energy.ca.gov/",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "CEU 2024 Power Content Label",
+      "url": "https://www.cerritos.gov/media/gpefvlkw/2024_pcl-cerritos-electric-utility.pdf",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "City of Cerritos — Cerritos Electric Utility",
+      "url": "https://www.cerritos.gov/home-property/utilities/cerritos-electric-utility/",
+      "accessDate": "2025-06-27"
+    }
+  ]
+}

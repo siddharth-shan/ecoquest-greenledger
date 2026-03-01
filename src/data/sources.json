@@ -71,6 +71,42 @@
       "accessDate": "2025-12-12",
       "freshnessLabel": "current",
       "dataUsedFor": ["Strategic Plan Alignment"]
+    },
+    {
+      "id": "mwd-water-rates",
+      "documentName": "Metropolitan Water District of Southern California — Rates & Charges",
+      "documentUrl": "https://www.mwdh2o.com/",
+      "description": "MWD wholesale water rates used as benchmark for recycled water cost savings calculations. Tier 1 treated water rate approximately $0.005/gallon.",
+      "accessDate": "2025-06-27",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Water Finance Module", "Impact ROI Benchmarks"]
+    },
+    {
+      "id": "carb-emissions",
+      "documentName": "California Air Resources Board — GHG Emission Inventory",
+      "documentUrl": "https://ww2.arb.ca.gov/ghg-inventory-data",
+      "description": "CARB grid emissions factor for California electricity: 622 lbs CO2e per MWh. Used for energy literacy emissions calculations and renewable energy scenario modeling.",
+      "accessDate": "2025-06-27",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Energy Literacy Module", "Emissions Calculations"]
+    },
+    {
+      "id": "athens-services",
+      "documentName": "Athens Services — Cerritos Residential Collection",
+      "documentUrl": "https://www.athensservices.com/",
+      "description": "Athens Services operates Cerritos residential waste collection with a 3-cart system (blue recycling, green organics, black landfill). All waste vehicles are CNG-operated. Used for recycling quiz content and SB 1383 education.",
+      "accessDate": "2025-06-27",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Recycling Quiz", "Waste Challenges"]
+    },
+    {
+      "id": "epa-egrid",
+      "documentName": "EPA eGRID — Emissions & Generation Resource Integrated Database",
+      "documentUrl": "https://www.epa.gov/egrid",
+      "description": "National average grid emissions factor: 852 lbs CO2e per MWh. Used alongside CARB data for California vs. national emissions comparison in energy literacy module.",
+      "accessDate": "2025-06-27",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Energy Literacy Module", "Emissions Comparisons"]
     }
   ]
 }

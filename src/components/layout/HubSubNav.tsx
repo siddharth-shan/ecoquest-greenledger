@@ -10,6 +10,14 @@ import {
   FileText,
   Receipt,
   SlidersHorizontal,
+  Building2,
+  Droplets,
+  Zap,
+  Recycle,
+  Wallet,
+  Landmark,
+  Bus,
+  TreePine,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { HUB_NAV_ITEMS } from "@/lib/constants";
@@ -22,6 +30,14 @@ const iconMap: Record<string, React.ElementType> = {
   FileText,
   Receipt,
   SlidersHorizontal,
+  Building2,
+  Droplets,
+  Zap,
+  Recycle,
+  Wallet,
+  Landmark,
+  Bus,
+  TreePine,
 };
 
 export default function HubSubNav() {

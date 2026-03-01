@@ -1,8 +1,15 @@
 import { Building2, CheckCircle2, ExternalLink, Printer } from "lucide-react";
 import { getImpactCounters, getSurveyAggregateResults } from "@/lib/kv";
 import { getEquivalence } from "@/lib/impact-equivalences";
+import { computeCostPerOutcome } from "@/lib/impact-roi";
 import strategicPlanData from "@/data/strategic-plan.json";
 import sourcesData from "@/data/sources.json";
+import expenditureData from "@/data/budget/expenditures.json";
+import ReportCostMetrics from "@/components/report/ReportCostMetrics";
+import ReportMethodology from "@/components/report/ReportMethodology";
+import type { BudgetData } from "@/types/budget";
+
+const budgetData = expenditureData as unknown as BudgetData;
 
 export const dynamic = "force-dynamic";
 
@@ -16,6 +23,8 @@ export default async function ReportPage() {
     counters.find((c) => c.id === "challenges-completed")?.value ?? 0;
   const volunteerHours =
     counters.find((c) => c.id === "park-hours")?.value ?? 0;
+
+  const costOutcomes = computeCostPerOutcome(counters, budgetData.categories);
 
   const categoryLabels: Record<string, string> = {
     parks: "Parks & Greening",
@@ -210,6 +219,12 @@ export default async function ReportPage() {
             })}
           </div>
         </section>
+
+        {/* Cost per Outcome Analysis */}
+        <ReportCostMetrics costOutcomes={costOutcomes} />
+
+        {/* Methodology & Limitations */}
+        <ReportMethodology />
 
         {/* Budget Overview */}
         <section className="mb-10">

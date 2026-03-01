@@ -54,3 +54,12 @@ export function getEquivalence(counterId: string, value: number): Equivalence | 
   if (!entry) return null;
   return entry.equivalence(value);
 }
+
+// Dollar value per unit for each impact counter
+// Sources: MWD wholesale rate, USDA tree maintenance, Keep America Beautiful, Independent Sector
+export const DOLLAR_EQUIVALENCES: Record<string, { dollarPerUnit: number; source: string }> = {
+  "water-saved": { dollarPerUnit: 0.005, source: "MWD wholesale water rate (~$5/1000 gal)" },
+  "trees-cared": { dollarPerUnit: 20, source: "USDA avg annual tree maintenance value" },
+  "litter-collected": { dollarPerUnit: 0.30, source: "Keep America Beautiful avg cleanup cost/lb" },
+  "park-hours": { dollarPerUnit: 31.80, source: "Independent Sector volunteer value 2023" },
+};

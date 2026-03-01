@@ -1,0 +1,136 @@
+{
+  "metadata": [
+    {
+      "sourceId": "adopted-budget-2025-26",
+      "updateFrequency": "Annually (July adoption cycle)",
+      "methodology": "The Adopted Budget is prepared by the Finance Division, reviewed by department heads, and adopted by City Council resolution. Figures represent appropriated amounts, not actuals. Operating expenditures are broken into personnel, maintenance/operations, and capital outlay within each department.",
+      "dataFields": [
+        { "fieldName": "Department Totals", "description": "Sum of all line items within each of the 7 General Fund departments", "unit": "USD", "precision": "To the dollar", "type": "direct" },
+        { "fieldName": "Line Item Amounts", "description": "Individual appropriations (e.g., Sheriff Contract, Fire Contract)", "unit": "USD", "precision": "To the dollar", "type": "direct" },
+        { "fieldName": "3-Year Comparison", "description": "Actual (FY 23-24), Adopted (FY 24-25), Adopted (FY 25-26)", "unit": "USD", "precision": "To the dollar", "type": "direct" },
+        { "fieldName": "Sustainability Tags", "description": "GreenLedger-assigned tags linking budget items to sustainability categories", "unit": "Category label", "precision": "N/A", "type": "derived" }
+      ],
+      "limitations": [
+        "Adopted figures may differ from actual expenditures — actuals are available after fiscal year close",
+        "Sustainability tags are editorially assigned by GreenLedger, not official city classifications",
+        "Line item granularity limited to what the adopted document discloses"
+      ],
+      "confidenceLevel": "high",
+      "lastVerified": "2025-06-27"
+    },
+    {
+      "sourceId": "budget-at-a-glance-2025-26",
+      "updateFrequency": "Annually (published alongside adopted budget)",
+      "methodology": "One-page summary infographic produced by the city's Finance Division. Totals are rounded for readability and match the adopted budget's summary tables.",
+      "dataFields": [
+        { "fieldName": "All-Funds Operating", "description": "Total citywide operating expenditures across all funds", "unit": "USD (millions)", "precision": "Rounded to $0.1M", "type": "direct" },
+        { "fieldName": "General Fund Revenue", "description": "Total projected General Fund revenue", "unit": "USD (millions)", "precision": "Rounded to $0.1M", "type": "direct" },
+        { "fieldName": "CIP Total", "description": "Total Capital Improvement Plan appropriation", "unit": "USD (millions)", "precision": "Rounded to $0.1M", "type": "direct" }
+      ],
+      "limitations": [
+        "Rounded figures — use full adopted budget for precise amounts",
+        "Summary only — does not break down by department or fund"
+      ],
+      "confidenceLevel": "high",
+      "lastVerified": "2025-06-27"
+    },
+    {
+      "sourceId": "opengov-transparency",
+      "updateFrequency": "Updated when new budget is adopted; historical data available continuously",
+      "methodology": "Interactive portal powered by OpenGov Inc. Pulls from the city's financial system. Allows filtering by fund, department, and fiscal year. Historical data represents actuals for closed years and adopted/amended for current year.",
+      "dataFields": [
+        { "fieldName": "Historical Expenditures", "description": "10-year department-level expenditure data (FY 2016-17 to 2025-26)", "unit": "USD", "precision": "To the dollar", "type": "direct" },
+        { "fieldName": "Historical Revenue", "description": "10-year revenue by category", "unit": "USD", "precision": "To the dollar", "type": "direct" },
+        { "fieldName": "Year-over-Year Change", "description": "Computed change between fiscal years", "unit": "Percentage", "precision": "0.1%", "type": "derived" }
+      ],
+      "limitations": [
+        "Adopted year figures may be amended mid-year and differ from final actuals",
+        "Department names and structures may change across years",
+        "Portal availability depends on city contract with OpenGov"
+      ],
+      "confidenceLevel": "high",
+      "lastVerified": "2025-06-27"
+    },
+    {
+      "sourceId": "adopted-budget-2024-25",
+      "updateFrequency": "Annually (prior-year reference)",
+      "methodology": "Same preparation process as current year. Used for year-over-year comparison in GreenLedger's trend analysis.",
+      "dataFields": [
+        { "fieldName": "Prior Year Amounts", "description": "FY 2024-25 adopted figures for comparison", "unit": "USD", "precision": "To the dollar", "type": "direct" }
+      ],
+      "limitations": [
+        "Adopted figures — actual expenditures may have differed",
+        "Used only for trend comparison, not standalone analysis"
+      ],
+      "confidenceLevel": "high",
+      "lastVerified": "2025-06-27"
+    },
+    {
+      "sourceId": "sustainability-green-efforts",
+      "updateFrequency": "Updated periodically by city staff (no fixed schedule)",
+      "methodology": "Official city webpage maintained by the Public Works or Sustainability office. Lists active programs with qualitative descriptions. Quantitative metrics (e.g., 350,000 kWh solar) are self-reported by the city.",
+      "dataFields": [
+        { "fieldName": "Solar Generation", "description": "Annual kWh from Corporate Yard solar installation", "unit": "kWh/year", "precision": "Rounded to nearest thousand", "type": "direct" },
+        { "fieldName": "LED Savings", "description": "Energy reduction from traffic signal LED conversion", "unit": "Percentage", "precision": "Approximate", "type": "direct" },
+        { "fieldName": "Tree Count", "description": "City-maintained tree inventory", "unit": "Trees", "precision": "Rounded to nearest thousand", "type": "direct" },
+        { "fieldName": "CNG Fleet", "description": "Waste collection vehicle fuel type", "unit": "Qualitative", "precision": "N/A", "type": "direct" }
+      ],
+      "limitations": [
+        "No fixed update schedule — metrics may lag behind current operations",
+        "Quantitative figures are self-reported, not independently audited",
+        "Page does not provide time-series data for trend analysis"
+      ],
+      "confidenceLevel": "medium",
+      "lastVerified": "2025-06-27"
+    },
+    {
+      "sourceId": "recycled-water",
+      "updateFrequency": "Updated periodically by city staff",
+      "methodology": "Dedicated program page describing the recycled water distribution system. Key metrics (722M gallons, 25 miles, 200 acres) are self-reported program statistics from program inception in 1988.",
+      "dataFields": [
+        { "fieldName": "Annual Savings", "description": "Gallons of potable water conserved per year via recycled water", "unit": "Gallons/year", "precision": "Rounded to nearest million", "type": "direct" },
+        { "fieldName": "Distribution Lines", "description": "Miles of recycled water pipeline", "unit": "Miles", "precision": "Approximate", "type": "direct" },
+        { "fieldName": "Area Served", "description": "Acres of parks/medians irrigated with recycled water", "unit": "Acres", "precision": "200+ (approximate)", "type": "direct" },
+        { "fieldName": "Program Start", "description": "Year recycled water program began", "unit": "Year", "precision": "Exact", "type": "direct" }
+      ],
+      "limitations": [
+        "722M gallon figure may be cumulative program estimate, not independently metered annually",
+        "Infrastructure details (cost, capacity) are not publicly disclosed on this page",
+        "No update timestamp on the page itself"
+      ],
+      "confidenceLevel": "medium",
+      "lastVerified": "2025-06-27"
+    },
+    {
+      "sourceId": "census-2020",
+      "updateFrequency": "Decennial census (next: 2030); ACS estimates annually",
+      "methodology": "Official U.S. Census Bureau count from the 2020 Decennial Census. Population figure of 51,460 used for all per-capita calculations in GreenLedger.",
+      "dataFields": [
+        { "fieldName": "Population", "description": "Total resident population of Cerritos city", "unit": "Persons", "precision": "Exact count", "type": "direct" },
+        { "fieldName": "Per-Capita Values", "description": "Budget figures divided by population", "unit": "USD/person", "precision": "Derived", "type": "derived" }
+      ],
+      "limitations": [
+        "2020 count — actual current population may differ",
+        "Per-capita calculations assume stable population between census years",
+        "ACS estimates available but with larger margins of error"
+      ],
+      "confidenceLevel": "high",
+      "lastVerified": "2024-11-15"
+    },
+    {
+      "sourceId": "strategic-plan-2025-27",
+      "updateFrequency": "Multi-year plan; next update expected 2027-2028",
+      "methodology": "Adopted by City Council as a guiding policy document. Goals and objectives were developed through council workshops and community input. GreenLedger maps its features to specific goals editorially.",
+      "dataFields": [
+        { "fieldName": "Goals", "description": "7 strategic goals with numbered objectives", "unit": "Qualitative", "precision": "N/A", "type": "direct" },
+        { "fieldName": "GreenLedger Alignment", "description": "Editorially assigned mapping of app features to strategic goals", "unit": "Qualitative", "precision": "N/A", "type": "derived" }
+      ],
+      "limitations": [
+        "Alignment mappings are editorial interpretations, not official city endorsements",
+        "Strategic plan objectives are aspirational — progress metrics not published"
+      ],
+      "confidenceLevel": "high",
+      "lastVerified": "2025-12-12"
+    }
+  ]
+}

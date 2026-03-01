@@ -52,3 +52,37 @@ export interface ImpactCounter {
   icon: string;
   sustainabilityTag: SustainabilityTag;
 }
+
+export interface CostPerOutcome {
+  counterId: string;
+  counterLabel: string;
+  communityTotal: number;
+  unit: string;
+  departmentName: string;
+  budgetAllocated: number;
+  costPerUnit: number;
+  benchmarkCostPerUnit: number;
+  benchmarkSource: string;
+  efficiencyRatio: number;
+  sustainabilityTag: SustainabilityTag;
+}
+
+export interface CategoryROI {
+  tag: SustainabilityTag;
+  label: string;
+  totalBudgetAllocated: number;
+  totalCommunityUnits: number;
+  avgCostPerUnit: number;
+  avgBenchmarkCost: number;
+  roiRating: "excellent" | "good" | "fair";
+}
+
+export interface ScalingProjection {
+  counterId: string;
+  counterLabel: string;
+  currentValue: number;
+  projectedValue: number;
+  multiplier: number;
+  unit: string;
+  dollarValue: number;
+}

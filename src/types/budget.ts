@@ -113,6 +113,27 @@ export interface TaxDollarBreakdown {
   perHundred: number;
 }
 
+// Data Dictionary Types
+export type ConfidenceLevel = "high" | "medium" | "low";
+
+export interface DataField {
+  fieldName: string;
+  description: string;
+  unit: string;
+  precision: string;
+  type: "direct" | "derived";
+}
+
+export interface SourceMetadata {
+  sourceId: string;
+  updateFrequency: string;
+  methodology: string;
+  dataFields: DataField[];
+  limitations: string[];
+  confidenceLevel: ConfidenceLevel;
+  lastVerified: string;
+}
+
 // Budget Simulator Types
 export interface SimulatorDepartment {
   id: string;

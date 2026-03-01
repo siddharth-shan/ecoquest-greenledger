@@ -1,0 +1,126 @@
+{
+  "program": {
+    "name": "Cerritos on Wheels (COW)",
+    "description": "Cerritos on Wheels (COW) provides public transportation to over 180 locations throughout the city, arriving at stops every 60 minutes during operating days. COW is funded by local Proposition A and C funds administered by LA Metro.",
+    "locations": 180,
+    "headwayMinutes": 60,
+    "operatingDays": "Monday through Friday",
+    "operatingHours": "6:30 AM to 6:30 PM",
+    "funding": "Proposition A and C (LA Metro)",
+    "gtfsAvailable": true,
+    "meanCommuteMinutes": 32.4
+  },
+  "routes": [
+    {
+      "id": "green",
+      "name": "Green Route",
+      "color": "#22c55e",
+      "keyStops": ["Cerritos Towne Center", "Los Cerritos Center", "Cerritos Library", "City Hall", "Heritage Park"],
+      "description": "Connects major commercial and civic destinations in central Cerritos"
+    },
+    {
+      "id": "blue",
+      "name": "Blue Route",
+      "color": "#3b82f6",
+      "keyStops": ["Cerritos College", "Auto Square", "Artesia Transit Center", "ABC District Schools"],
+      "description": "Links educational institutions and the Auto Square commercial area"
+    },
+    {
+      "id": "red",
+      "name": "Red Route",
+      "color": "#ef4444",
+      "keyStops": ["Cerritos Regional Park", "Iron-Wood Nine Golf Course", "Olympic Swim Center", "Cerritos Senior Center"],
+      "description": "Serves recreation facilities and residential neighborhoods"
+    }
+  ],
+  "modeShiftData": {
+    "averageCarTripMiles": 4.2,
+    "averageCarEmissionsPerMile": 0.89,
+    "transitEmissionsPerTrip": 0.65,
+    "walkBikeEmissionsPerTrip": 0,
+    "averageGasPrice": 5.49,
+    "fuelEconomyMpg": 25.4,
+    "annualCarCostPerMile": 0.67
+  },
+  "challenges": [
+    {
+      "id": "first-ride",
+      "name": "First COW Ride",
+      "description": "Take your first ride on Cerritos on Wheels and log the trip",
+      "points": 50,
+      "ecoReward": 3.00,
+      "verificationMethod": "Schedule match + self-report",
+      "estimatedCO2Saved": 3.74
+    },
+    {
+      "id": "week-commuter",
+      "name": "Week Commuter",
+      "description": "Use COW or walk/bike for 5 trips in one week instead of driving",
+      "points": 200,
+      "ecoReward": 5.00,
+      "verificationMethod": "Daily log + QR scan",
+      "estimatedCO2Saved": 18.7
+    },
+    {
+      "id": "route-explorer",
+      "name": "Route Explorer",
+      "description": "Ride all 3 COW routes at least once and document your experience",
+      "points": 150,
+      "ecoReward": 4.00,
+      "verificationMethod": "Photo at each route stop",
+      "estimatedCO2Saved": 11.2
+    },
+    {
+      "id": "carpool-organizer",
+      "name": "Carpool Organizer",
+      "description": "Organize a carpool with 3+ classmates for school or an event",
+      "points": 100,
+      "ecoReward": 3.50,
+      "verificationMethod": "Teacher/leader sign-off",
+      "estimatedCO2Saved": 7.5
+    }
+  ],
+  "impactCalculator": {
+    "description": "Calculate the environmental and financial impact of shifting trips from car to transit, walking, or biking.",
+    "scenarioPresets": [
+      {
+        "name": "Student Daily Commute",
+        "tripsPerWeek": 10,
+        "avgMilesPerTrip": 3.5,
+        "weeksPerYear": 36,
+        "description": "Typical school commute, 5 days/week round trip"
+      },
+      {
+        "name": "Weekend Errands",
+        "tripsPerWeek": 4,
+        "avgMilesPerTrip": 5.0,
+        "weeksPerYear": 52,
+        "description": "Shopping, library, recreation center trips"
+      },
+      {
+        "name": "School Club Activities",
+        "tripsPerWeek": 3,
+        "avgMilesPerTrip": 4.0,
+        "weeksPerYear": 36,
+        "description": "After-school activities, volunteering, meetings"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "name": "City of Cerritos — Cerritos on Wheels (COW)",
+      "url": "https://www.cerritos.gov/streets-parking-transit/buses-and-transit/cerritos-on-wheels-cow/",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "Census QuickFacts — Cerritos (mean commute time)",
+      "url": "https://www.census.gov/quickfacts/fact/table/cerritoscitycalifornia/PST045224",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "EPA — Greenhouse Gas Emissions from a Typical Passenger Vehicle",
+      "url": "https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle",
+      "accessDate": "2025-06-27"
+    }
+  ]
+}

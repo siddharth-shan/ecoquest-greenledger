@@ -1,0 +1,114 @@
+{
+  "description": "Simulated micro green bonds tied to real Cerritos infrastructure projects. Students learn municipal finance concepts: coupon, maturity, risk, and project impact.",
+  "disclaimer": "This is an educational simulation only. No real securities are being issued, purchased, or traded. No real money is involved.",
+  "projects": [
+    {
+      "id": "water-infra",
+      "name": "Recycled Water System Expansion",
+      "category": "water",
+      "description": "Expand the 25-mile recycled water distribution network to serve additional parks and medians, building on the system that saves 722M gallons/year.",
+      "projectCost": 4500000,
+      "annualBenefit": 380000,
+      "bondTermYears": 10,
+      "couponRate": 3.5,
+      "riskRating": "AA",
+      "riskFactors": ["Proven 37-year operating history", "Stable water demand", "Low technology risk"],
+      "impactMetric": "Gallons potable water saved",
+      "impactPerYear": 120000000,
+      "cityDepartment": "Public Works",
+      "budgetReference": "$16.5M FY 2025-26"
+    },
+    {
+      "id": "solar-expansion",
+      "name": "Municipal Solar Phase III",
+      "category": "energy",
+      "description": "Install additional rooftop solar on city buildings, following the success of the Corporate Yard system (350,000 kWh/yr) and the historic 1978 City Hall installation.",
+      "projectCost": 2800000,
+      "annualBenefit": 245000,
+      "bondTermYears": 15,
+      "couponRate": 4.0,
+      "riskRating": "A+",
+      "riskFactors": ["Proven technology in Southern California climate", "Falling panel costs", "Electricity rate escalation favorable"],
+      "impactMetric": "kWh clean energy generated",
+      "impactPerYear": 500000,
+      "cityDepartment": "Administrative Services",
+      "budgetReference": "$11.4M FY 2025-26"
+    },
+    {
+      "id": "urban-canopy",
+      "name": "Urban Canopy Acceleration",
+      "category": "parks",
+      "description": "Accelerate tree planting from 250 to 500 trees/year and establish a young tree maintenance program, building on Cerritos' 30,000+ tree urban forest.",
+      "projectCost": 1200000,
+      "annualBenefit": 165000,
+      "bondTermYears": 8,
+      "couponRate": 3.0,
+      "riskRating": "A",
+      "riskFactors": ["Established program (Tree City USA 26 years)", "Drought risk requires species adaptation", "Long-term maintenance commitment"],
+      "impactMetric": "Trees planted and maintained",
+      "impactPerYear": 500,
+      "cityDepartment": "Public Works",
+      "budgetReference": "$16.5M FY 2025-26"
+    },
+    {
+      "id": "organics-diversion",
+      "name": "SB 1383 Organics Compliance",
+      "category": "waste",
+      "description": "Fund enhanced organics collection infrastructure and community education to meet California SB 1383 diversion targets, through the Athens Services franchise.",
+      "projectCost": 1800000,
+      "annualBenefit": 210000,
+      "bondTermYears": 7,
+      "couponRate": 3.75,
+      "riskRating": "A-",
+      "riskFactors": ["Regulatory mandate (SB 1383) ensures demand", "Contamination rates affect processing costs", "Franchise hauler coordination required"],
+      "impactMetric": "Tons organics diverted from landfill",
+      "impactPerYear": 3200,
+      "cityDepartment": "Public Works",
+      "budgetReference": "$16.5M FY 2025-26"
+    },
+    {
+      "id": "cow-transit",
+      "name": "COW Transit Modernization",
+      "category": "streets",
+      "description": "Upgrade Cerritos on Wheels (COW) fleet to hybrid/electric vehicles and expand service to cover 200+ locations with 45-minute headways.",
+      "projectCost": 3500000,
+      "annualBenefit": 290000,
+      "bondTermYears": 12,
+      "couponRate": 4.25,
+      "riskRating": "BBB+",
+      "riskFactors": ["Ridership growth depends on frequency improvements", "EV charging infrastructure needed", "Funded by Prop A/C — Metro funding risk"],
+      "impactMetric": "Annual transit trips served",
+      "impactPerYear": 45000,
+      "cityDepartment": "Community Development",
+      "budgetReference": "$6.7M FY 2025-26"
+    }
+  ],
+  "ratingScale": [
+    { "rating": "AAA", "description": "Highest quality — minimal risk", "color": "#059669" },
+    { "rating": "AA", "description": "High quality — very low risk", "color": "#10b981" },
+    { "rating": "A+", "description": "Upper medium quality — low risk", "color": "#34d399" },
+    { "rating": "A", "description": "Medium quality — low to moderate risk", "color": "#6ee7b7" },
+    { "rating": "A-", "description": "Medium quality — moderate risk", "color": "#fbbf24" },
+    { "rating": "BBB+", "description": "Adequate quality — moderate risk", "color": "#f59e0b" },
+    { "rating": "BBB", "description": "Adequate quality — some risk", "color": "#f97316" }
+  ],
+  "learningObjectives": [
+    "Understand what a municipal bond is and how it funds public projects",
+    "Learn the relationship between risk, return (coupon rate), and bond rating",
+    "Calculate simple payback periods and return on investment for infrastructure",
+    "Compare trade-offs between different sustainability investments",
+    "Understand how Cerritos departments manage capital project budgets"
+  ],
+  "sources": [
+    {
+      "name": "City of Cerritos — FY 2025-26 Adopted Budget",
+      "url": "https://www.cerritos.gov/media/purhqkrc/fy-2025-2026_adopted-budget.pdf",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "City of Cerritos — Current Green Efforts",
+      "url": "https://www.cerritos.gov/city-government/sustainability/current-green-efforts/",
+      "accessDate": "2025-06-27"
+    }
+  ]
+}

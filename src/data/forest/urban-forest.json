@@ -1,0 +1,171 @@
+{
+  "program": {
+    "name": "Cerritos Urban Forest",
+    "description": "Since incorporation in 1956, the City of Cerritos has planted more than 30,000 trees. Approximately 250 young trees are planted each year. Cerritos has been named a Tree City USA for 26 consecutive years.",
+    "totalTrees": 30000,
+    "annualPlantings": 250,
+    "treeCityYears": 26,
+    "managedBy": "Public Works Department",
+    "budgetDepartment": "Public Works",
+    "departmentBudget": 16537657
+  },
+  "assetValuation": {
+    "description": "Trees are municipal assets with quantifiable financial benefits. The Council of Tree and Landscape Appraisers (CTLA) method and i-Tree tools provide standardized valuation frameworks.",
+    "averageTreeValue": 3500,
+    "totalForestValue": 105000000,
+    "valuationNote": "Estimated using average replacement cost method. Actual values vary significantly by species, size, condition, and location.",
+    "annualAppreciation": 2.5,
+    "annualMaintenanceCostPerTree": 45,
+    "replacementCostPerTree": 850,
+    "plantingCostPerTree": 350
+  },
+  "benefits": [
+    {
+      "id": "air-quality",
+      "name": "Air Quality Improvement",
+      "icon": "Wind",
+      "annualValuePerTree": 4.69,
+      "totalAnnualValue": 140700,
+      "description": "Trees remove particulate matter, ozone, SO2, NO2, and CO from the air. Each tree removes approximately 26 lbs of CO2 per year.",
+      "metric": "26 lbs CO2 removed per tree per year",
+      "totalMetric": "780,000 lbs CO2 removed annually"
+    },
+    {
+      "id": "stormwater",
+      "name": "Stormwater Management",
+      "icon": "CloudRain",
+      "annualValuePerTree": 8.25,
+      "totalAnnualValue": 247500,
+      "description": "Tree canopy intercepts rainfall, reducing runoff and lowering flood risk. This reduces the burden on city storm drain infrastructure.",
+      "metric": "1,000 gallons rainfall intercepted per tree per year",
+      "totalMetric": "30M gallons stormwater managed annually"
+    },
+    {
+      "id": "energy-savings",
+      "name": "Energy Savings",
+      "icon": "Zap",
+      "annualValuePerTree": 6.82,
+      "totalAnnualValue": 204600,
+      "description": "Strategically placed trees shade buildings and reduce cooling costs in Southern California's warm climate.",
+      "metric": "~50 kWh saved per shade tree per year",
+      "totalMetric": "1.5M kWh cooling energy saved annually"
+    },
+    {
+      "id": "property-value",
+      "name": "Property Value Enhancement",
+      "icon": "Home",
+      "annualValuePerTree": 12.50,
+      "totalAnnualValue": 375000,
+      "description": "As the City notes, trees can increase property values. Studies show mature street trees add 3-15% to nearby home values.",
+      "metric": "3-15% property value increase nearby",
+      "totalMetric": "$375K annual aggregate value enhancement"
+    },
+    {
+      "id": "heat-island",
+      "name": "Heat Island Reduction",
+      "icon": "Thermometer",
+      "annualValuePerTree": 3.15,
+      "totalAnnualValue": 94500,
+      "description": "Urban canopy reduces surface temperatures by 20-45 degrees F compared to unshaded areas, critical for pedestrian comfort.",
+      "metric": "20-45°F surface temperature reduction",
+      "totalMetric": "Significant heat island mitigation across city"
+    }
+  ],
+  "speciesData": [
+    {
+      "name": "Coast Live Oak",
+      "category": "Native Shade",
+      "lifespan": 250,
+      "canopySpread": 40,
+      "maintenanceCost": "Low",
+      "waterNeed": "Low",
+      "co2Annually": 48,
+      "plantingCost": 450
+    },
+    {
+      "name": "London Plane",
+      "category": "Street Tree",
+      "lifespan": 150,
+      "canopySpread": 35,
+      "maintenanceCost": "Medium",
+      "waterNeed": "Medium",
+      "co2Annually": 42,
+      "plantingCost": 375
+    },
+    {
+      "name": "Crape Myrtle",
+      "category": "Ornamental",
+      "lifespan": 50,
+      "canopySpread": 20,
+      "maintenanceCost": "Low",
+      "waterNeed": "Low",
+      "co2Annually": 15,
+      "plantingCost": 225
+    },
+    {
+      "name": "Chinese Elm",
+      "category": "Shade Tree",
+      "lifespan": 60,
+      "canopySpread": 40,
+      "maintenanceCost": "Medium",
+      "waterNeed": "Medium",
+      "co2Annually": 36,
+      "plantingCost": 300
+    },
+    {
+      "name": "Southern Magnolia",
+      "category": "Evergreen",
+      "lifespan": 120,
+      "canopySpread": 30,
+      "maintenanceCost": "Low",
+      "waterNeed": "Medium",
+      "co2Annually": 30,
+      "plantingCost": 400
+    }
+  ],
+  "plannerScenarios": [
+    {
+      "id": "maintain",
+      "name": "Current Program",
+      "treesPerYear": 250,
+      "annualBudget": 350000,
+      "description": "Continue planting ~250 trees/year with current maintenance"
+    },
+    {
+      "id": "accelerate",
+      "name": "Accelerated Planting",
+      "treesPerYear": 500,
+      "annualBudget": 650000,
+      "description": "Double planting to 500 trees/year with expanded maintenance"
+    },
+    {
+      "id": "canopy-focus",
+      "name": "Canopy Maximization",
+      "treesPerYear": 350,
+      "annualBudget": 550000,
+      "description": "Focus on large-canopy species for maximum shade and stormwater benefit"
+    }
+  ],
+  "sources": [
+    {
+      "name": "City of Cerritos — Tree City USA Announcement",
+      "url": "https://www.cerritos.gov/news/posts/cerritos-named-a-tree-city-usa/",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "City of Cerritos — Landscape and Trees",
+      "url": "https://www.cerritos.gov/home-property/landscape-and-trees/",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "City of Cerritos — FY 2025-26 Adopted Budget (Public Works)",
+      "url": "https://www.cerritos.gov/media/purhqkrc/fy-2025-2026_adopted-budget.pdf",
+      "accessDate": "2025-06-27"
+    },
+    {
+      "name": "USDA Forest Service — i-Tree Benefits",
+      "url": "https://www.itreetools.org/",
+      "accessDate": "2025-06-27"
+    }
+  ]
+}
