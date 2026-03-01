@@ -41,14 +41,14 @@ export default function BudgetOverview({
     <div className="space-y-8">
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <div className="bg-gradient-to-br from-eco-green to-eco-green-dark rounded-xl p-4 text-white">
+        <div className="bg-gradient-to-br from-civic-primary to-civic-primary-dark rounded-xl p-4 text-white">
           <DollarSign className="w-5 h-5 mb-1 opacity-80" />
           <p className="text-xs opacity-80">Total Budget</p>
           <p className="text-xl font-bold">
             {formatCurrency(summary.totalExpenditures)}
           </p>
         </div>
-        <div className="bg-gradient-to-br from-eco-blue to-eco-blue-dark rounded-xl p-4 text-white">
+        <div className="bg-gradient-to-br from-civic-accent to-civic-accent-dark rounded-xl p-4 text-white">
           <Users className="w-5 h-5 mb-1 opacity-80" />
           <p className="text-xs opacity-80">Per Resident</p>
           <p className="text-xl font-bold">
@@ -57,7 +57,7 @@ export default function BudgetOverview({
         </div>
         <div className="bg-white border border-gray-200 rounded-xl p-4">
           <p className="text-xs text-gray-500">Sustainability Spend</p>
-          <p className="text-xl font-bold text-eco-green">
+          <p className="text-xl font-bold text-civic-accent">
             {formatPercent(summary.sustainabilitySpendPercent)}
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function BudgetOverview({
           </p>
           <p
             className={`text-xl font-bold ${
-              summary.surplus >= 0 ? "text-eco-green" : "text-red-500"
+              summary.surplus >= 0 ? "text-civic-accent" : "text-red-500"
             }`}
           >
             {formatCurrency(Math.abs(summary.surplus))}
@@ -85,7 +85,7 @@ export default function BudgetOverview({
           <select
             value={activeFiscalYear}
             onChange={(e) => setActiveFiscalYear(e.target.value)}
-            className="text-sm border border-gray-200 rounded-lg px-3 py-1.5 bg-white focus:ring-2 focus:ring-eco-green/20 focus:border-eco-green outline-none"
+            className="text-sm border border-gray-200 rounded-lg px-3 py-1.5 bg-white focus:ring-2 focus:ring-civic-primary/20 focus:border-civic-primary outline-none"
           >
             {expenditureData.fiscalYears.map((y) => (
               <option key={y} value={y}>
@@ -97,7 +97,7 @@ export default function BudgetOverview({
             onClick={() => setIsPerCapita(!isPerCapita)}
             className={`text-sm px-3 py-1.5 rounded-lg font-medium transition-colors cursor-pointer ${
               isPerCapita
-                ? "bg-eco-green text-white"
+                ? "bg-civic-primary text-white"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >

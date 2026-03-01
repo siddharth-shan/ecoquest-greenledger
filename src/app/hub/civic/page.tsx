@@ -62,7 +62,7 @@ const actionItems = [
     description:
       "Anyone can speak during the Public Comment period. You get 3 minutes to address the Council on any topic.",
     icon: Megaphone,
-    color: "bg-green-50 text-eco-green",
+    color: "bg-green-50 text-green-600",
   },
   {
     title: "Read the Agenda",
@@ -87,8 +87,8 @@ export default function CivicPage() {
     <div className="container-custom py-6">
       <div className="mb-6">
         <div className="flex items-center gap-3 mb-2">
-          <div className="w-10 h-10 rounded-xl bg-eco-blue-light flex items-center justify-center">
-            <Megaphone className="w-5 h-5 text-eco-blue" />
+          <div className="w-10 h-10 rounded-xl bg-civic-accent-light flex items-center justify-center">
+            <Megaphone className="w-5 h-5 text-civic-accent" />
           </div>
           <h1 className="section-title mb-0">
             Civic <span className="text-gradient">Actions</span>
@@ -101,7 +101,7 @@ export default function CivicPage() {
       </div>
 
       {/* Key message */}
-      <div className="bg-gradient-to-r from-eco-green/5 to-eco-blue/5 rounded-2xl p-6 border border-eco-green/10 mb-8">
+      <div className="bg-gradient-to-r from-civic-primary/5 to-civic-accent/5 rounded-2xl p-6 border border-civic-primary/10 mb-8">
         <h3 className="font-heading font-bold text-lg text-gray-900 mb-2">
           Knowledge → Action → Impact
         </h3>
@@ -132,7 +132,7 @@ export default function CivicPage() {
                   href={meeting.videoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-xs text-eco-blue hover:text-eco-blue/80 font-medium"
+                  className="flex items-center gap-1 text-xs text-civic-accent hover:text-civic-accent-dark font-medium"
                 >
                   <Video className="w-3.5 h-3.5" /> Watch
                   <ExternalLink className="w-3 h-3" />
@@ -157,8 +157,8 @@ export default function CivicPage() {
 
             <p className="text-sm text-gray-600 mb-2">{meeting.description}</p>
 
-            <div className="bg-eco-green-light/30 rounded-lg p-3 mt-3">
-              <p className="text-xs font-medium text-eco-green-dark">
+            <div className="bg-civic-primary-light rounded-lg p-3 mt-3">
+              <p className="text-xs font-medium text-civic-primary-dark">
                 💰 Budget Connection:{" "}
                 <span className="font-normal text-gray-600">
                   {meeting.budgetRelevance}
@@ -195,7 +195,7 @@ export default function CivicPage() {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs text-eco-green hover:text-eco-green-dark font-medium mt-3"
+                className="inline-flex items-center gap-1 text-xs text-civic-accent hover:text-civic-accent-dark font-medium mt-3"
               >
                 Learn more <ExternalLink className="w-3 h-3" />
               </a>

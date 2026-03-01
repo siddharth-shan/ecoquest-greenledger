@@ -38,7 +38,7 @@ export default function GlossaryModal({
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search terms..."
-            className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-eco-green/20 focus:border-eco-green outline-none transition-all text-sm"
+            className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-civic-primary/20 focus:border-civic-primary outline-none transition-all text-sm"
           />
         </div>
 
@@ -53,7 +53,7 @@ export default function GlossaryModal({
               </h4>
               <p className="text-sm text-gray-600">{term.definition}</p>
               {term.example && (
-                <p className="text-xs text-eco-green mt-1.5 italic">
+                <p className="text-xs text-civic-accent mt-1.5 italic">
                   Example: {term.example}
                 </p>
               )}

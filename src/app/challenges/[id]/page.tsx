@@ -76,7 +76,7 @@ export default function ChallengeDetailPage() {
               <Clock className="w-3.5 h-3.5" />
               ~{challenge.estimatedMinutes} min
             </span>
-            <span className="text-sm text-eco-green font-semibold flex items-center gap-1">
+            <span className="text-sm text-civic-accent font-semibold flex items-center gap-1">
               <Star className="w-3.5 h-3.5" />
               {challenge.pointsReward} pts
             </span>
@@ -88,15 +88,15 @@ export default function ChallengeDetailPage() {
         </div>
 
         {/* Steps */}
-        <div className="bg-white rounded-xl border border-gray-100 p-5">
+        <div className="bg-white rounded-xl border border-gray-200 p-5">
           <h2 className="font-heading font-bold text-lg mb-3 flex items-center gap-2">
-            <CheckCircle2 className="w-5 h-5 text-eco-green" />
+            <CheckCircle2 className="w-5 h-5 text-civic-accent" />
             Steps
           </h2>
           <ol className="space-y-3">
             {challenge.steps.map((step, i) => (
               <li key={i} className="flex gap-3">
-                <span className="w-6 h-6 rounded-full bg-eco-green-light text-eco-green-dark text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
+                <span className="w-6 h-6 rounded-full bg-civic-primary-light text-civic-primary-dark text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                   {i + 1}
                 </span>
                 <span className="text-sm text-gray-700">{step}</span>
@@ -106,15 +106,15 @@ export default function ChallengeDetailPage() {
         </div>
 
         {/* Tips */}
-        <div className="bg-eco-yellow/5 rounded-xl border border-eco-yellow/20 p-5">
+        <div className="bg-civic-highlight/5 rounded-xl border border-civic-highlight/20 p-5">
           <h2 className="font-heading font-bold text-lg mb-3 flex items-center gap-2">
-            <Lightbulb className="w-5 h-5 text-eco-yellow" />
+            <Lightbulb className="w-5 h-5 text-civic-highlight" />
             Tips
           </h2>
           <ul className="space-y-2">
             {challenge.tips.map((tip, i) => (
               <li key={i} className="flex gap-2 text-sm text-gray-700">
-                <span className="text-eco-yellow">•</span>
+                <span className="text-civic-highlight">•</span>
                 {tip}
               </li>
             ))}
@@ -122,18 +122,18 @@ export default function ChallengeDetailPage() {
         </div>
 
         {/* City Connection */}
-        <div className="bg-eco-blue-light/50 rounded-xl border border-eco-blue/20 p-5">
+        <div className="bg-civic-accent-light/50 rounded-xl border border-civic-accent/20 p-5">
           <h2 className="font-heading font-bold text-lg mb-2 flex items-center gap-2">
-            <Target className="w-5 h-5 text-eco-blue" />
+            <Target className="w-5 h-5 text-civic-accent" />
             City Connection
           </h2>
           <p className="text-sm text-gray-700">{challenge.cityGoalConnection}</p>
         </div>
 
         {/* Financial Snippet */}
-        <div className="bg-eco-green-light/50 rounded-xl border border-eco-green/20 p-5">
+        <div className="bg-civic-primary-light rounded-xl border border-civic-primary/20 p-5">
           <h2 className="font-heading font-bold text-lg mb-2 flex items-center gap-2">
-            <DollarSign className="w-5 h-5 text-eco-green" />
+            <DollarSign className="w-5 h-5 text-civic-primary" />
             Why It Matters Financially
           </h2>
           <p className="text-sm text-gray-700">{challenge.financialSnippet}</p>
@@ -141,7 +141,7 @@ export default function ChallengeDetailPage() {
 
         {/* Submission */}
         {!submitted ? (
-          <div className="bg-white rounded-xl border border-gray-100 p-5">
+          <div className="bg-white rounded-xl border border-gray-200 p-5">
             <h2 className="font-heading font-bold text-lg mb-3">
               Complete This Challenge
             </h2>
@@ -150,7 +150,7 @@ export default function ChallengeDetailPage() {
               onChange={(e) => setReflection(e.target.value)}
               placeholder="Write your reflection here... What did you learn? What surprised you?"
               rows={4}
-              className="w-full border border-gray-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-eco-green/20 focus:border-eco-green outline-none resize-none"
+              className="w-full border border-gray-200 rounded-xl p-3 text-sm focus:ring-2 focus:ring-civic-primary/20 focus:border-civic-primary outline-none resize-none"
             />
             <button
               onClick={handleSubmit}
@@ -161,9 +161,9 @@ export default function ChallengeDetailPage() {
             </button>
           </div>
         ) : (
-          <div className="bg-eco-green-light rounded-xl p-6 text-center">
-            <CheckCircle2 className="w-12 h-12 text-eco-green mx-auto mb-3" />
-            <h2 className="font-heading font-bold text-xl text-eco-green-dark">
+          <div className="bg-civic-accent-light rounded-xl p-6 text-center">
+            <CheckCircle2 className="w-12 h-12 text-civic-accent mx-auto mb-3" />
+            <h2 className="font-heading font-bold text-xl text-civic-accent-dark">
               Challenge Complete!
             </h2>
             <p className="text-sm text-gray-600 mt-1">

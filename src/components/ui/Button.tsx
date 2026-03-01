@@ -5,11 +5,11 @@ import { cn } from "@/lib/utils";
 
 const variantStyles = {
   primary:
-    "bg-eco-green text-white hover:bg-eco-green-dark hover:shadow-lg hover:-translate-y-0.5 focus-visible:ring-eco-green",
+    "bg-civic-primary text-white hover:bg-civic-primary-dark hover:shadow-lg hover:-translate-y-0.5 focus-visible:ring-civic-primary",
   secondary:
-    "bg-eco-blue text-white hover:bg-eco-blue-dark hover:shadow-lg hover:-translate-y-0.5 focus-visible:ring-eco-blue",
+    "bg-civic-accent text-white hover:bg-civic-accent-dark hover:shadow-lg hover:-translate-y-0.5 focus-visible:ring-civic-accent",
   outline:
-    "bg-transparent text-eco-green border-2 border-eco-green hover:bg-eco-green hover:text-white focus-visible:ring-eco-green",
+    "bg-transparent text-civic-primary border-2 border-civic-primary hover:bg-civic-primary hover:text-white focus-visible:ring-civic-primary",
   ghost:
     "bg-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus-visible:ring-gray-400",
   danger:
@@ -18,8 +18,8 @@ const variantStyles = {
 
 const sizeStyles = {
   sm: "px-3 py-1.5 text-xs rounded-lg gap-1.5",
-  md: "px-5 py-2.5 text-sm rounded-full gap-2",
-  lg: "px-7 py-3 text-base rounded-full gap-2.5",
+  md: "px-5 py-2.5 text-sm rounded-lg gap-2",
+  lg: "px-7 py-3 text-base rounded-lg gap-2.5",
 } as const;
 
 export type ButtonVariant = keyof typeof variantStyles;

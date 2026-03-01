@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Trophy, BarChart3, Landmark, User, Leaf } from "lucide-react";
+import { Home, Trophy, BarChart3, Landmark, User, Building2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV_ITEMS } from "@/lib/constants";
 
@@ -21,14 +21,13 @@ export default function Navbar() {
     <nav className="hidden md:block sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
       <div className="container-custom flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-eco flex items-center justify-center">
-            <Leaf className="w-5 h-5 text-white" />
+          <div className="w-8 h-8 rounded-lg bg-civic-primary flex items-center justify-center">
+            <Building2 className="w-5 h-5 text-white" />
           </div>
-          <span className="font-heading font-bold text-lg">
-            <span className="text-eco-green">Eco</span>
-            <span className="text-eco-blue">Quest</span>
-            <span className="text-gray-700 ml-1 font-semibold text-sm">
-              GreenLedger
+          <span className="font-heading font-bold text-lg text-civic-primary">
+            GreenLedger
+            <span className="text-gray-500 ml-1 font-semibold text-sm">
+              Cerritos
             </span>
           </span>
         </Link>
@@ -46,9 +45,9 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
+                  "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
                   isActive
-                    ? "bg-eco-green-light text-eco-green-dark"
+                    ? "bg-civic-primary-light text-civic-primary-dark"
                     : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                 )}
               >

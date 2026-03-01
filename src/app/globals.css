@@ -4,17 +4,17 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* EcoQuest Brand Colors */
-  --eco-green: #34a853;
-  --eco-green-dark: #137333;
-  --eco-green-light: #e8f5e9;
-  --eco-blue: #00a8e1;
-  --eco-blue-dark: #0077a8;
-  --eco-blue-light: #e0f4fd;
-  --eco-yellow: #fbbc04;
-  --eco-orange: #f57c00;
+  /* Civic Professional Palette */
+  --civic-primary: #1a365d;
+  --civic-primary-dark: #0f2440;
+  --civic-primary-light: #edf2f7;
+  --civic-accent: #2b7a78;
+  --civic-accent-dark: #1f5f5d;
+  --civic-accent-light: #e6fffa;
+  --civic-highlight: #d69e2e;
+  --civic-warm: #c05621;
 
-  /* Sustainability Tag Colors */
+  /* Sustainability Tag Colors (functional — keep as-is) */
   --tag-parks: #22c55e;
   --tag-parks-bg: #dcfce7;
   --tag-waste: #f59e0b;
@@ -33,14 +33,14 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-eco-green: var(--eco-green);
-  --color-eco-green-dark: var(--eco-green-dark);
-  --color-eco-green-light: var(--eco-green-light);
-  --color-eco-blue: var(--eco-blue);
-  --color-eco-blue-dark: var(--eco-blue-dark);
-  --color-eco-blue-light: var(--eco-blue-light);
-  --color-eco-yellow: var(--eco-yellow);
-  --color-eco-orange: var(--eco-orange);
+  --color-civic-primary: var(--civic-primary);
+  --color-civic-primary-dark: var(--civic-primary-dark);
+  --color-civic-primary-light: var(--civic-primary-light);
+  --color-civic-accent: var(--civic-accent);
+  --color-civic-accent-dark: var(--civic-accent-dark);
+  --color-civic-accent-light: var(--civic-accent-light);
+  --color-civic-highlight: var(--civic-highlight);
+  --color-civic-warm: var(--civic-warm);
 
   --color-tag-parks: var(--tag-parks);
   --color-tag-parks-bg: var(--tag-parks-bg);
@@ -55,9 +55,9 @@
   --color-tag-general: var(--tag-general);
   --color-tag-general-bg: var(--tag-general-bg);
 
-  --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  --font-heading: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
 }
 
@@ -70,19 +70,19 @@ body {
 /* Component Styles */
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-2.5 font-semibold rounded-full transition-all duration-300 text-center cursor-pointer text-sm;
+    @apply inline-flex items-center justify-center px-6 py-2.5 font-semibold rounded-lg transition-all duration-300 text-center cursor-pointer text-sm;
   }
 
   .btn-primary {
-    @apply bg-eco-green text-white hover:bg-eco-green-dark hover:shadow-lg hover:-translate-y-0.5;
+    @apply bg-civic-primary text-white hover:bg-civic-primary-dark hover:shadow-lg hover:-translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply bg-eco-blue text-white hover:bg-eco-blue-dark hover:shadow-lg hover:-translate-y-0.5;
+    @apply bg-civic-accent text-white hover:bg-civic-accent-dark hover:shadow-lg hover:-translate-y-0.5;
   }
 
   .btn-outline {
-    @apply bg-transparent text-eco-green border-2 border-eco-green hover:bg-eco-green hover:text-white;
+    @apply bg-transparent text-civic-primary border-2 border-civic-primary hover:bg-civic-primary hover:text-white;
   }
 
   .btn-ghost {
@@ -98,7 +98,7 @@ body {
   }
 
   .card {
-    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden;
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden;
   }
 
   .card-hover {
@@ -110,20 +110,20 @@ body {
   }
 
   .section-underline {
-    @apply w-16 h-1 bg-gradient-to-r from-eco-green to-eco-blue rounded-full;
+    @apply w-16 h-1 bg-gradient-to-r from-civic-primary to-civic-accent rounded-full;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-eco-green to-eco-blue bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-civic-primary to-civic-accent bg-clip-text text-transparent;
   }
 
-  .bg-gradient-eco {
-    @apply bg-gradient-to-br from-eco-green to-eco-blue;
+  .bg-gradient-civic {
+    @apply bg-gradient-to-br from-civic-primary to-civic-accent;
   }
 
-  .bg-gradient-eco-light {
-    @apply bg-gradient-to-br from-eco-green-light to-eco-blue-light;
+  .bg-gradient-civic-light {
+    @apply bg-gradient-to-br from-civic-primary-light to-civic-accent-light;
   }
 }

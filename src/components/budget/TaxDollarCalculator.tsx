@@ -60,10 +60,10 @@ export default function TaxDollarCalculator() {
   return (
     <div className="space-y-8">
       {/* How It Works */}
-      <div className="bg-gradient-to-r from-eco-green/5 to-eco-blue/5 rounded-2xl p-6 border border-eco-green/10">
+      <div className="bg-gradient-to-r from-civic-primary/5 to-civic-accent/5 rounded-2xl p-6 border border-civic-primary/10">
         <div className="flex items-start gap-3 mb-4">
-          <div className="w-10 h-10 rounded-xl bg-eco-green/10 flex items-center justify-center shrink-0">
-            <Info className="w-5 h-5 text-eco-green" />
+          <div className="w-10 h-10 rounded-xl bg-civic-primary/10 flex items-center justify-center shrink-0">
+            <Info className="w-5 h-5 text-civic-primary" />
           </div>
           <div>
             <h3 className="font-heading font-bold text-lg text-gray-900">
@@ -83,7 +83,7 @@ export default function TaxDollarCalculator() {
       {/* Calculator */}
       <div className="bg-white rounded-2xl border border-gray-100 p-6">
         <h3 className="font-heading font-bold text-lg mb-4 flex items-center gap-2">
-          <ShoppingCart className="w-5 h-5 text-eco-green" />
+          <ShoppingCart className="w-5 h-5 text-civic-primary" />
           Your Annual Impact
         </h3>
         <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-end mb-6">
@@ -97,15 +97,15 @@ export default function TaxDollarCalculator() {
                 type="number"
                 value={annualSpending}
                 onChange={(e) => setAnnualSpending(e.target.value)}
-                className="w-full pl-8 pr-4 py-3 border border-gray-200 rounded-xl text-lg font-semibold focus:ring-2 focus:ring-eco-green/20 focus:border-eco-green outline-none"
+                className="w-full pl-8 pr-4 py-3 border border-gray-200 rounded-xl text-lg font-semibold focus:ring-2 focus:ring-civic-primary/20 focus:border-civic-primary outline-none"
                 min={0}
                 step={500}
               />
             </div>
           </div>
-          <div className="bg-eco-green-light rounded-xl px-6 py-3 text-center shrink-0">
+          <div className="bg-civic-primary-light rounded-xl px-6 py-3 text-center shrink-0">
             <p className="text-xs text-gray-500">Your city contribution</p>
-            <p className="text-2xl font-bold text-eco-green">
+            <p className="text-2xl font-bold text-civic-primary">
               ${cityRevenue.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}
             </p>
             <p className="text-xs text-gray-500">per year in sales tax</p>

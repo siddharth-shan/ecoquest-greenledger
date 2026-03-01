@@ -40,9 +40,9 @@ export default function HubSubNav() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 shrink-0",
+                  "flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-200 shrink-0",
                   isActive
-                    ? "bg-eco-green text-white shadow-sm"
+                    ? "bg-civic-primary text-white shadow-sm"
                     : "text-gray-600 hover:bg-gray-100"
                 )}
               >

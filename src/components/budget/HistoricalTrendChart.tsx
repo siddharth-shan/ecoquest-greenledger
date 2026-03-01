@@ -188,7 +188,7 @@ export default function HistoricalTrendChart() {
             }
             className={`text-left rounded-xl border p-4 transition-all ${
               selectedEvent === event.fiscalYear
-                ? "border-eco-green bg-eco-green-light/30"
+                ? "border-civic-primary bg-civic-primary-light"
                 : "border-gray-100 bg-white hover:border-gray-200"
             }`}
           >
@@ -196,7 +196,7 @@ export default function HistoricalTrendChart() {
               <span className="text-xs font-mono text-gray-400">
                 FY {event.fiscalYear}
               </span>
-              <span className="text-xs font-semibold text-eco-green">
+              <span className="text-xs font-semibold text-civic-primary">
                 {event.label}
               </span>
             </div>

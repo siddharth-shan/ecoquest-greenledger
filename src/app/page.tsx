@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
-  Leaf,
+  Building2,
   ArrowRight,
   DollarSign,
   Users,
@@ -44,21 +44,21 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-eco text-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-civic-primary via-civic-primary-dark to-civic-accent text-white py-16 md:py-24">
         <div className="container-custom">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                <Leaf className="w-6 h-6 text-white" />
+                <Building2 className="w-6 h-6 text-white" />
               </div>
               <span className="font-heading font-bold text-lg">
-                EcoQuest GreenLedger
+                GreenLedger
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-extrabold leading-tight mb-4">
               Follow the Money.
               <br />
-              <span className="text-eco-yellow">Improve Your City.</span>
+              <span className="text-civic-highlight">Improve Your City.</span>
             </h1>
             <p className="text-lg text-white/80 mb-8 max-w-lg">
               See how Cerritos spends your tax dollars on sustainability — then
@@ -67,14 +67,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 href="/hub/budget"
-                className="inline-flex items-center justify-center gap-2 bg-white text-eco-green-dark font-semibold px-6 py-3 rounded-full hover:bg-eco-yellow hover:text-gray-900 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-white text-civic-primary-dark font-semibold px-6 py-3 rounded-lg hover:bg-civic-highlight hover:text-gray-900 transition-all duration-300"
               >
                 <BarChart3 className="w-5 h-5" />
                 Explore the Budget
               </Link>
               <Link
                 href="/challenges"
-                className="inline-flex items-center justify-center gap-2 bg-white/15 text-white font-semibold px-6 py-3 rounded-full hover:bg-white/25 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-white/15 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/25 transition-all duration-300"
               >
                 <Trophy className="w-5 h-5" />
                 Start a Challenge
@@ -92,8 +92,8 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-eco-green-light flex items-center justify-center shrink-0">
-                <DollarSign className="w-5 h-5 text-eco-green" />
+              <div className="w-10 h-10 rounded-lg bg-civic-primary-light flex items-center justify-center shrink-0">
+                <DollarSign className="w-5 h-5 text-civic-primary" />
               </div>
               <div>
                 <p className="text-xl font-bold text-gray-900">$131.4M</p>
@@ -101,8 +101,8 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-eco-blue-light flex items-center justify-center shrink-0">
-                <Users className="w-5 h-5 text-eco-blue" />
+              <div className="w-10 h-10 rounded-lg bg-civic-accent-light flex items-center justify-center shrink-0">
+                <Users className="w-5 h-5 text-civic-accent" />
               </div>
               <div>
                 <p className="text-xl font-bold text-gray-900">$2,553</p>
@@ -119,8 +119,8 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-eco-yellow/10 flex items-center justify-center shrink-0">
-                <TrendingUp className="w-5 h-5 text-eco-yellow" />
+              <div className="w-10 h-10 rounded-lg bg-civic-highlight/10 flex items-center justify-center shrink-0">
+                <TrendingUp className="w-5 h-5 text-civic-highlight" />
               </div>
               <div>
                 <p className="text-xl font-bold text-gray-900">722M gal</p>
@@ -143,7 +143,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/challenges"
-              className="hidden sm:flex items-center gap-1 text-sm font-medium text-eco-green hover:text-eco-green-dark"
+              className="hidden sm:flex items-center gap-1 text-sm font-medium text-civic-primary hover:text-civic-primary-dark"
             >
               View All
               <ArrowRight className="w-4 h-4" />
@@ -175,7 +175,7 @@ export default function HomePage() {
               </div>
               <Link
                 href="/impact"
-                className="hidden sm:flex items-center gap-1 text-sm font-medium text-eco-green hover:text-eco-green-dark"
+                className="hidden sm:flex items-center gap-1 text-sm font-medium text-civic-primary hover:text-civic-primary-dark"
               >
                 See All
                 <ArrowRight className="w-4 h-4" />
@@ -187,9 +187,9 @@ export default function HomePage() {
                 return (
                   <div
                     key={counter.id}
-                    className="bg-eco-green-light/50 rounded-xl p-4 text-center"
+                    className="bg-civic-primary-light rounded-xl p-4 text-center"
                   >
-                    <Icon className="w-5 h-5 text-eco-green mx-auto mb-2" />
+                    <Icon className="w-5 h-5 text-civic-primary mx-auto mb-2" />
                     <p className="text-xl font-bold text-gray-900 tabular-nums">
                       <AnimatedCounter value={counter.value} duration={1200} />
                     </p>
@@ -205,7 +205,7 @@ export default function HomePage() {
       )}
 
       {/* CTA */}
-      <section className="bg-gradient-eco-light py-12">
+      <section className="bg-slate-50 border-t border-gray-200 py-12">
         <div className="container-custom text-center">
           <h2 className="font-heading font-bold text-2xl text-gray-900 mb-3">
             Ready to make a difference?

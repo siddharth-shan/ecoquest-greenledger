@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
-import { Leaf, Mail, User } from "lucide-react";
+import { Building2, Mail, User } from "lucide-react";
 
 export default function SignInPage() {
   const [email, setEmail] = useState("");
@@ -25,13 +25,12 @@ export default function SignInPage() {
       <div className="bg-white rounded-2xl shadow-xl p-8">
         {/* Branding */}
         <div className="text-center mb-8">
-          <div className="w-14 h-14 rounded-xl bg-gradient-eco flex items-center justify-center mx-auto mb-4">
-            <Leaf className="w-8 h-8 text-white" />
+          <div className="w-14 h-14 rounded-xl bg-civic-primary flex items-center justify-center mx-auto mb-4">
+            <Building2 className="w-8 h-8 text-white" />
           </div>
-          <h1 className="font-heading font-bold text-2xl text-gray-900">
-            <span className="text-eco-green">Eco</span>
-            <span className="text-eco-blue">Quest</span>{" "}
-            <span className="text-gray-600 text-lg">GreenLedger</span>
+          <h1 className="font-heading font-bold text-2xl text-civic-primary">
+            GreenLedger{" "}
+            <span className="text-gray-500 text-lg">Cerritos</span>
           </h1>
           <p className="text-gray-500 text-sm mt-2">
             Sign in to track your sustainability challenges
@@ -86,7 +85,7 @@ export default function SignInPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your name"
-                className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-eco-green/20 focus:border-eco-green outline-none transition-all text-sm"
+                className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-civic-primary/20 focus:border-civic-primary outline-none transition-all text-sm"
               />
             </div>
           </div>
@@ -102,7 +101,7 @@ export default function SignInPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
                 required
-                className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-eco-green/20 focus:border-eco-green outline-none transition-all text-sm"
+                className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl focus:ring-2 focus:ring-civic-primary/20 focus:border-civic-primary outline-none transition-all text-sm"
               />
             </div>
           </div>

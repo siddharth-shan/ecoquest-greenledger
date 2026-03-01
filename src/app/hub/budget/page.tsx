@@ -35,8 +35,8 @@ export default function BudgetPage() {
       {/* 10-Year Historical Trend */}
       <div className="mt-10">
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 rounded-xl bg-eco-blue-light flex items-center justify-center">
-            <TrendingUp className="w-5 h-5 text-eco-blue" />
+          <div className="w-10 h-10 rounded-xl bg-civic-accent-light flex items-center justify-center">
+            <TrendingUp className="w-5 h-5 text-civic-accent" />
           </div>
           <div>
             <h2 className="font-heading font-bold text-xl text-gray-900">

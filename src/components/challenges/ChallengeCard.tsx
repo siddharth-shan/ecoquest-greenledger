@@ -43,7 +43,7 @@ export default function ChallengeCard({
         className={cn(
           "bg-white rounded-xl border p-5 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer",
           status === "completed"
-            ? "border-eco-green/30 bg-eco-green-light/30"
+            ? "border-civic-accent/30 bg-civic-accent-light/30"
             : "border-gray-100"
         )}
       >
@@ -58,7 +58,7 @@ export default function ChallengeCard({
             <Icon
               className={cn(
                 "w-6 h-6",
-                status === "completed" ? "text-eco-green" : "text-gray-500"
+                status === "completed" ? "text-civic-accent" : "text-gray-500"
               )}
             />
           </div>
@@ -88,7 +88,7 @@ export default function ChallengeCard({
               <Clock className="w-3.5 h-3.5" />
               {challenge.estimatedMinutes}m
             </span>
-            <span className="flex items-center gap-1 font-semibold text-eco-green">
+            <span className="flex items-center gap-1 font-semibold text-civic-accent">
               <Star className="w-3.5 h-3.5" />
               {challenge.pointsReward}pts
             </span>
@@ -96,8 +96,8 @@ export default function ChallengeCard({
         </div>
 
         {status === "completed" && (
-          <div className="mt-3 pt-3 border-t border-eco-green/20">
-            <span className="text-xs font-medium text-eco-green">
+          <div className="mt-3 pt-3 border-t border-civic-accent/20">
+            <span className="text-xs font-medium text-civic-accent">
               ✓ Completed
             </span>
           </div>

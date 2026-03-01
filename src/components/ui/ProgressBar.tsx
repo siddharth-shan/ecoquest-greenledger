@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils";
 
 const colorStyles = {
-  "eco-green": "bg-eco-green",
-  "eco-green-dark": "bg-eco-green-dark",
-  "eco-blue": "bg-eco-blue",
-  "eco-blue-dark": "bg-eco-blue-dark",
-  "eco-yellow": "bg-eco-yellow",
-  "eco-orange": "bg-eco-orange",
+  "civic-primary": "bg-civic-primary",
+  "civic-primary-dark": "bg-civic-primary-dark",
+  "civic-accent": "bg-civic-accent",
+  "civic-accent-dark": "bg-civic-accent-dark",
+  "civic-highlight": "bg-civic-highlight",
+  "civic-warm": "bg-civic-warm",
 } as const;
 
 const sizeStyles = {
@@ -30,7 +30,7 @@ export interface ProgressBarProps {
 function ProgressBar({
   value,
   max = 100,
-  color = "eco-green",
+  color = "civic-primary",
   size = "md",
   showLabel = false,
   className,

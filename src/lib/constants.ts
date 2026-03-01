@@ -47,14 +47,14 @@ export const SUSTAINABILITY_TAG_CONFIG: Record<
 };
 
 export const CHART_COLORS = [
-  "#34a853",
-  "#00a8e1",
-  "#f57c00",
-  "#fbbc04",
-  "#a855f7",
-  "#ef4444",
-  "#6b7280",
-  "#ec4899",
+  "#1a365d",
+  "#2b7a78",
+  "#c05621",
+  "#d69e2e",
+  "#6b46c1",
+  "#c53030",
+  "#4a5568",
+  "#b83280",
 ];
 
 export const NAV_ITEMS = [
@@ -70,16 +70,17 @@ export const HUB_NAV_ITEMS = [
   { label: "Tax Dollar", href: "/hub/tax-dollar", icon: "Receipt" },
   { label: "Simulator", href: "/hub/simulator", icon: "SlidersHorizontal" },
   { label: "Scorecards", href: "/hub/scorecards", icon: "ClipboardCheck" },
+  { label: "Priorities", href: "/hub/priorities", icon: "ListOrdered" },
   { label: "Civic Actions", href: "/hub/civic", icon: "Megaphone" },
   { label: "Sources", href: "/hub/sources", icon: "FileText" },
 ] as const;
 
 export const DEPARTMENT_COLORS: Record<string, string> = {
-  "community-safety": "#EF4444",
-  "public-works": "#3B82F6",
-  "community-cultural-services": "#34A853",
-  "theater": "#A855F7",
-  "administrative-services": "#F59E0B",
-  "community-development": "#06B6D4",
-  "legislative-admin": "#6B7280",
+  "community-safety": "#9B2C2C",
+  "public-works": "#2B6CB0",
+  "community-cultural-services": "#276749",
+  "theater": "#6B46C1",
+  "administrative-services": "#B7791F",
+  "community-development": "#2C7A7B",
+  "legislative-admin": "#4A5568",
 };

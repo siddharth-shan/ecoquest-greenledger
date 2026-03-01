@@ -30,7 +30,7 @@ export default function SourceCitation({
               href={source.documentUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-eco-blue hover:underline"
+              className="text-sm font-medium text-civic-accent hover:underline"
             >
               {source.documentName}
             </a>

@@ -88,7 +88,7 @@ export default function BudgetChart({
             className={cn(
               "p-1.5 rounded-md transition-colors cursor-pointer",
               chartType === "pie"
-                ? "bg-white shadow-sm text-eco-green"
+                ? "bg-white shadow-sm text-civic-primary"
                 : "text-gray-400 hover:text-gray-600"
             )}
           >
@@ -99,7 +99,7 @@ export default function BudgetChart({
             className={cn(
               "p-1.5 rounded-md transition-colors cursor-pointer",
               chartType === "bar"
-                ? "bg-white shadow-sm text-eco-green"
+                ? "bg-white shadow-sm text-civic-primary"
                 : "text-gray-400 hover:text-gray-600"
             )}
           >

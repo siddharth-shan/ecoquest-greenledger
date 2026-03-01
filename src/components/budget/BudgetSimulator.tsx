@@ -76,7 +76,7 @@ export default function BudgetSimulator() {
   return (
     <div className="space-y-6">
       {/* Header info */}
-      <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 border border-purple-100/50">
+      <div className="bg-gradient-to-r from-civic-primary-light to-civic-accent-light rounded-2xl p-6 border border-civic-primary/10">
         <h3 className="font-heading font-bold text-lg text-gray-900 mb-2">
           How would YOU balance the budget?
         </h3>
@@ -95,7 +95,7 @@ export default function BudgetSimulator() {
           <p
             className={`text-xl font-bold ${
               Math.abs(difference) < 100000
-                ? "text-eco-green"
+                ? "text-civic-accent"
                 : difference > 0
                 ? "text-red-500"
                 : "text-blue-500"
@@ -120,7 +120,7 @@ export default function BudgetSimulator() {
         <div className="bg-white rounded-xl border border-gray-100 p-4 text-center">
           <button
             onClick={handleReset}
-            className="flex items-center gap-1 mx-auto text-sm font-medium text-eco-green hover:text-eco-green-dark transition-colors"
+            className="flex items-center gap-1 mx-auto text-sm font-medium text-civic-primary hover:text-civic-primary-dark transition-colors"
           >
             <RotateCcw className="w-4 h-4" />
             Reset
@@ -219,7 +219,7 @@ export default function BudgetSimulator() {
         </h3>
         <ul className="space-y-2 text-sm text-gray-600">
           <li className="flex items-start gap-2">
-            <span className="text-eco-green mt-0.5">•</span>
+            <span className="text-civic-accent mt-0.5">•</span>
             <span>
               <strong>Fixed costs matter:</strong> The Sheriff + Fire contracts
               ($23.4M) are negotiated with LA County and can&apos;t easily change.
@@ -227,14 +227,14 @@ export default function BudgetSimulator() {
             </span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-eco-green mt-0.5">•</span>
+            <span className="text-civic-accent mt-0.5">•</span>
             <span>
               <strong>Trade-offs are real:</strong> Increasing one department
               means finding savings elsewhere — or raising taxes.
             </span>
           </li>
           <li className="flex items-start gap-2">
-            <span className="text-eco-green mt-0.5">•</span>
+            <span className="text-civic-accent mt-0.5">•</span>
             <span>
               <strong>Per-capita impact:</strong> Every $1M change = about $19.43
               per resident. Small percentages = big impacts.
