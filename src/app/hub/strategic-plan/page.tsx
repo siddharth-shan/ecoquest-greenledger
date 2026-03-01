@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import {
   Building2,
@@ -9,9 +9,6 @@ import {
   MessageSquare,
   CheckCircle2,
   ExternalLink,
-  Users,
-  Trophy,
-  BarChart3,
   ArrowRight,
 } from "lucide-react";
 import strategicPlanData from "@/data/strategic-plan.json";
@@ -47,30 +44,15 @@ const featureLinks: Record<string, string> = {
   "Budget Explorer": "/hub/budget",
   "Tax Dollar Calculator": "/hub/tax-dollar",
   "Budget Simulator": "/hub/simulator",
-  "Challenges": "/challenges",
   "Scorecards": "/hub/scorecards",
   "Historical Trends": "/hub/budget",
   "Community Priorities": "/hub/priorities",
   "Civic Actions": "/hub/civic",
-  "Impact Dashboard": "/impact",
+  "Budget Q&A": "/hub/ask",
 };
 
-interface EngagementStats {
-  totalSurveyResponses: number;
-  totalChallengesCompleted: number;
-  totalVolunteerHours: number;
-}
-
 export default function StrategicPlanPage() {
-  const [stats, setStats] = useState<EngagementStats | null>(null);
   const [expandedGoal, setExpandedGoal] = useState<string | null>("goal-6");
-
-  useEffect(() => {
-    fetch("/api/stats")
-      .then((r) => r.json())
-      .then(setStats)
-      .catch(() => {});
-  }, []);
 
   return (
     <div className="container-custom py-6">
@@ -91,32 +73,6 @@ export default function StrategicPlanPage() {
         </p>
         <div className="section-underline mt-3" />
       </div>
-
-      {/* Engagement Metrics Banner */}
-      {stats && (
-        <div className="bg-gradient-to-r from-civic-primary via-civic-primary-dark to-civic-accent rounded-xl p-6 text-white mb-8">
-          <h2 className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-4">
-            Platform Engagement
-          </h2>
-          <div className="grid grid-cols-3 gap-6">
-            <div className="text-center">
-              <Users className="w-6 h-6 text-white/70 mx-auto mb-1" />
-              <p className="text-2xl font-bold">{stats.totalSurveyResponses}</p>
-              <p className="text-xs text-white/70">Survey Responses</p>
-            </div>
-            <div className="text-center">
-              <Trophy className="w-6 h-6 text-white/70 mx-auto mb-1" />
-              <p className="text-2xl font-bold">{stats.totalChallengesCompleted}</p>
-              <p className="text-xs text-white/70">Challenges Completed</p>
-            </div>
-            <div className="text-center">
-              <BarChart3 className="w-6 h-6 text-white/70 mx-auto mb-1" />
-              <p className="text-2xl font-bold">{stats.totalVolunteerHours}</p>
-              <p className="text-xs text-white/70">Volunteer Hours</p>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Goal Cards */}
       <div className="space-y-4 mb-8">

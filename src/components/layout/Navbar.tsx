@@ -2,16 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Trophy, BarChart3, Landmark, User, Building2 } from "lucide-react";
+import { Home, Landmark, FileText, Building2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV_ITEMS } from "@/lib/constants";
 
 const iconMap: Record<string, React.ElementType> = {
   Home,
-  Trophy,
-  BarChart3,
   Landmark,
-  User,
+  FileText,
 };
 
 export default function Navbar() {

@@ -20,33 +20,6 @@ export default function ReportMethodology() {
         </div>
 
         <div>
-          <h3 className="font-bold text-gray-900 mb-1">Calculation Approach</h3>
-          <ul className="list-disc list-inside space-y-1 text-gray-600">
-            <li>
-              <strong>Budget allocation shares</strong> are estimated percentages
-              of department totals attributed to specific sustainability programs
-              (e.g., 15% of Public Works for water conservation). Actual line-item
-              allocations may differ.
-            </li>
-            <li>
-              <strong>Cost per outcome</strong> divides the estimated budget
-              allocation by the community impact counter total. These are
-              directional metrics, not audited financial figures.
-            </li>
-            <li>
-              <strong>Benchmarks</strong> are drawn from national sources (MWD,
-              USDA, EPA, Independent Sector) and may not reflect local conditions
-              exactly.
-            </li>
-            <li>
-              <strong>Equivalences</strong> use standard conversion factors
-              (e.g., 660,000 gal/Olympic pool, 48 lbs CO2/tree/year) widely cited
-              in environmental education.
-            </li>
-          </ul>
-        </div>
-
-        <div>
           <h3 className="font-bold text-gray-900 mb-1">Confidence Levels</h3>
           <ul className="list-disc list-inside space-y-1 text-gray-600">
             <li>
@@ -58,11 +31,6 @@ export default function ReportMethodology() {
               sustainability percentages — estimated from departmental
               descriptions and publicly available program details.
             </li>
-            <li>
-              <strong>Directional:</strong> Cost-per-outcome ratios, ROI ratings,
-              scaling projections — useful for comparison but not precise
-              financial analysis.
-            </li>
           </ul>
         </div>
 
@@ -73,10 +41,9 @@ export default function ReportMethodology() {
             <p className="text-amber-700">
               This report is a student-built civic technology demonstration using
               publicly available data. It is not an official City of Cerritos
-              document, nor has it been reviewed or endorsed by city staff. Budget
-              allocation estimates and cost-per-outcome calculations are
-              educational approximations. For authoritative financial data, refer
-              to the official Adopted Budget at cerritos.gov.
+              document, nor has it been reviewed or endorsed by city staff.
+              For authoritative financial data, refer to the official Adopted
+              Budget at cerritos.gov.
             </p>
           </div>
         </div>

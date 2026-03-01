@@ -59,10 +59,8 @@ export const CHART_COLORS = [
 
 export const NAV_ITEMS = [
   { label: "Home", href: "/", icon: "Home" },
-  { label: "Challenges", href: "/challenges", icon: "Trophy" },
-  { label: "Impact", href: "/impact", icon: "BarChart3" },
   { label: "Cerritos Hub", href: "/hub", icon: "Landmark" },
-  { label: "Profile", href: "/profile", icon: "User" },
+  { label: "Report", href: "/report", icon: "FileText" },
 ] as const;
 
 export const HUB_NAV_GROUPS = [
@@ -73,8 +71,7 @@ export const HUB_NAV_GROUPS = [
       { label: "Budget Overview", href: "/hub/budget", icon: "PieChart", description: "City spending by department with 10-year trends" },
       { label: "Your Tax Dollar", href: "/hub/tax-dollar", icon: "Receipt", description: "See exactly where your tax dollars go" },
       { label: "Simulator", href: "/hub/simulator", icon: "SlidersHorizontal", description: "Drag sliders to reshape the city budget" },
-      { label: "Eco Rewards", href: "/hub/green-wallet", icon: "Wallet", description: "Earn rewards for sustainable actions" },
-      { label: "City Green Bonds", href: "/hub/green-bonds", icon: "Landmark", description: "Municipal bonds funding green projects" },
+      { label: "Budget Q&A", href: "/hub/ask", icon: "MessageCircleQuestion", description: "Ask AI questions about the Cerritos budget" },
     ],
   },
   {
@@ -86,7 +83,6 @@ export const HUB_NAV_GROUPS = [
       { label: "Energy & Solar", href: "/hub/energy-literacy", icon: "Zap", description: "City solar and energy efficiency programs" },
       { label: "Urban Forest", href: "/hub/urban-forest", icon: "TreePine", description: "28,000+ city trees and urban canopy data" },
       { label: "Transit", href: "/hub/transit", icon: "Bus", description: "Transportation mode shift calculator" },
-      { label: "Recycling Quiz", href: "/hub/recycling-quiz", icon: "Recycle", description: "Test your 3-cart recycling knowledge" },
     ],
   },
   {

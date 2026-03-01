@@ -1,55 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import {
   ArrowRight,
   DollarSign,
   Users,
   TreePine,
-  Trophy,
   Droplets,
-  Recycle,
   BarChart3,
   Leaf,
   MessageCircle,
   ClipboardCheck,
-  Waves,
-  Wind,
-  UserCheck,
-  HandCoins,
+  MessageCircleQuestion,
+  FileText,
 } from "lucide-react";
-import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
-import ChallengeCard from "@/components/challenges/ChallengeCard";
-import { getEquivalence } from "@/lib/impact-equivalences";
-import challengeData from "@/data/challenges/challenges.json";
-import type { Challenge } from "@/types/challenge";
-import type { ImpactCounter } from "@/types/challenge";
-
-const challenges = challengeData.challenges as unknown as Challenge[];
-const featured = challenges.slice(0, 3);
-
-const iconMap: Record<string, React.ElementType> = {
-  Droplets,
-  TreePine,
-  Recycle,
-  Trophy,
-  Clock: Trophy,
-};
-
-const equivIconMap: Record<string, React.ElementType> = {
-  Waves,
-  Wind,
-  UserCheck,
-  HandCoins,
-  Users,
-};
-
-interface EngagementStats {
-  totalSurveyResponses: number;
-  totalChallengesCompleted: number;
-  totalVolunteerHours: number;
-}
 
 const topBenefits = [
   {
@@ -79,7 +43,7 @@ const topBenefits = [
   {
     title: "Make Your Voice Count",
     description:
-      "Rank community priorities, complete sustainability challenges, and see how your values compare to actual city spending.",
+      "Rank community priorities, explore the city strategic plan, and see how your values compare to actual city spending.",
     stat: "5 categories ranked",
     icon: MessageCircle,
     href: "/hub/priorities",
@@ -91,20 +55,6 @@ const topBenefits = [
 ];
 
 export default function HomePage() {
-  const [counters, setCounters] = useState<ImpactCounter[]>([]);
-  const [stats, setStats] = useState<EngagementStats | null>(null);
-
-  useEffect(() => {
-    fetch("/api/impact")
-      .then((r) => r.json())
-      .then(setCounters)
-      .catch(() => {});
-    fetch("/api/stats")
-      .then((r) => r.json())
-      .then(setStats)
-      .catch(() => {});
-  }, []);
-
   return (
     <div>
       {/* Hero */}
@@ -125,8 +75,9 @@ export default function HomePage() {
               <span className="text-eco-green">Improve Your City.</span>
             </h1>
             <p className="text-base text-white/80 mb-3 max-w-lg">
-              See how Cerritos spends your tax dollars on sustainability — then
-              take action with real-world challenges that make a difference.
+              See how Cerritos spends your tax dollars on sustainability —
+              explore the budget, track real environmental metrics, and engage
+              with your city.
             </p>
 
             {/* Strategic Plan Badge */}
@@ -146,11 +97,11 @@ export default function HomePage() {
                 Explore the Budget
               </Link>
               <Link
-                href="/challenges"
+                href="/report"
                 className="inline-flex items-center justify-center gap-2 bg-white/15 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/25 transition-all duration-300"
               >
-                <Trophy className="w-5 h-5" />
-                Start a Challenge
+                <FileText className="w-5 h-5" />
+                View Report
               </Link>
             </div>
           </div>
@@ -232,143 +183,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Community Engagement Metrics */}
-      {stats && (
-        <section className="py-10 bg-white border-b border-gray-100">
-          <div className="container-custom">
-            <h2 className="font-heading font-bold text-sm text-gray-400 uppercase tracking-wider mb-4">
-              Community Engagement
-            </h2>
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-civic-primary-light rounded-xl p-5 text-center">
-                <Users className="w-6 h-6 text-civic-primary mx-auto mb-2" />
-                <p className="text-2xl font-bold text-gray-900">
-                  {stats.totalSurveyResponses}
-                </p>
-                <p className="text-xs text-gray-600 mt-1">Survey Responses</p>
-              </div>
-              <div className="bg-civic-accent-light rounded-xl p-5 text-center">
-                <Trophy className="w-6 h-6 text-civic-accent mx-auto mb-2" />
-                <p className="text-2xl font-bold text-gray-900">
-                  {stats.totalChallengesCompleted}
-                </p>
-                <p className="text-xs text-gray-600 mt-1">
-                  Challenges Completed
-                </p>
-              </div>
-              <div className="bg-civic-highlight/10 rounded-xl p-5 text-center">
-                <BarChart3 className="w-6 h-6 text-civic-highlight mx-auto mb-2" />
-                <p className="text-2xl font-bold text-gray-900">
-                  {stats.totalVolunteerHours}
-                </p>
-                <p className="text-xs text-gray-600 mt-1">Volunteer Hours</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Featured Challenges */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="section-title text-2xl">Take Action</h2>
-              <p className="text-gray-500 text-sm">
-                Real-world challenges tied to Cerritos sustainability goals
-              </p>
-            </div>
-            <Link
-              href="/challenges"
-              className="hidden sm:flex items-center gap-1 text-sm font-medium text-civic-primary hover:text-civic-primary-dark"
-            >
-              View All
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featured.map((c) => (
-              <ChallengeCard key={c.id} challenge={c} />
-            ))}
-          </div>
-          <div className="sm:hidden mt-4 text-center">
-            <Link href="/challenges" className="btn btn-outline text-sm">
-              View All Challenges
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Impact Preview with Equivalences */}
-      {counters.length > 0 && (
-        <section className="section-padding bg-white">
-          <div className="container-custom">
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <h2 className="section-title text-2xl">Community Impact</h2>
-                <p className="text-gray-500 text-sm">
-                  Together, our community has achieved this
-                </p>
-              </div>
-              <Link
-                href="/impact"
-                className="hidden sm:flex items-center gap-1 text-sm font-medium text-civic-primary hover:text-civic-primary-dark"
-              >
-                See All
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {counters.slice(0, 5).map((counter) => {
-                const Icon = iconMap[counter.icon] || Trophy;
-                const equiv = getEquivalence(counter.id, counter.value);
-                const EquivIcon = equiv
-                  ? equivIconMap[equiv.icon] || null
-                  : null;
-                return (
-                  <div
-                    key={counter.id}
-                    className="bg-civic-primary-light rounded-xl p-4 text-center"
-                  >
-                    <Icon className="w-5 h-5 text-civic-primary mx-auto mb-2" />
-                    <p className="text-xl font-bold text-gray-900 tabular-nums">
-                      <AnimatedCounter value={counter.value} duration={1200} />
-                    </p>
-                    <p className="text-xs text-gray-600 mt-1">
-                      {counter.label}
-                    </p>
-                    {equiv && (
-                      <div className="flex items-center justify-center gap-1 text-[10px] text-civic-accent mt-1.5">
-                        {EquivIcon && <EquivIcon className="w-3 h-3" />}
-                        <span>
-                          ≈ {equiv.value} {equiv.label}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* CTA */}
       <section className="bg-slate-50 border-t border-gray-200 py-12">
         <div className="container-custom text-center">
           <h2 className="font-heading font-bold text-2xl text-gray-900 mb-3">
-            Ready to make a difference?
+            Ready to explore?
           </h2>
           <p className="text-gray-600 mb-6 max-w-md mx-auto">
-            Explore the budget, complete challenges, and help build a more
-            sustainable Cerritos.
+            Dive into the budget data or ask AI-powered questions about city
+            finances and sustainability.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/hub/budget" className="btn btn-primary">
               Explore the Budget
             </Link>
-            <Link href="/challenges" className="btn btn-outline">
-              Start a Challenge
+            <Link
+              href="/hub/ask"
+              className="btn btn-outline inline-flex items-center gap-2"
+            >
+              <MessageCircleQuestion className="w-4 h-4" />
+              Ask About the Budget
             </Link>
           </div>
         </div>

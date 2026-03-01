@@ -1,30 +1,15 @@
 import { Building2, CheckCircle2, ExternalLink, Printer } from "lucide-react";
-import { getImpactCounters, getSurveyAggregateResults } from "@/lib/kv";
-import { getEquivalence } from "@/lib/impact-equivalences";
-import { computeCostPerOutcome } from "@/lib/impact-roi";
+import { getSurveyAggregateResults } from "@/lib/kv";
 import strategicPlanData from "@/data/strategic-plan.json";
 import sourcesData from "@/data/sources.json";
-import expenditureData from "@/data/budget/expenditures.json";
-import ReportCostMetrics from "@/components/report/ReportCostMetrics";
 import ReportMethodology from "@/components/report/ReportMethodology";
-import type { BudgetData } from "@/types/budget";
-
-const budgetData = expenditureData as unknown as BudgetData;
 
 export const dynamic = "force-dynamic";
 
 export default async function ReportPage() {
-  const [counters, surveyResults] = await Promise.all([
-    getImpactCounters(),
-    getSurveyAggregateResults("sustainability-priorities-2025"),
-  ]);
-
-  const challengesCompleted =
-    counters.find((c) => c.id === "challenges-completed")?.value ?? 0;
-  const volunteerHours =
-    counters.find((c) => c.id === "park-hours")?.value ?? 0;
-
-  const costOutcomes = computeCostPerOutcome(counters, budgetData.categories);
+  const surveyResults = await getSurveyAggregateResults(
+    "sustainability-priorities-2025"
+  );
 
   const categoryLabels: Record<string, string> = {
     parks: "Parks & Greening",
@@ -62,13 +47,13 @@ export default async function ReportPage() {
             </div>
           </div>
           <h1 className="text-3xl font-heading font-extrabold text-civic-primary mb-2">
-            EcoQuest GreenLedger
+            GreenLedger
           </h1>
           <p className="text-lg text-gray-600 mb-1">
-            Civic Sustainability Dashboard for Cerritos, CA
+            Cerritos Budget Transparency & Civic Engagement Platform
           </p>
           <p className="text-sm text-gray-400">
-            Student-built civic technology | Prepared February 2026
+            Student-built civic technology | Prepared March 2026
           </p>
         </header>
 
@@ -83,8 +68,8 @@ export default async function ReportPage() {
             <strong>environmental sustainability</strong>. Built by Cerritos
             high school students, it transforms the city&apos;s 370-page adopted
             budget into interactive explorations, tracks real sustainability
-            metrics from verified city data, and engages residents through
-            gamified environmental challenges.
+            metrics from verified city data, and includes an AI-powered budget
+            Q&A tool for natural language exploration of city finances.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed">
             Unlike existing civic tech platforms that address either budget
@@ -132,34 +117,20 @@ export default async function ReportPage() {
           </div>
         </section>
 
-        {/* Engagement Metrics */}
-        <section className="mb-10">
-          <h2 className="text-xl font-heading font-bold text-civic-primary mb-3 border-b border-gray-200 pb-2">
-            Community Engagement
-          </h2>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="border border-gray-200 rounded-lg p-4 text-center">
+        {/* Community Engagement */}
+        {surveyResults.totalResponses > 0 && (
+          <section className="mb-10">
+            <h2 className="text-xl font-heading font-bold text-civic-primary mb-3 border-b border-gray-200 pb-2">
+              Community Engagement
+            </h2>
+            <div className="border border-gray-200 rounded-lg p-4 text-center mb-6">
               <p className="text-2xl font-bold text-civic-primary">
                 {surveyResults.totalResponses}
               </p>
               <p className="text-xs text-gray-600 mt-1">Survey Responses</p>
             </div>
-            <div className="border border-gray-200 rounded-lg p-4 text-center">
-              <p className="text-2xl font-bold text-civic-primary">
-                {challengesCompleted}
-              </p>
-              <p className="text-xs text-gray-600 mt-1">
-                Challenges Completed
-              </p>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-4 text-center">
-              <p className="text-2xl font-bold text-civic-primary">
-                {volunteerHours}
-              </p>
-              <p className="text-xs text-gray-600 mt-1">Volunteer Hours</p>
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* Community Priorities */}
         {surveyResults.totalResponses > 0 && (
@@ -191,37 +162,6 @@ export default async function ReportPage() {
             </div>
           </section>
         )}
-
-        {/* Environmental Impact */}
-        <section className="mb-10">
-          <h2 className="text-xl font-heading font-bold text-civic-primary mb-3 border-b border-gray-200 pb-2">
-            Environmental Impact
-          </h2>
-          <div className="grid grid-cols-2 gap-3">
-            {counters.map((counter) => {
-              const equiv = getEquivalence(counter.id, counter.value);
-              return (
-                <div
-                  key={counter.id}
-                  className="border border-gray-200 rounded-lg p-3"
-                >
-                  <p className="text-xl font-bold text-gray-900">
-                    {counter.value.toLocaleString()}
-                  </p>
-                  <p className="text-xs text-gray-600">{counter.label}</p>
-                  {equiv && (
-                    <p className="text-xs text-civic-accent mt-1">
-                      ≈ {equiv.value} {equiv.label}
-                    </p>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* Cost per Outcome Analysis */}
-        <ReportCostMetrics costOutcomes={costOutcomes} />
 
         {/* Methodology & Limitations */}
         <ReportMethodology />
@@ -280,7 +220,7 @@ export default async function ReportPage() {
         {/* Footer */}
         <footer className="text-center border-t-2 border-civic-primary pt-6">
           <p className="text-sm font-heading font-bold text-civic-primary">
-            EcoQuest GreenLedger
+            GreenLedger
           </p>
           <p className="text-xs text-gray-500 mt-1">
             A student-built civic technology project for the City of Cerritos
