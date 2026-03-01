@@ -71,6 +71,7 @@ export const HUB_NAV_ITEMS = [
   { label: "Simulator", href: "/hub/simulator", icon: "SlidersHorizontal" },
   { label: "Scorecards", href: "/hub/scorecards", icon: "ClipboardCheck" },
   { label: "Priorities", href: "/hub/priorities", icon: "ListOrdered" },
+  { label: "Strategic Plan", href: "/hub/strategic-plan", icon: "Building2" },
   { label: "Civic Actions", href: "/hub/civic", icon: "Megaphone" },
   { label: "Sources", href: "/hub/sources", icon: "FileText" },
 ] as const;

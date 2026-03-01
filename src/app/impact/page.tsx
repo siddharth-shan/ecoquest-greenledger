@@ -8,9 +8,15 @@ import {
   Clock,
   Trophy,
   TrendingUp,
+  Waves,
+  Wind,
+  UserCheck,
+  HandCoins,
+  Users,
 } from "lucide-react";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import SustainabilityTag from "@/components/shared/SustainabilityTag";
+import { getEquivalence } from "@/lib/impact-equivalences";
 import type { ImpactCounter } from "@/types/challenge";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -19,6 +25,14 @@ const iconMap: Record<string, React.ElementType> = {
   Recycle,
   Clock,
   Trophy,
+};
+
+const equivIconMap: Record<string, React.ElementType> = {
+  Waves,
+  Wind,
+  UserCheck,
+  HandCoins,
+  Users,
 };
 
 export default function ImpactPage() {
@@ -56,6 +70,9 @@ export default function ImpactPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {counters.map((counter) => {
           const Icon = iconMap[counter.icon] || Trophy;
+          const equiv = getEquivalence(counter.id, counter.value);
+          const EquivIcon = equiv ? (equivIconMap[equiv.icon] || Trophy) : null;
+
           return (
             <div
               key={counter.id}
@@ -73,6 +90,17 @@ export default function ImpactPage() {
               <p className="text-sm font-medium text-gray-600 mb-2">
                 {counter.label}
               </p>
+
+              {/* Equivalence */}
+              {equiv && (
+                <div className="flex items-center justify-center gap-1.5 text-xs text-civic-accent mt-1 mb-2">
+                  {EquivIcon && <EquivIcon className="w-3.5 h-3.5" />}
+                  <span>
+                    ≈ {equiv.value} {equiv.label}
+                  </span>
+                </div>
+              )}
+
               <SustainabilityTag tag={counter.sustainabilityTag} />
             </div>
           );
@@ -83,6 +111,18 @@ export default function ImpactPage() {
         <div className="text-center py-12">
           <p className="text-gray-400">
             Impact counters are loading...
+          </p>
+        </div>
+      )}
+
+      {/* Methodology note */}
+      {loaded && counters.length > 0 && (
+        <div className="mt-8 bg-gray-50 rounded-xl p-4 border border-gray-100">
+          <p className="text-xs text-gray-500">
+            <strong>Equivalences:</strong> Water savings calculated at 660,000 gal/Olympic pool (FINA).
+            CO2 absorption at 48 lbs/tree/year (USDA Forest Service).
+            Volunteer value at $31.80/hr (Independent Sector 2023).
+            Waste diversion at 4.4 lbs/person-day (EPA).
           </p>
         </div>
       )}

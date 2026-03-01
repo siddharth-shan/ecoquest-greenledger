@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   ListOrdered,
   TreePine,
@@ -12,7 +12,20 @@ import {
   ArrowDown,
   CheckCircle2,
   Send,
+  BarChart3,
+  Users,
+  TrendingUp,
 } from "lucide-react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+  Legend,
+} from "recharts";
 
 interface PriorityCategory {
   id: string;
@@ -21,6 +34,7 @@ interface PriorityCategory {
   icon: React.ElementType;
   tagColor: string;
   tagBg: string;
+  barColor: string;
 }
 
 const defaultCategories: PriorityCategory[] = [
@@ -32,6 +46,7 @@ const defaultCategories: PriorityCategory[] = [
     icon: TreePine,
     tagColor: "text-tag-parks",
     tagBg: "bg-tag-parks-bg",
+    barColor: "#22c55e",
   },
   {
     id: "water",
@@ -41,6 +56,7 @@ const defaultCategories: PriorityCategory[] = [
     icon: Droplets,
     tagColor: "text-tag-water",
     tagBg: "bg-tag-water-bg",
+    barColor: "#3b82f6",
   },
   {
     id: "waste",
@@ -50,6 +66,7 @@ const defaultCategories: PriorityCategory[] = [
     icon: Recycle,
     tagColor: "text-tag-waste",
     tagBg: "bg-tag-waste-bg",
+    barColor: "#f59e0b",
   },
   {
     id: "energy",
@@ -59,6 +76,7 @@ const defaultCategories: PriorityCategory[] = [
     icon: Zap,
     tagColor: "text-tag-energy",
     tagBg: "bg-tag-energy-bg",
+    barColor: "#a855f7",
   },
   {
     id: "streets",
@@ -68,8 +86,29 @@ const defaultCategories: PriorityCategory[] = [
     icon: Route,
     tagColor: "text-tag-streets",
     tagBg: "bg-tag-streets-bg",
+    barColor: "#6b7280",
   },
 ];
+
+// Budget allocation by sustainability tag (from expenditures.json FY 2025-26)
+// Derived from department sustainability tags
+const BUDGET_BY_TAG: Record<string, { amount: number; pct: number }> = {
+  parks: { amount: 15805251 + 6677286 * 0.3, pct: 19.1 },
+  water: { amount: 16537657 * 0.35, pct: 6.3 },
+  waste: { amount: 16537657 * 0.25, pct: 4.5 },
+  energy: { amount: 11407603 * 0.2 + 12302403 * 0.1, pct: 3.8 },
+  streets: { amount: 16537657 * 0.4, pct: 7.2 },
+};
+
+interface AggregateResult {
+  surveyId: string;
+  totalResponses: number;
+  results: {
+    categoryId: string;
+    averageRank: number;
+    voteCount: number;
+  }[];
+}
 
 export default function PrioritiesPage() {
   const [categories, setCategories] =
@@ -77,6 +116,26 @@ export default function PrioritiesPage() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [aggregate, setAggregate] = useState<AggregateResult | null>(null);
+  const [showResults, setShowResults] = useState(false);
+
+  const fetchResults = useCallback(async () => {
+    try {
+      const res = await fetch(
+        "/api/surveys?surveyId=sustainability-priorities-2025"
+      );
+      if (res.ok) {
+        const data = await res.json();
+        setAggregate(data);
+      }
+    } catch {
+      // silently fail
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchResults();
+  }, [fetchResults]);
 
   const moveUp = (index: number) => {
     if (index === 0) return;
@@ -121,6 +180,7 @@ export default function PrioritiesPage() {
       }
 
       setSubmitted(true);
+      fetchResults();
     } catch {
       setError("Something went wrong. Please try again.");
     } finally {
@@ -133,6 +193,37 @@ export default function PrioritiesPage() {
     setSubmitted(false);
     setError(null);
   };
+
+  const categoryMap = Object.fromEntries(
+    defaultCategories.map((c) => [c.id, c])
+  );
+
+  // Build chart data: "priority score" = 6 - averageRank (so higher = more preferred)
+  const priorityChartData = aggregate?.results.map((r) => {
+    const cat = categoryMap[r.categoryId];
+    return {
+      name: cat?.label ?? r.categoryId,
+      priorityScore: Math.round((6 - r.averageRank) * 100) / 100,
+      averageRank: r.averageRank,
+      color: cat?.barColor ?? "#94a3b8",
+    };
+  }) ?? [];
+
+  // Build comparison data: priority rank vs budget allocation
+  const comparisonData = aggregate?.results.map((r) => {
+    const cat = categoryMap[r.categoryId];
+    const budget = BUDGET_BY_TAG[r.categoryId];
+    // Normalize priority: rank 1 = 100%, rank 5 = 20%
+    const priorityPct = Math.round(((6 - r.averageRank) / 5) * 100);
+    return {
+      name: cat?.label ?? r.categoryId,
+      "Community Priority": priorityPct,
+      "Budget Allocation": budget?.pct ?? 0,
+      color: cat?.barColor ?? "#94a3b8",
+    };
+  }) ?? [];
+
+  const hasResults = aggregate && aggregate.totalResponses > 0;
 
   return (
     <div className="container-custom py-6">
@@ -150,7 +241,28 @@ export default function PrioritiesPage() {
         <div className="section-underline mt-3" />
       </div>
 
-      {!submitted ? (
+      {/* Toggle between survey and results */}
+      {hasResults && (
+        <div className="flex gap-2 mb-6">
+          <button
+            onClick={() => setShowResults(false)}
+            className={`btn text-sm ${!showResults ? "btn-primary" : "btn-ghost"}`}
+          >
+            <Send className="w-4 h-4 mr-2" />
+            Submit Rankings
+          </button>
+          <button
+            onClick={() => setShowResults(true)}
+            className={`btn text-sm ${showResults ? "btn-primary" : "btn-ghost"}`}
+          >
+            <BarChart3 className="w-4 h-4 mr-2" />
+            View Results
+          </button>
+        </div>
+      )}
+
+      {/* Survey Form */}
+      {!showResults && !submitted && (
         <div className="max-w-xl mx-auto">
           <div className="bg-civic-primary-light rounded-xl p-4 mb-6">
             <p className="text-sm text-civic-primary-dark">
@@ -225,7 +337,10 @@ export default function PrioritiesPage() {
             {isSubmitting ? "Submitting..." : "Submit My Priorities"}
           </button>
         </div>
-      ) : (
+      )}
+
+      {/* Submitted Confirmation */}
+      {!showResults && submitted && (
         <div className="max-w-xl mx-auto">
           <div className="bg-civic-accent-light rounded-xl p-8 text-center">
             <CheckCircle2 className="w-12 h-12 text-civic-accent mx-auto mb-3" />
@@ -258,13 +373,180 @@ export default function PrioritiesPage() {
               })}
             </div>
 
-            <button
-              onClick={handleReset}
-              className="btn btn-outline text-sm"
-            >
-              Submit Another Ranking
-            </button>
+            <div className="flex gap-3 justify-center">
+              <button
+                onClick={handleReset}
+                className="btn btn-outline text-sm"
+              >
+                Submit Another Ranking
+              </button>
+              <button
+                onClick={() => setShowResults(true)}
+                className="btn btn-primary text-sm"
+              >
+                <BarChart3 className="w-4 h-4 mr-2" />
+                View Community Results
+              </button>
+            </div>
           </div>
+        </div>
+      )}
+
+      {/* Community Results */}
+      {showResults && hasResults && (
+        <div className="space-y-8">
+          {/* Response count banner */}
+          <div className="bg-gradient-to-r from-civic-primary to-civic-accent rounded-xl p-6 text-white">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div className="flex items-center gap-3">
+                <Users className="w-8 h-8 text-white/80" />
+                <div>
+                  <p className="text-3xl font-bold">{aggregate!.totalResponses}</p>
+                  <p className="text-white/80 text-sm">Responses Collected</p>
+                </div>
+              </div>
+              <div className="text-right">
+                <p className="text-white/70 text-sm">
+                  Help us reach <strong className="text-white">100 responses</strong>
+                </p>
+                <div className="w-48 h-2 bg-white/20 rounded-full mt-2">
+                  <div
+                    className="h-full bg-civic-highlight rounded-full transition-all"
+                    style={{
+                      width: `${Math.min((aggregate!.totalResponses / 100) * 100, 100)}%`,
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Priority Rankings Chart */}
+          <div className="bg-white rounded-xl border border-gray-200 p-6">
+            <div className="flex items-center gap-2 mb-1">
+              <TrendingUp className="w-5 h-5 text-civic-primary" />
+              <h3 className="font-heading font-bold text-lg text-gray-900">
+                Community Priority Rankings
+              </h3>
+            </div>
+            <p className="text-sm text-gray-500 mb-6">
+              Higher score = higher community priority (5 = top, 1 = lowest)
+            </p>
+            <div className="h-72">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  data={priorityChartData}
+                  layout="vertical"
+                  margin={{ top: 0, right: 20, bottom: 0, left: 120 }}
+                >
+                  <XAxis type="number" domain={[0, 5]} tick={{ fontSize: 12 }} />
+                  <YAxis
+                    type="category"
+                    dataKey="name"
+                    tick={{ fontSize: 13 }}
+                    width={115}
+                  />
+                  <Tooltip
+                    formatter={(value: number | undefined) => [
+                      value != null ? value.toFixed(2) : "0",
+                      "Priority Score",
+                    ]}
+                    contentStyle={{
+                      borderRadius: "8px",
+                      border: "1px solid #e5e7eb",
+                    }}
+                  />
+                  <Bar dataKey="priorityScore" radius={[0, 6, 6, 0]} barSize={28}>
+                    {priorityChartData.map((entry, i) => (
+                      <Cell key={i} fill={entry.color} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+
+          {/* Priorities vs Spending */}
+          <div className="bg-white rounded-xl border border-gray-200 p-6">
+            <div className="flex items-center gap-2 mb-1">
+              <BarChart3 className="w-5 h-5 text-civic-accent" />
+              <h3 className="font-heading font-bold text-lg text-gray-900">
+                Priorities vs. Budget Allocation
+              </h3>
+            </div>
+            <p className="text-sm text-gray-500 mb-6">
+              Are residents&apos; priorities aligned with how the city spends?
+            </p>
+            <div className="h-72">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart
+                  data={comparisonData}
+                  margin={{ top: 0, right: 20, bottom: 0, left: 120 }}
+                  layout="vertical"
+                >
+                  <XAxis
+                    type="number"
+                    domain={[0, 100]}
+                    tickFormatter={(v) => `${v}%`}
+                    tick={{ fontSize: 12 }}
+                  />
+                  <YAxis
+                    type="category"
+                    dataKey="name"
+                    tick={{ fontSize: 13 }}
+                    width={115}
+                  />
+                  <Tooltip
+                    formatter={(value: number | undefined, name?: string) => [
+                      `${value != null ? value.toFixed(1) : "0"}%`,
+                      name ?? "",
+                    ]}
+                    contentStyle={{
+                      borderRadius: "8px",
+                      border: "1px solid #e5e7eb",
+                    }}
+                  />
+                  <Legend />
+                  <Bar
+                    dataKey="Community Priority"
+                    fill="#1a365d"
+                    radius={[0, 4, 4, 0]}
+                    barSize={14}
+                  />
+                  <Bar
+                    dataKey="Budget Allocation"
+                    fill="#2b7a78"
+                    radius={[0, 4, 4, 0]}
+                    barSize={14}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+            <p className="text-xs text-gray-400 mt-4">
+              Budget allocation % reflects estimated sustainability-related
+              spending from the FY 2025-26 Adopted Budget. Community priority
+              is normalized from average rankings.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Show results prompt if no results yet */}
+      {showResults && !hasResults && (
+        <div className="max-w-xl mx-auto text-center py-12">
+          <Users className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+          <h3 className="font-heading font-bold text-lg text-gray-600 mb-2">
+            No results yet
+          </h3>
+          <p className="text-sm text-gray-400 mb-4">
+            Be the first to submit your sustainability priorities!
+          </p>
+          <button
+            onClick={() => setShowResults(false)}
+            className="btn btn-primary text-sm"
+          >
+            Submit Your Rankings
+          </button>
         </div>
       )}
     </div>

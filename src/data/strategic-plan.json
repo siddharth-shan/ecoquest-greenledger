@@ -1,0 +1,45 @@
+{
+  "planTitle": "City of Cerritos Strategic Plan 2025-2027",
+  "adoptedDate": "December 12, 2024",
+  "sourceUrl": "https://www.cerritos.gov/city-government/strategic-plan/",
+  "goals": [
+    {
+      "id": "goal-5",
+      "number": 5,
+      "title": "Improve Technology Resources",
+      "description": "Leverage technology to improve city services, increase efficiency, and enhance resident experience.",
+      "greenledgerAlignment": [
+        "Mobile-first civic dashboard accessible to all residents",
+        "Interactive budget visualization replacing static PDF documents",
+        "Digital sustainability challenges replacing paper-based outreach"
+      ],
+      "features": ["Budget Explorer", "Tax Dollar Calculator", "Budget Simulator", "Challenges"]
+    },
+    {
+      "id": "goal-6",
+      "number": 6,
+      "title": "Focus on Fiscal Transparency and Sustainability",
+      "description": "Provide clear, accessible financial information and advance environmental sustainability programs.",
+      "greenledgerAlignment": [
+        "Real-time budget explorer with 7-department breakdown from adopted budget",
+        "Per-capita spending calculator shows personal tax dollar allocation",
+        "Sustainability scorecards track city environmental programs with verified data",
+        "10-year historical trend analysis from OpenGov data"
+      ],
+      "features": ["Budget Explorer", "Tax Dollar Calculator", "Scorecards", "Historical Trends"]
+    },
+    {
+      "id": "goal-7",
+      "number": 7,
+      "title": "Improve Community Communications",
+      "description": "Enhance methods for communicating with and engaging residents in city affairs.",
+      "greenledgerAlignment": [
+        "Community Priorities survey collects resident sustainability preferences",
+        "Civic Actions page provides direct links to city engagement opportunities",
+        "Impact tracking shows collective community environmental actions",
+        "Youth engagement through gamified sustainability challenges"
+      ],
+      "features": ["Community Priorities", "Civic Actions", "Impact Dashboard", "Challenges"]
+    }
+  ]
+}

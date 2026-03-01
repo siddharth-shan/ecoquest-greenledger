@@ -127,3 +127,42 @@ body {
     @apply bg-gradient-to-br from-civic-primary-light to-civic-accent-light;
   }
 }
+
+/* Print Styles for Report Page */
+@media print {
+  body {
+    font-size: 11pt;
+    line-height: 1.4;
+    color: #000;
+    background: #fff;
+  }
+
+  nav,
+  footer:not(.report-page footer),
+  .no-print {
+    display: none !important;
+  }
+
+  .report-page {
+    margin: 0;
+    padding: 0;
+  }
+
+  .report-page .max-w-3xl {
+    max-width: 100%;
+    padding: 0.5in;
+  }
+
+  .report-page section {
+    page-break-inside: avoid;
+  }
+
+  .report-page h2 {
+    page-break-after: avoid;
+  }
+
+  @page {
+    margin: 0.5in;
+    size: letter;
+  }
+}

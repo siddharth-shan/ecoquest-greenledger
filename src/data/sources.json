@@ -62,6 +62,15 @@
       "accessDate": "2024-11-15",
       "freshnessLabel": "recent",
       "dataUsedFor": ["Per-Capita Calculations", "Demographics", "Tax Dollar Calculator"]
+    },
+    {
+      "id": "strategic-plan-2025-27",
+      "documentName": "City of Cerritos Strategic Plan 2025-2027",
+      "documentUrl": "https://www.cerritos.gov/city-government/strategic-plan/",
+      "description": "City Council adopted strategic plan outlining 7 goals for city operations, including Goal 5 (Technology), Goal 6 (Fiscal Transparency & Sustainability), and Goal 7 (Community Communications).",
+      "accessDate": "2025-12-12",
+      "freshnessLabel": "current",
+      "dataUsedFor": ["Strategic Plan Alignment"]
     }
   ]
 }
