@@ -13,9 +13,8 @@ import {
   Recycle,
   TrendingUp,
   BarChart3,
-  Monitor,
-  PiggyBank,
-  MessageSquare,
+  Leaf,
+  MessageCircle,
   ClipboardCheck,
   Waves,
   Wind,
@@ -54,27 +53,42 @@ interface EngagementStats {
   totalVolunteerHours: number;
 }
 
-const strategicGoals = [
+const topBenefits = [
   {
-    number: 5,
-    title: "Technology Resources",
-    description: "Interactive dashboards replacing static PDFs",
-    icon: Monitor,
-    color: "bg-purple-50 text-purple-700",
+    title: "See Where Your Money Goes",
+    description:
+      "Interactive budget explorer turns a 370-page PDF into explorable data — 7 departments, 10-year trends, per-capita breakdowns.",
+    stat: "$131.4M explored",
+    icon: BarChart3,
+    href: "/hub/budget",
+    borderColor: "border-civic-primary",
+    iconBg: "bg-civic-primary-light",
+    iconColor: "text-civic-primary",
+    linkColor: "text-civic-primary hover:text-civic-primary-dark",
   },
   {
-    number: 6,
-    title: "Fiscal Transparency",
-    description: "Real budget data with 7-department breakdown",
-    icon: PiggyBank,
-    color: "bg-emerald-50 text-emerald-700",
+    title: "Track Real Environmental Impact",
+    description:
+      "Verified sustainability scorecards — 722M gallons recycled water, 28,000+ city trees, solar energy, clean fleet — all from official city data.",
+    stat: "722M gal saved",
+    icon: Leaf,
+    href: "/hub/scorecards",
+    borderColor: "border-civic-accent",
+    iconBg: "bg-civic-accent-light",
+    iconColor: "text-civic-accent",
+    linkColor: "text-civic-accent hover:text-civic-accent-dark",
   },
   {
-    number: 7,
-    title: "Community Communications",
-    description: "Two-way engagement through surveys & challenges",
-    icon: MessageSquare,
-    color: "bg-blue-50 text-blue-700",
+    title: "Make Your Voice Count",
+    description:
+      "Rank community priorities, complete sustainability challenges, and see how your values compare to actual city spending.",
+    stat: "5 categories ranked",
+    icon: MessageCircle,
+    href: "/hub/priorities",
+    borderColor: "border-civic-highlight",
+    iconBg: "bg-civic-highlight/15",
+    iconColor: "text-civic-highlight",
+    linkColor: "text-civic-highlight hover:text-amber-600",
   },
 ];
 
@@ -192,50 +206,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Strategic Alignment */}
-      <section className="py-10 bg-gray-50 border-b border-gray-100">
+      {/* Why GreenLedger */}
+      <section className="py-12 bg-white border-b border-gray-100">
         <div className="container-custom">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="font-heading font-bold text-sm text-gray-400 uppercase tracking-wider mb-1">
-                Strategic Plan Alignment
-              </h2>
-              <p className="text-gray-600 text-sm">
-                Built to support Cerritos&apos;s 2025-2027 strategic goals
-              </p>
-            </div>
-            <Link
-              href="/hub/strategic-plan"
-              className="hidden sm:flex items-center gap-1 text-sm font-medium text-civic-primary hover:text-civic-primary-dark"
-            >
-              Learn More
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+          <div className="text-center mb-8">
+            <h2 className="section-title text-2xl">Why GreenLedger?</h2>
+            <div className="section-underline mx-auto" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {strategicGoals.map((goal) => {
-              const Icon = goal.icon;
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {topBenefits.map((benefit) => {
+              const Icon = benefit.icon;
               return (
-                <Link
-                  key={goal.number}
-                  href="/hub/strategic-plan"
-                  className="bg-white rounded-xl border border-gray-200 p-5 hover:shadow-md transition-all hover:-translate-y-0.5"
+                <div
+                  key={benefit.title}
+                  className={`bg-white rounded-xl border border-gray-200 border-t-3 ${benefit.borderColor} p-6 hover:shadow-lg transition-all hover:-translate-y-1`}
                 >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div
-                      className={`w-10 h-10 rounded-lg ${goal.color} flex items-center justify-center`}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">
-                      Goal {goal.number}
-                    </span>
+                  <div
+                    className={`w-12 h-12 rounded-full ${benefit.iconBg} flex items-center justify-center mb-4`}
+                  >
+                    <Icon className={`w-6 h-6 ${benefit.iconColor}`} />
                   </div>
-                  <h3 className="font-heading font-bold text-gray-900 text-sm mb-1">
-                    {goal.title}
+                  <h3 className="font-heading font-bold text-gray-900 text-lg mb-2">
+                    {benefit.title}
                   </h3>
-                  <p className="text-xs text-gray-500">{goal.description}</p>
-                </Link>
+                  <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                    {benefit.description}
+                  </p>
+                  <p className="text-sm font-bold text-gray-900 mb-4">
+                    {benefit.stat}
+                  </p>
+                  <Link
+                    href={benefit.href}
+                    className={`inline-flex items-center gap-1 text-sm font-semibold ${benefit.linkColor} transition-colors`}
+                  >
+                    Explore
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               );
             })}
           </div>
