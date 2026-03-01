@@ -65,23 +65,46 @@ export const NAV_ITEMS = [
   { label: "Profile", href: "/profile", icon: "User" },
 ] as const;
 
-export const HUB_NAV_ITEMS = [
-  { label: "Budget Explorer", href: "/hub/budget", icon: "PieChart" },
-  { label: "Tax Dollar", href: "/hub/tax-dollar", icon: "Receipt" },
-  { label: "Simulator", href: "/hub/simulator", icon: "SlidersHorizontal" },
-  { label: "Green Wallet", href: "/hub/green-wallet", icon: "Wallet" },
-  { label: "Green Bonds", href: "/hub/green-bonds", icon: "Landmark" },
-  { label: "Scorecards", href: "/hub/scorecards", icon: "ClipboardCheck" },
-  { label: "Priorities", href: "/hub/priorities", icon: "ListOrdered" },
-  { label: "Strategic Plan", href: "/hub/strategic-plan", icon: "Building2" },
-  { label: "Water Finance", href: "/hub/water-finance", icon: "Droplets" },
-  { label: "Energy Literacy", href: "/hub/energy-literacy", icon: "Zap" },
-  { label: "Transit", href: "/hub/transit", icon: "Bus" },
-  { label: "Urban Forest", href: "/hub/urban-forest", icon: "TreePine" },
-  { label: "Recycling Quiz", href: "/hub/recycling-quiz", icon: "Recycle" },
-  { label: "Civic Actions", href: "/hub/civic", icon: "Megaphone" },
-  { label: "Sources", href: "/hub/sources", icon: "FileText" },
+export const HUB_NAV_GROUPS = [
+  {
+    label: "Money & Budget",
+    icon: "Banknote",
+    items: [
+      { label: "Budget Overview", href: "/hub/budget", icon: "PieChart", description: "City spending by department with 10-year trends" },
+      { label: "Your Tax Dollar", href: "/hub/tax-dollar", icon: "Receipt", description: "See exactly where your tax dollars go" },
+      { label: "Simulator", href: "/hub/simulator", icon: "SlidersHorizontal", description: "Drag sliders to reshape the city budget" },
+      { label: "Eco Rewards", href: "/hub/green-wallet", icon: "Wallet", description: "Earn rewards for sustainable actions" },
+      { label: "City Green Bonds", href: "/hub/green-bonds", icon: "Landmark", description: "Municipal bonds funding green projects" },
+    ],
+  },
+  {
+    label: "Sustainability",
+    icon: "Leaf",
+    items: [
+      { label: "Scorecards", href: "/hub/scorecards", icon: "ClipboardCheck", description: "Track city sustainability metrics" },
+      { label: "Water Finance", href: "/hub/water-finance", icon: "Droplets", description: "Recycled water program saving 722M gal/year" },
+      { label: "Energy & Solar", href: "/hub/energy-literacy", icon: "Zap", description: "City solar and energy efficiency programs" },
+      { label: "Urban Forest", href: "/hub/urban-forest", icon: "TreePine", description: "28,000+ city trees and urban canopy data" },
+      { label: "Transit", href: "/hub/transit", icon: "Bus", description: "Transportation mode shift calculator" },
+      { label: "Recycling Quiz", href: "/hub/recycling-quiz", icon: "Recycle", description: "Test your 3-cart recycling knowledge" },
+    ],
+  },
+  {
+    label: "Community",
+    icon: "Users",
+    items: [
+      { label: "Priorities", href: "/hub/priorities", icon: "ListOrdered", description: "Rank what matters most to Cerritos" },
+      { label: "Strategic Plan", href: "/hub/strategic-plan", icon: "Building2", description: "City goals and progress alignment" },
+      { label: "Get Involved", href: "/hub/civic", icon: "Megaphone", description: "Meeting schedule and participation guide" },
+    ],
+  },
 ] as const;
+
+export const HUB_SOURCES_LINK = {
+  label: "Sources",
+  href: "/hub/sources",
+  icon: "FileText",
+} as const;
 
 export const DEPARTMENT_COLORS: Record<string, string> = {
   "community-safety": "#9B2C2C",
