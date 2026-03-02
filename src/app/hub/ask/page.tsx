@@ -4,23 +4,30 @@ import { useState, useRef, useEffect } from "react";
 import {
   MessageCircleQuestion,
   Send,
-  Loader2,
   Sparkles,
   FileText,
+  Bot,
 } from "lucide-react";
-import type { QAMessage } from "@/types/budget-qa";
+import { askBudgetQuestion } from "@/lib/budget-assistant";
+
+interface QAMessage {
+  role: "user" | "assistant";
+  content: string;
+  sources?: string[];
+}
 
 const SUGGESTED_QUESTIONS = [
   "How much does Cerritos spend on community safety?",
   "What's the biggest source of city revenue?",
   "How has the budget changed over 10 years?",
   "What sustainability programs does the city run?",
+  "How much is spent per resident?",
+  "What is the General Fund?",
 ];
 
 export default function BudgetQAPage() {
   const [messages, setMessages] = useState<QAMessage[]>([]);
   const [input, setInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -28,49 +35,23 @@ export default function BudgetQAPage() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  async function handleSubmit(question?: string) {
+  function handleSubmit(question?: string) {
     const text = question || input.trim();
-    if (!text || isLoading) return;
+    if (!text) return;
 
     setInput("");
     const userMessage: QAMessage = { role: "user", content: text };
-    setMessages((prev) => [...prev, userMessage]);
-    setIsLoading(true);
 
-    try {
-      const res = await fetch("/api/budget-qa", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          message: text,
-          history: messages,
-        }),
-      });
+    // Get answer instantly (client-side)
+    const response = askBudgetQuestion(text);
+    const assistantMessage: QAMessage = {
+      role: "assistant",
+      content: response.answer,
+      sources: response.sources,
+    };
 
-      if (!res.ok) {
-        throw new Error("Failed to get response");
-      }
-
-      const data = await res.json();
-      const assistantMessage: QAMessage = {
-        role: "assistant",
-        content: data.answer,
-        sources: data.sources,
-      };
-      setMessages((prev) => [...prev, assistantMessage]);
-    } catch {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          content:
-            "Sorry, I had trouble processing your question. Please try again.",
-        },
-      ]);
-    } finally {
-      setIsLoading(false);
-      inputRef.current?.focus();
-    }
+    setMessages((prev) => [...prev, userMessage, assistantMessage]);
+    setTimeout(() => inputRef.current?.focus(), 0);
   }
 
   return (
@@ -85,9 +66,13 @@ export default function BudgetQAPage() {
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Budget Q&A</h1>
               <p className="text-sm text-gray-500">
-                AI-powered answers from verified Cerritos budget data
+                Smart answers from verified Cerritos budget data
               </p>
             </div>
+          </div>
+          <div className="flex items-center gap-1.5 mt-2 text-xs text-civic-accent">
+            <Bot className="w-3.5 h-3.5" />
+            <span>Runs 100% in your browser — no data sent to external servers</span>
           </div>
         </div>
 
@@ -127,7 +112,16 @@ export default function BudgetQAPage() {
                       : "bg-gray-50 text-gray-800 border border-gray-100"
                   }`}
                 >
-                  <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
+                  {msg.role === "assistant" ? (
+                    <div
+                      className="text-sm prose prose-sm max-w-none prose-strong:text-gray-900 prose-li:my-0.5"
+                      dangerouslySetInnerHTML={{
+                        __html: formatMarkdown(msg.content),
+                      }}
+                    />
+                  ) : (
+                    <p className="text-sm">{msg.content}</p>
+                  )}
                   {msg.sources && msg.sources.length > 0 && (
                     <div className="mt-3 pt-2 border-t border-gray-200">
                       <p className="text-xs font-medium text-gray-500 mb-1 flex items-center gap-1">
@@ -136,7 +130,7 @@ export default function BudgetQAPage() {
                       </p>
                       {msg.sources.map((src, j) => (
                         <p key={j} className="text-xs text-gray-500">
-                          {src.document}
+                          {src}
                         </p>
                       ))}
                     </div>
@@ -144,14 +138,6 @@ export default function BudgetQAPage() {
                 </div>
               </div>
             ))}
-
-            {isLoading && (
-              <div className="flex justify-start">
-                <div className="bg-gray-50 border border-gray-100 rounded-xl px-4 py-3">
-                  <Loader2 className="w-4 h-4 text-civic-primary animate-spin" />
-                </div>
-              </div>
-            )}
 
             <div ref={messagesEndRef} />
           </div>
@@ -172,23 +158,33 @@ export default function BudgetQAPage() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask about the Cerritos budget..."
                 className="flex-1 text-sm bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-civic-primary/30 focus:border-civic-primary"
-                disabled={isLoading}
               />
               <button
                 type="submit"
-                disabled={!input.trim() || isLoading}
+                disabled={!input.trim()}
                 className="shrink-0 w-10 h-10 rounded-lg bg-civic-primary text-white flex items-center justify-center hover:bg-civic-primary-dark transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 <Send className="w-4 h-4" />
               </button>
             </form>
             <p className="text-[10px] text-gray-400 mt-2 text-center">
-              Answers are generated from verified city budget data. Always verify
-              important figures with official sources.
+              Answers generated from verified city budget data. Always verify
+              important figures with official sources at cerritos.gov.
             </p>
           </div>
         </div>
       </div>
     </div>
   );
+}
+
+/** Simple markdown → HTML for bold, lists, and line breaks */
+function formatMarkdown(text: string): string {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/^- (.+)$/gm, "<li>$1</li>")
+    .replace(/^(\d+)\. (.+)$/gm, "<li>$2</li>")
+    .replace(/(<li>.*<\/li>\n?)+/g, (match) => `<ul class="list-disc list-inside space-y-0.5 my-1">${match}</ul>`)
+    .replace(/\n\n/g, "<br/><br/>")
+    .replace(/\n/g, "<br/>");
 }

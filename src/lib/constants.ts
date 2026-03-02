@@ -72,6 +72,8 @@ export const HUB_NAV_GROUPS = [
       { label: "Your Tax Dollar", href: "/hub/tax-dollar", icon: "Receipt", description: "See exactly where your tax dollars go" },
       { label: "Simulator", href: "/hub/simulator", icon: "SlidersHorizontal", description: "Drag sliders to reshape the city budget" },
       { label: "Budget Q&A", href: "/hub/ask", icon: "MessageCircleQuestion", description: "Ask AI questions about the Cerritos budget" },
+      { label: "Budget Insights", href: "/hub/insights", icon: "Lightbulb", description: "AI-generated findings from budget data" },
+      { label: "Budget Forecast", href: "/hub/forecast", icon: "TrendingUp", description: "5-year projections with linear regression" },
     ],
   },
   {
