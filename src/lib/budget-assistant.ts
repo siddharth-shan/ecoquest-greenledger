@@ -54,26 +54,26 @@ function yoyChange(amounts: { fiscalYear: string; amount: number }[]): { change:
   return { change: curr - prev, pctChange: (curr - prev) / prev };
 }
 
-// Keyword matchers
+// Keyword matchers — use stems/prefixes for broader matching
 const keywords: Record<string, string[]> = {
-  safety: ["safety", "sheriff", "police", "fire", "law enforcement", "crime", "patrol", "emergency"],
-  "public-works": ["public works", "streets", "roads", "parks", "trees", "maintenance", "infrastructure", "water system"],
-  "community-cultural-services": ["library", "recreation", "senior", "cultural", "swim", "community services", "sports"],
-  theater: ["theater", "theatre", "ccpa", "performing arts", "concerts", "broadway", "shows"],
-  "administrative-services": ["administrative", "finance", "hr", "human resources", "technology", "it department"],
-  "community-development": ["development", "planning", "zoning", "housing", "transit", "code enforcement", "economic development"],
-  "legislative-admin": ["council", "city manager", "attorney", "clerk", "mayor", "legislative", "elected"],
-  "sales-tax": ["sales tax", "auto square", "shopping", "retail", "restaurant"],
-  revenue: ["revenue", "income", "money coming in", "how much does the city earn", "funding", "where does money come from"],
-  spending: ["spending", "expenditure", "spend", "cost", "how much does", "budget for", "allocat"],
-  water: ["water", "recycled water", "conservation", "drought", "irrigation"],
+  safety: ["safety", "safe", "sheriff", "police", "cop", "fire department", "firefight", "law enforcement", "crime", "patrol", "emergency", "911", "public safety", "crossing guard", "parking enforcement"],
+  "public-works": ["public works", "street", "road", "pav", "pothole", "sidewalk", "park", "tree", "maintenance", "repair", "infrastruc", "water system", "sewer", "trash", "waste", "signal", "traffic light", "median", "curb", "gutter", "storm drain"],
+  "community-cultural-services": ["library", "recreation", "senior", "cultural", "swim", "community service", "sport", "youth program", "fitness", "community center", "after school"],
+  theater: ["theater", "theatre", "ccpa", "performing art", "concert", "broadway", "show", "stage", "performance"],
+  "administrative-services": ["administrative service", "finance department", "hr", "human resource", "information technology", "it department", "cyber", "payroll", "procurement", "accounting"],
+  "community-development": ["community development", "planning", "zoning", "housing", "code enforcement", "economic development", "building permit", "inspection"],
+  "legislative-admin": ["council", "city manager", "attorney", "clerk", "mayor", "legislative", "elected", "city hall leadership"],
+  "sales-tax": ["sales tax", "auto square", "shopping", "retail", "restaurant", "car dealer"],
+  revenue: ["revenue", "income", "money com", "earn", "fund raise", "where does money come from", "how does the city make", "how does cerritos make", "source of fund"],
+  spending: ["spend", "expenditure", "cost", "budget for", "allocat", "how much money", "how much does", "how much is", "what does the city spend", "pay for", "paid for", "goes to", "go to", "go toward", "invest in"],
+  water: ["water", "recycled water", "conservation", "drought", "irrigation", "gallon"],
   trees: ["tree", "urban forest", "canopy", "arbor", "planting"],
-  solar: ["solar", "energy", "power", "electricity", "led", "clean energy"],
-  fleet: ["fleet", "cng", "vehicle", "truck", "bus", "transit", "propane"],
-  total: ["total budget", "overall budget", "entire budget", "all funds", "how big"],
-  percapita: ["per capita", "per resident", "per person", "each resident", "per household"],
-  biggest: ["biggest", "largest", "most", "top", "highest", "number one", "#1"],
-  change: ["change", "trend", "growing", "increasing", "decreasing", "over time", "historical", "10 year", "ten year"],
+  solar: ["solar", "energy", "power plant", "electricity", "led", "clean energy", "renewable", "kWh"],
+  fleet: ["fleet", "cng", "vehicle", "truck", "bus", "transit", "propane", "natural gas"],
+  total: ["total budget", "overall budget", "entire budget", "all funds", "how big is the budget", "whole budget", "full budget", "budget overview", "city budget"],
+  percapita: ["per capita", "per resident", "per person", "each resident", "per household", "per citizen", "each person"],
+  biggest: ["biggest", "largest", "most", "top", "highest", "number one", "#1", "main", "primary", "majority"],
+  change: ["change", "trend", "grow", "increas", "decreas", "over time", "historical", "10 year", "ten year", "over the years", "year over year", "yoy"],
   compare: ["compare", "versus", "vs", "difference between"],
 };
 
@@ -86,6 +86,45 @@ function matchTopics(question: string): string[] {
     }
   }
   return matched;
+}
+
+/** Search line items across all departments for keyword matches */
+function findLineItem(question: string): { dept: typeof departments[number]; lineItem: typeof departments[number]["lineItems"][number] } | null {
+  const q = question.toLowerCase();
+  const words = q.split(/\s+/).filter((w) => w.length > 3);
+
+  for (const dept of departments) {
+    for (const li of dept.lineItems) {
+      const searchText = `${li.name} ${li.tldr}`.toLowerCase();
+      // Check if multiple question words appear in the line item text
+      const matchCount = words.filter((w) => searchText.includes(w)).length;
+      if (matchCount >= 2 || (matchCount === 1 && words.length <= 3)) {
+        return { dept, lineItem: li };
+      }
+    }
+  }
+  return null;
+}
+
+function answerLineItem(dept: typeof departments[number], li: typeof departments[number]["lineItems"][number]): AssistantResponse {
+  const amount = latestAmount(li.amounts);
+  const deptAmount = latestAmount(dept.amounts);
+  const change = yoyChange(li.amounts);
+
+  let answer = `**${li.name}** (${dept.name} Department)\n\n`;
+  answer += `**FY 2025-26 Budget: ${fmt(amount)}**\n\n`;
+  answer += `${li.tldr}\n\n`;
+  answer += `- **Share of ${dept.name} budget:** ${pct(amount / deptAmount)}\n`;
+  if (change) {
+    const direction = change.change > 0 ? "increased" : "decreased";
+    answer += `- **Year-over-year:** ${direction} by ${fmt(Math.abs(change.change))} (${pct(Math.abs(change.pctChange))})\n`;
+  }
+  answer += `\n**3-year trend:**\n`;
+  for (const a of li.amounts) {
+    answer += `- FY ${a.fiscalYear}: ${fmt(a.amount)}\n`;
+  }
+
+  return { answer, sources: ["FY 2025-26 Adopted Budget"] };
 }
 
 function findDepartment(topics: string[], question: string): typeof departments[number] | null {
@@ -392,7 +431,18 @@ export function askBudgetQuestion(question: string): AssistantResponse {
     return answerSustainabilityOverview();
   }
 
-  // Default: total budget overview
+  // Line-item search fallback — searches all line item names and descriptions
+  const lineItemMatch = findLineItem(question);
+  if (lineItemMatch) {
+    return answerLineItem(lineItemMatch.dept, lineItemMatch.lineItem);
+  }
+
+  // If the question looks like a spending query, show the total budget
+  if (q.includes("how much") || q.includes("what") || q.includes("money")) {
+    return answerTotal();
+  }
+
+  // Default: help message
   return {
     answer: `I can help you explore the Cerritos budget! Here's what I can answer about:\n\n` +
       `- **Departments:** Community Safety, Public Works, Library & Recreation, Theater, Administrative Services, Community Development, Legislative\n` +
