@@ -65,7 +65,7 @@ export default function TrendChart({
       <h3 className="font-heading font-bold text-lg text-gray-900 mb-4">
         Spending Trends (3 Years)
       </h3>
-      <div className="w-full h-[300px]">
+      <div className="min-h-[300px] min-w-0 w-full h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={data}>
             <defs>

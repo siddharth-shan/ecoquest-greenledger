@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   TreePine,
   DollarSign,
-  Droplets,
   Wind,
   Zap,
   Home,
@@ -21,9 +20,6 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-  Legend,
-  PieChart,
-  Pie,
   Cell,
 } from "recharts";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
@@ -63,7 +59,6 @@ export default function UrbanForestModule() {
 
   // Planner calculations
   const totalNewTrees = treesPerYear * planYears;
-  const totalTrees = program.totalTrees + totalNewTrees;
   const plantingCost = totalNewTrees * valuation.plantingCostPerTree;
   const maintenanceCost = totalNewTrees * valuation.annualMaintenanceCostPerTree * planYears;
   const totalCost = plantingCost + maintenanceCost;
@@ -74,12 +69,6 @@ export default function UrbanForestModule() {
   const benefitChartData = benefits.map((b) => ({
     name: b.name.split(" ").slice(0, 2).join(" "),
     annual: Math.round(b.totalAnnualValue / 1000),
-  }));
-
-  const benefitPieData = benefits.map((b, i) => ({
-    name: b.name,
-    value: b.totalAnnualValue,
-    color: benefitColors[i],
   }));
 
   return (

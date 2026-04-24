@@ -432,7 +432,7 @@ export default function PrioritiesPage() {
             <p className="text-sm text-gray-500 mb-6">
               Higher score = higher community priority (5 = top, 1 = lowest)
             </p>
-            <div className="h-72">
+            <div className="min-h-72 min-w-0 h-72 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                   data={priorityChartData}
@@ -477,7 +477,7 @@ export default function PrioritiesPage() {
             <p className="text-sm text-gray-500 mb-6">
               Are residents&apos; priorities aligned with how the city spends?
             </p>
-            <div className="h-72">
+            <div className="min-h-72 min-w-0 h-72 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                   data={comparisonData}

@@ -8,11 +8,9 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
   ReferenceLine,
 } from "recharts";
-import { TrendingUp, Info } from "lucide-react";
 import historicalData from "@/data/budget/historical.json";
 import type { BudgetHistoricalData } from "@/types/budget";
 
@@ -101,8 +99,12 @@ export default function HistoricalTrendChart() {
 
       {/* Chart */}
       <div className="bg-white rounded-2xl border border-gray-100 p-4">
-        <ResponsiveContainer width="100%" height={400}>
-          <LineChart data={chartData} margin={{ top: 10, right: 10, left: 10, bottom: 0 }}>
+        <div className="min-h-[400px] min-w-0 h-[400px] w-full">
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart
+              data={chartData}
+              margin={{ top: 10, right: 10, left: 10, bottom: 0 }}
+            >
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
             <XAxis
               dataKey="fiscalYear"
@@ -172,8 +174,9 @@ export default function HistoricalTrendChart() {
                 />
               ) : null
             )}
-          </LineChart>
-        </ResponsiveContainer>
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
       </div>
 
       {/* Key Events */}

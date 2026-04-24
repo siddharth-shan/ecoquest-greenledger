@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, startTransition } from "react";
 
 export function useAnimatedNumber(
   target: number,
@@ -13,7 +13,9 @@ export function useAnimatedNumber(
 
   useEffect(() => {
     if (!enabled) {
-      setCurrent(target);
+      startTransition(() => {
+        setCurrent(target);
+      });
       return;
     }
 

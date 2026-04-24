@@ -50,6 +50,10 @@ const iconMap: Record<string, React.ElementType> = {
 
 export default function HubSubNav() {
   const pathname = usePathname();
+  return <HubSubNavInner key={pathname} pathname={pathname} />;
+}
+
+function HubSubNavInner({ pathname }: { pathname: string }) {
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -70,11 +74,6 @@ export default function HubSubNav() {
       document.removeEventListener("keydown", handleEscape);
     };
   }, []);
-
-  // Close dropdown on route change
-  useEffect(() => {
-    setOpenGroup(null);
-  }, [pathname]);
 
   function isGroupActive(group: (typeof HUB_NAV_GROUPS)[number]) {
     return group.items.some((item) => pathname === item.href);
@@ -192,3 +191,4 @@ export default function HubSubNav() {
     </div>
   );
 }
+

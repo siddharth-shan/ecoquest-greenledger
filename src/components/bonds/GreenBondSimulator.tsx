@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   Landmark,
   TrendingUp,
-  ShieldCheck,
   Calculator,
   Info,
   ExternalLink,
@@ -19,13 +18,7 @@ import {
   Tooltip,
   ResponsiveContainer,
   Legend,
-  RadarChart,
-  Radar,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
 } from "recharts";
-import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { formatCurrency } from "@/lib/utils";
 import bondData from "@/data/bonds/green-bonds.json";
 
@@ -41,14 +34,6 @@ const TABS = [
 ] as const;
 
 type TabId = (typeof TABS)[number]["id"];
-
-const categoryColors: Record<string, string> = {
-  water: "#3b82f6",
-  energy: "#f59e0b",
-  parks: "#22c55e",
-  waste: "#10b981",
-  streets: "#8b5cf6",
-};
 
 export default function GreenBondSimulator() {
   const [activeTab, setActiveTab] = useState<TabId>("explore");
@@ -81,14 +66,6 @@ export default function GreenBondSimulator() {
     couponRate: p.couponRate,
     paybackYears: Math.round((p.projectCost / p.annualBenefit) * 10) / 10,
     annualBenefit: p.annualBenefit / 1000,
-  }));
-
-  const radarData = projects.map((p) => ({
-    project: p.name.split(" ").slice(0, 2).join(" "),
-    return: p.couponRate * 20,
-    safety: ratingScale.findIndex((r) => r.rating === p.riskRating) <= 2 ? 90 : ratingScale.findIndex((r) => r.rating === p.riskRating) <= 4 ? 70 : 50,
-    impact: Math.min((p.annualBenefit / 400000) * 100, 100),
-    term: Math.max(100 - p.bondTermYears * 5, 20),
   }));
 
   return (
@@ -129,7 +106,6 @@ export default function GreenBondSimulator() {
         <div className="space-y-6">
           <div className="grid gap-4">
             {projects.map((project) => {
-              const returns = calcReturns(project, 1000);
               const ratingColor = ratingScale.find((r) => r.rating === project.riskRating)?.color || "#6b7280";
 
               return (

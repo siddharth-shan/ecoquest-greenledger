@@ -18,7 +18,7 @@ interface UseBudgetDataReturn {
   setActiveFiscalYear: (year: string) => void;
   filteredExpenditures: BudgetCategory[];
   filteredRevenue: BudgetCategory[];
-  summary: BudgetSummary | null;
+  summary: BudgetSummary;
   isPerCapita: boolean;
   setIsPerCapita: (v: boolean) => void;
 }

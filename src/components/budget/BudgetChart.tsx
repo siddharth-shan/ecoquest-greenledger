@@ -108,7 +108,7 @@ export default function BudgetChart({
         </div>
       </div>
 
-      <div className="w-full h-[300px]">
+      <div className="min-h-[300px] min-w-0 w-full h-[300px]">
         <ResponsiveContainer width="100%" height="100%">
           {chartType === "pie" ? (
             <PieChart>

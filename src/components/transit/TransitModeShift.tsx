@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   Bus,
   Bike,
-  Footprints,
   Car,
   Leaf,
   MapPin,
@@ -21,9 +20,6 @@ import {
   YAxis,
   Tooltip,
   ResponsiveContainer,
-  Legend,
-  PieChart,
-  Pie,
   Cell,
 } from "recharts";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
@@ -42,13 +38,6 @@ const TABS = [
 ] as const;
 
 type TabId = (typeof TABS)[number]["id"];
-
-const modeIcons: Record<string, React.ElementType> = {
-  transit: Bus,
-  bike: Bike,
-  walk: Footprints,
-  car: Car,
-};
 
 export default function TransitModeShift() {
   const [activeTab, setActiveTab] = useState<TabId>("routes");
@@ -71,11 +60,6 @@ export default function TransitModeShift() {
   const comparisonData = [
     { mode: "Drive Alone", co2: Math.round(carEmissions), cost: Math.round(totalMiles * costPerMile), color: "#ef4444" },
     { mode: shiftMode === "transit" ? "COW Transit" : "Walk/Bike", co2: Math.round(transitEmissions), cost: shiftMode === "transit" ? Math.round(totalTrips * 1.0) : 0, color: "#22c55e" },
-  ];
-
-  const savingsPieData = [
-    { name: "CO₂ Saved", value: Math.round(emissionsSaved), color: "#22c55e" },
-    { name: "Remaining", value: Math.round(transitEmissions), color: "#e5e7eb" },
   ];
 
   return (

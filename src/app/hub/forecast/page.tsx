@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import {
-  LineChart,
   Line,
   XAxis,
   YAxis,
@@ -17,7 +16,6 @@ import { TrendingUp, Info } from "lucide-react";
 import {
   generateTotalForecast,
   generateDepartmentForecasts,
-  type ForecastPoint,
 } from "@/lib/budget-forecast";
 
 function fmt(n: number): string {
@@ -119,7 +117,7 @@ export default function ForecastPage() {
           <h2 className="text-sm font-semibold text-gray-900 mb-4">
             {chartTitle}
           </h2>
-          <div className="h-[350px]">
+          <div className="min-h-[350px] min-w-0 h-[350px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <ComposedChart data={chartData}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />

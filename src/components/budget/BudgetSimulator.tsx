@@ -1,13 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import {
-  SlidersHorizontal,
-  RotateCcw,
-  Users,
-  AlertTriangle,
-  Share2,
-} from "lucide-react";
+import { RotateCcw, AlertTriangle } from "lucide-react";
 import expenditureData from "@/data/budget/expenditures.json";
 import type { BudgetData } from "@/types/budget";
 import { CERRITOS_POPULATION } from "@/lib/constants";
@@ -69,9 +63,6 @@ export default function BudgetSimulator() {
 
   const formatM = (v: number) =>
     `$${(v / 1_000_000).toFixed(1)}M`;
-
-  const formatK = (v: number) =>
-    `$${(v / 1_000).toFixed(0)}K`;
 
   return (
     <div className="space-y-6">

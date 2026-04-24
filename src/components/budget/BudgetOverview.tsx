@@ -35,8 +35,6 @@ export default function BudgetOverview({
     setIsPerCapita,
   } = useBudgetData(expenditureData, revenueData);
 
-  if (!summary) return null;
-
   return (
     <div className="space-y-8">
       {/* Quick Stats */}

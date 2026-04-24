@@ -37,7 +37,7 @@ Card.displayName = "Card";
 
 /* ------------------------------------------------------------------ */
 
-export interface CardHeaderProps extends HTMLAttributes<HTMLDivElement> {}
+export type CardHeaderProps = HTMLAttributes<HTMLDivElement>;
 
 const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
   ({ className, children, ...props }, ref) => {
@@ -57,7 +57,7 @@ CardHeader.displayName = "CardHeader";
 
 /* ------------------------------------------------------------------ */
 
-export interface CardContentProps extends HTMLAttributes<HTMLDivElement> {}
+export type CardContentProps = HTMLAttributes<HTMLDivElement>;
 
 const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
   ({ className, children, ...props }, ref) => {
@@ -77,7 +77,7 @@ CardContent.displayName = "CardContent";
 
 /* ------------------------------------------------------------------ */
 
-export interface CardFooterProps extends HTMLAttributes<HTMLDivElement> {}
+export type CardFooterProps = HTMLAttributes<HTMLDivElement>;
 
 const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
   ({ className, children, ...props }, ref) => {
